@@ -1765,8 +1765,16 @@ function showError(msg) {
 }
 
 // ── CARGAR DATOS ──────────────────────────────────────────────────────────────
+const MAX_RETRIES = 10;
+const RETRY_INTERVAL = 8000; // 8 segundos entre intentos
+
+async function fetchMaterial(url, attempt) {
+  const res = await fetch(url + '?t=' + Date.now());
+  if (!res.ok) throw new Error('not_found');
+  return res.json();
+}
+
 async function init() {
-  // Leer ID de la URL: /m/martinez_jc_20260312_1
   const parts = window.location.pathname.split('/');
   const id = parts[parts.length - 1] || parts[parts.length - 2];
 
@@ -1775,17 +1783,28 @@ async function init() {
     return;
   }
 
-  try {
-    const url = `https://raw.githubusercontent.com/enohcaid/losinno-material-educativo/refs/heads/gh-pages/m/${id}.json`;
-    const res = await fetch(url + '?t=' + Date.now());
-    if (!res.ok) throw new Error('not_found');
-    const data = await res.json();
-    renderMaterial(data);
-  } catch(e) {
-    if (e.message === 'not_found') {
-      showError('Este material no existe o fue eliminado. Pedile uno nuevo a tu médica.');
-    } else {
-      showError('No se pudo cargar el material. Revisá tu conexión e intentá de nuevo.');
+  const url = `https://raw.githubusercontent.com/enohcaid/losinno-material-educativo/refs/heads/gh-pages/m/${id}.json`;
+
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      const data = await fetchMaterial(url, attempt);
+      renderMaterial(data);
+      return;
+    } catch(e) {
+      if (e.message !== 'not_found') {
+        // Error de red — mostrar mensaje
+        showError('No se pudo cargar el material. Revisá tu conexión e intentá de nuevo.');
+        return;
+      }
+      if (attempt < MAX_RETRIES) {
+        // Todavía no propagó — mostrar mensaje amigable y reintentar
+        const remaining = MAX_RETRIES - attempt;
+        document.querySelector('.loading-text').textContent =
+          `Preparando tu material, un momento${'.'.repeat(attempt % 4)}`;
+        await new Promise(r => setTimeout(r, RETRY_INTERVAL));
+      } else {
+        showError('Tu material todavía se está procesando. Esperá unos minutos y volvé a abrir el link.');
+      }
     }
   }
 }
