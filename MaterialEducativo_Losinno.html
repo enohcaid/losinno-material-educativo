@@ -810,7 +810,17 @@ function patientSearch(val) {
   _patientActiveIdx = -1;
   dd.innerHTML = matches.map((p, i) => {
     const waNum = normalizeArgPhone(p.celular || '');
-    const celularDisplay = waNum ? waNum.replace(/^549/, '+54 9 ') : (p.celular || '');
+    // Formatear para mostrar: +54 9 XXXX XXXXXX
+    let celularDisplay = p.celular || '';
+    if (waNum) {
+      const digits = waNum.slice(3); // quitar 549
+      if (digits.startsWith('11')) {
+        celularDisplay = `+54 9 11 ${digits.slice(2)}`;
+      } else {
+        const areaLen = digits.length <= 10 ? 4 : 4;
+        celularDisplay = `+54 9 ${digits.slice(0, areaLen)} ${digits.slice(areaLen)}`;
+      }
+    }
     const celular = p.celular ? `<div class="opt-celular">📱 ${celularDisplay}</div>` : '';
     return `<div class="patient-option" data-idx="${i}" data-nombre="${p.apellido}, ${p.nombres}" data-celular="${p.celular || ''}" onclick="selectPatient(this)">`
       + `<div class="opt-nombre">${p.apellido}, ${p.nombres}</div>${celular}</div>`;
