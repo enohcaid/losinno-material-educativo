@@ -1,4 +1,4 @@
-[claude_access.md](https://github.com/user-attachments/files/25938120/claude_access.md)
+[claude_access.md](https://raw.githubusercontent.com/enohcaid/losinno-material-educativo/refs/heads/main/config/claude_access.md)
 token: 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
 
 # Proyecto: Losinno — Material Educativo
