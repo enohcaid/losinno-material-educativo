@@ -1,1 +1,27 @@
-
+name: Sync MaterialEducativo to gh-pages
+ 
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'MaterialEducativo_Losinno.html'
+ 
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+ 
+      - name: Copy HTML to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: .
+          include_files: MaterialEducativo_Losinno.html
+          keep_files: true
+ 
