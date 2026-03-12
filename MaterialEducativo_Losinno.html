@@ -782,6 +782,46 @@ document.addEventListener('click', e => {
   }
 });
 
+// ── NORMALIZACIÓN DE TELÉFONOS ARGENTINOS ─────────────────────────────────────
+// Devuelve el número en formato WhatsApp internacional (549XXXXXXXXXX)
+// o string vacío si no hay número válido.
+function normalizeArgPhone(raw) {
+  if (!raw || !raw.trim()) return '';
+  let d = raw.replace(/\D/g, '');   // solo dígitos
+
+  // Ya tiene código país 54
+  if (d.startsWith('54')) d = d.slice(2);
+
+  // Empieza con 9 (formato WA sin 54)
+  if (d.startsWith('9')) d = d.slice(1);
+
+  // Quitar 0 inicial (prefijo discado local)
+  if (d.startsWith('0')) d = d.slice(1);
+
+  // CABA (área 11): quedarse con los últimos 8 dígitos locales
+  if (d.startsWith('11')) {
+    let local = d.slice(2);
+    if (local.startsWith('011')) local = local.slice(3);
+    if (local.startsWith('11'))  local = local.slice(2);
+    d = '11' + local.slice(-8);
+
+  // Interior: detectar doble prefijo (ej "02325 02325418113")
+  } else {
+    for (const len of [4, 3]) {
+      const area = d.slice(0, len);
+      let rest = d.slice(len);
+      if (rest.startsWith('0' + area)) rest = rest.slice(1 + len);
+      else if (rest.startsWith(area))  rest = rest.slice(len);
+      else continue;
+      d = area + rest;
+      break;
+    }
+  }
+
+  // Resultado final: código país + 9 (celular) + número
+  return d.length >= 8 ? '549' + d : '';
+}
+
 // ── ACTUALIZAR PACIENTES DESDE CSV → REPO ─────────────────────────────────────
 const GH_TOKEN  = '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';
 const GH_OWNER  = 'enohcaid';
@@ -3020,8 +3060,7 @@ async function generatePDF() {
 
     // WhatsApp button
     const waBtn = document.getElementById('btnWhatsapp');
-    const patientCelular = (window._patientCelular || '').replace(/\D/g, '');
-    const waPhone = patientCelular ? `54${patientCelular}` : '';
+    const waPhone = normalizeArgPhone(window._patientCelular || '');
     const waText = encodeURIComponent(`Hola${patientName ? ' ' + patientName : ''}, te envío tu material educativo de Losinno.`);
     waBtn.href = `https://wa.me/${waPhone}?text=${waText}`;
     waBtn.classList.add('visible');
