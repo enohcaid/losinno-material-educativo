@@ -256,6 +256,72 @@
   .csv-status.ok { color: #2a9d2a; }
   .csv-status.err { color: #c0392b; }
 
+  /* ── HISTORIAL DE MATERIALES ── */
+  .historial-wrap {
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1.5px solid var(--border);
+    display: none;
+  }
+  .historial-wrap.open { display: block; }
+  .historial-header {
+    background: rgba(30,110,110,.06);
+    padding: 9px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--teal);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+  .historial-empty {
+    padding: 12px;
+    font-size: 12.5px;
+    color: #aaa;
+    text-align: center;
+  }
+  .historial-item {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+    transition: background .15s;
+  }
+  .historial-item:last-child { border-bottom: none; }
+  .historial-item-fecha {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 3px;
+  }
+  .historial-item-temas {
+    font-size: 12.5px;
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .historial-item-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .hbtn {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: all .15s;
+    font-family: 'Lato', sans-serif;
+  }
+  .hbtn-ver   { background: var(--teal); color: #fff; }
+  .hbtn-ver:hover { background: #155555; }
+  .hbtn-cargar { background: rgba(30,110,110,.10); color: var(--teal); }
+  .hbtn-cargar:hover { background: rgba(30,110,110,.2); }
+  .hbtn-borrar { background: rgba(192,57,43,.08); color: #c0392b; }
+  .hbtn-borrar:hover { background: rgba(192,57,43,.18); }
+
   /* ── TOPIC SEARCH ── */
   .topic-search-wrap {
     position: relative;
@@ -633,6 +699,11 @@
                onkeydown="patientKeydown(event)">
         <div class="patient-dropdown" id="patientDropdown"></div>
       </div>
+      <!-- Historial desplegable -->
+      <div class="historial-wrap" id="historialWrap">
+        <div class="historial-header">📋 Materiales enviados</div>
+        <div id="historialList"></div>
+      </div>
       <div class="csv-upload-row">
         <label class="btn-csv-upload" for="csvFileInput" id="csvUploadLabel">
           ↑ Actualizar lista
@@ -697,10 +768,10 @@
       <a class="btn-download" id="btnDownload" href="#" download>
         ↓ Descargar PDF
       </a>
-      <a class="btn-whatsapp" id="btnWhatsapp" href="#" target="_blank">
+      <button class="btn-whatsapp" id="btnCompartir" onclick="compartirMaterial()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Enviar por WhatsApp
-      </a>
+      </button>
     </div>
   </main>
 
@@ -738,7 +809,9 @@ function patientSearch(val) {
 
   _patientActiveIdx = -1;
   dd.innerHTML = matches.map((p, i) => {
-    const celular = p.celular ? `<div class="opt-celular">📱 ${p.celular}</div>` : '';
+    const waNum = normalizeArgPhone(p.celular || '');
+    const celularDisplay = waNum ? waNum.replace(/^549/, '+54 9 ') : (p.celular || '');
+    const celular = p.celular ? `<div class="opt-celular">📱 ${celularDisplay}</div>` : '';
     return `<div class="patient-option" data-idx="${i}" data-nombre="${p.apellido}, ${p.nombres}" data-celular="${p.celular || ''}" onclick="selectPatient(this)">`
       + `<div class="opt-nombre">${p.apellido}, ${p.nombres}</div>${celular}</div>`;
   }).join('');
@@ -752,6 +825,8 @@ function selectPatient(el) {
   window._patientCelular = el.dataset.celular || '';
   dd.classList.remove('open');
   _patientActiveIdx = -1;
+  // Mostrar historial si tiene materiales previos
+  renderHistorial(el.dataset.nombre);
 }
 
 function patientKeydown(e) {
@@ -822,6 +897,222 @@ function normalizeArgPhone(raw) {
   return d.length >= 8 ? '549' + d : '';
 }
 
+// ── HISTORIAL DE MATERIALES ────────────────────────────────────────────────────
+const GH_PAGES_BRANCH = 'gh-pages';
+const PAGES_BASE = 'https://enohcaid.github.io/losinno-material-educativo/m/';
+window._materialActual = null;
+
+function generateMaterialId(paciente) {
+  // formato: apellido_iniciales_YYYYMMDD_n
+  const parts = paciente.split(',');
+  const apellido = (parts[0] || '').trim().toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '');
+  const nombres = (parts[1] || '').trim().split(/\s+/);
+  const iniciales = nombres.map(n => n[0] || '').join('').toLowerCase().replace(/[^a-z]/g, '');
+  const hoy = new Date().toISOString().split('T')[0].replace(/-/g, '');
+  return { base: `${apellido}_${iniciales}_${hoy}`, fecha: hoy };
+}
+
+async function getNextMaterialId(base) {
+  // Busca si ya existen archivos con ese base en gh-pages
+  const apiUrl = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m?ref=${GH_PAGES_BRANCH}`;
+  const headers = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
+  let n = 1;
+  try {
+    const res = await fetch(apiUrl, { headers });
+    if (res.ok) {
+      const files = await res.json();
+      const existing = files.filter(f => f.name.startsWith(base + '_') || f.name === base + '.json');
+      n = existing.length + 1;
+    }
+  } catch(_) {}
+  return `${base}_${n}`;
+}
+
+async function compartirMaterial() {
+  const btn = document.getElementById('btnCompartir');
+  const data = window._materialActual;
+  if (!data) return;
+
+  btn.disabled = true;
+  btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Generando link…`;
+
+  try {
+    // 1. Generar ID único
+    const { base } = generateMaterialId(data.paciente || 'paciente');
+    const id = await getNextMaterialId(base);
+
+    // 2. Subir JSON del material a gh-pages/m/
+    const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m/${id}.json`;
+    const ghHeaders = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
+    const res = await fetch(apiBase, {
+      method: 'PUT',
+      headers: { ...ghHeaders, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: `Material ${id}`,
+        content,
+        branch: GH_PAGES_BRANCH
+      })
+    });
+    if (!res.ok) throw new Error(`GitHub: ${res.status}`);
+
+    // 3. Guardar en historial del paciente en pacientes.json
+    const materialEntry = {
+      id,
+      creado: data.creado,
+      temas: data.temas,
+      fotos: data.fotos,
+      orden: data.orden
+    };
+    await guardarEnHistorial(data.paciente, materialEntry);
+
+    // 4. Abrir WhatsApp con el link
+    const pageUrl = `${PAGES_BASE}${id}`;
+    const waPhone = normalizeArgPhone(data.celular || '');
+    const nombre = (data.paciente || '').split(',')[1]?.trim() || data.paciente || '';
+    const waText = encodeURIComponent(
+      `Hola${nombre ? ' ' + nombre : ''}, te comparto tu material educativo preparado por la Dra. Losinno:\n${pageUrl}`
+    );
+    const waUrl = `https://wa.me/${waPhone}?text=${waText}`;
+    window.open(waUrl, '_blank');
+
+    // 5. Actualizar UI
+    btn.innerHTML = `✓ Link enviado`;
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Enviar por WhatsApp`;
+    }, 3000);
+
+    // 6. Refrescar historial en el panel
+    renderHistorial(data.paciente);
+
+  } catch(e) {
+    console.error(e);
+    btn.disabled = false;
+    btn.innerHTML = `✗ Error — reintentar`;
+    setTimeout(() => {
+      btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Enviar por WhatsApp`;
+    }, 3000);
+  }
+}
+
+async function guardarEnHistorial(paciente, materialEntry) {
+  // Obtener pacientes.json actual
+  const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/pacientes.json`;
+  const headers = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
+  const existing = await fetch(`${apiBase}?ref=main`, { headers });
+  const existingData = await existing.json();
+  const sha = existingData.sha;
+  const patients = JSON.parse(atob(existingData.content.replace(/\n/g, '')));
+
+  // Encontrar el paciente y agregar el material
+  const idx = patients.findIndex(p => `${p.apellido}, ${p.nombres}` === paciente);
+  if (idx >= 0) {
+    if (!patients[idx].materiales) patients[idx].materiales = [];
+    patients[idx].materiales.unshift(materialEntry); // más reciente primero
+    // Actualizar lista local también
+    _pacientes = patients;
+  }
+
+  // Subir pacientes.json actualizado
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(patients, null, 2))));
+  await fetch(apiBase, {
+    method: 'PUT',
+    headers: { ...headers, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: `Historial: ${materialEntry.id}`, content, branch: 'main', sha })
+  });
+}
+
+async function borrarMaterial(paciente, materialId) {
+  if (!confirm('¿Eliminás este material? La paciente ya no podrá acceder al link.')) return;
+
+  const headers = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
+
+  // 1. Borrar el JSON del material en gh-pages
+  try {
+    const fileApi = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m/${materialId}.json?ref=${GH_PAGES_BRANCH}`;
+    const fileRes = await fetch(fileApi, { headers });
+    if (fileRes.ok) {
+      const fileData = await fileRes.json();
+      await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m/${materialId}.json`, {
+        method: 'DELETE',
+        headers: { ...headers, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: `Eliminar material ${materialId}`, sha: fileData.sha, branch: GH_PAGES_BRANCH })
+      });
+    }
+  } catch(_) {}
+
+  // 2. Quitar del historial en pacientes.json
+  const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/pacientes.json`;
+  const existing = await fetch(`${apiBase}?ref=main`, { headers });
+  const existingData = await existing.json();
+  const sha = existingData.sha;
+  const patients = JSON.parse(atob(existingData.content.replace(/\n/g, '')));
+  const idx = patients.findIndex(p => `${p.apellido}, ${p.nombres}` === paciente);
+  if (idx >= 0 && patients[idx].materiales) {
+    patients[idx].materiales = patients[idx].materiales.filter(m => m.id !== materialId);
+    _pacientes = patients;
+  }
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(patients, null, 2))));
+  await fetch(apiBase, {
+    method: 'PUT',
+    headers: { ...headers, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: `Eliminar historial: ${materialId}`, content, branch: 'main', sha })
+  });
+
+  renderHistorial(paciente);
+}
+
+function cargarMaterial(materialData) {
+  // Cargar temas y fotos en la app
+  selectedOrder = [...materialData.orden];
+  if (materialData.fotos) {
+    Object.assign(selectedImages, materialData.fotos);
+  }
+  renderTopicGrid();
+  renderOrderList();
+  // Colapsar historial
+  document.getElementById('historialWrap').classList.remove('open');
+  // Regenerar PDF
+  generatePDF();
+}
+
+function renderHistorial(paciente) {
+  const wrap = document.getElementById('historialWrap');
+  const list = document.getElementById('historialList');
+  if (!paciente) { wrap.classList.remove('open'); return; }
+
+  const p = _pacientes.find(p => `${p.apellido}, ${p.nombres}` === paciente);
+  const materiales = p?.materiales || [];
+
+  if (materiales.length === 0) {
+    wrap.classList.remove('open');
+    return;
+  }
+
+  list.innerHTML = materiales.map(m => {
+    const fecha = m.creado
+      ? new Date(m.creado + 'T00:00:00').toLocaleDateString('es-AR', { day: 'numeric', month: 'short', year: 'numeric' })
+      : '—';
+    const temaLabels = (m.temas || [])
+      .map(id => { const t = TOPICS.find(t => t.id === id); return t ? t.label : id; })
+      .filter(Boolean)
+      .join(', ');
+    const pageUrl = `${PAGES_BASE}${m.id}`;
+    return `<div class="historial-item">
+      <div class="historial-item-fecha">${fecha}</div>
+      <div class="historial-item-temas">${temaLabels || '—'}</div>
+      <div class="historial-item-actions">
+        <a class="hbtn hbtn-ver" href="${pageUrl}" target="_blank">Ver</a>
+        <button class="hbtn hbtn-cargar" onclick='cargarMaterial(${JSON.stringify(m)})'>Cargar</button>
+        <button class="hbtn hbtn-borrar" onclick="borrarMaterial('${paciente.replace(/'/g,"\\'")}', '${m.id}')">Borrar</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  wrap.classList.add('open');
+}
+
 // ── ACTUALIZAR PACIENTES DESDE CSV → REPO ─────────────────────────────────────
 const GH_TOKEN  = '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';
 const GH_OWNER  = 'enohcaid';
@@ -850,7 +1141,7 @@ async function uploadCSV(input) {
     const iNombres  = headers.findIndex(h => h.trim() === 'Nombres');
     const iCelular  = headers.findIndex(h => h.trim() === 'Celular / Otro');
 
-    const patients = rows.slice(1).map(row => {
+    const csvPatients = rows.slice(1).map(row => {
       // split respetando comas dentro de comillas
       const cols = row.match(/(".*?"|[^",]+|(?<=,)(?=,)|(?<=,)$|^(?=,))/g) || row.split(',');
       const clean = c => (c || '').replace(/^"|"$/g, '').trim();
@@ -861,17 +1152,46 @@ async function uploadCSV(input) {
       };
     }).filter(p => p.apellido || p.nombres);
 
-    // 2. Obtener SHA actual del archivo en el repo
+    // 2. Obtener pacientes.json actual (para hacer merge preservando historial)
     const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`;
     const headers2 = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
 
     let sha = '';
+    let existingPatients = [];
     try {
       const existing = await fetch(`${apiBase}?ref=${GH_BRANCH}`, { headers: headers2 });
-      if (existing.ok) { const data = await existing.json(); sha = data.sha; }
+      if (existing.ok) {
+        const data = await existing.json();
+        sha = data.sha;
+        existingPatients = JSON.parse(atob(data.content.replace(/\n/g, '')));
+      }
     } catch(_) {}
 
-    // 3. Subir JSON al repo
+    // 3. Merge: actualizar datos de contacto, preservar historial de materiales
+    const patients = csvPatients.map(csv => {
+      const existing = existingPatients.find(
+        e => e.apellido.toLowerCase() === csv.apellido.toLowerCase() &&
+             e.nombres.toLowerCase() === csv.nombres.toLowerCase()
+      );
+      return {
+        apellido: csv.apellido,
+        nombres:  csv.nombres,
+        celular:  csv.celular,
+        materiales: existing?.materiales || []   // preservar historial
+      };
+    });
+    // Preservar pacientes que ya no están en el CSV pero tienen historial
+    existingPatients.forEach(ep => {
+      if ((ep.materiales || []).length > 0) {
+        const stillInCsv = patients.find(
+          p => p.apellido.toLowerCase() === ep.apellido.toLowerCase() &&
+               p.nombres.toLowerCase() === ep.nombres.toLowerCase()
+        );
+        if (!stillInCsv) patients.push(ep); // mantener aunque no esté en CSV nuevo
+      }
+    });
+
+    // 4. Subir JSON al repo
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(patients, null, 2))));
     const body = {
       message: `Actualizar pacientes.json (${patients.length} pacientes)`,
@@ -888,7 +1208,7 @@ async function uploadCSV(input) {
 
     if (!res.ok) throw new Error(`GitHub: ${res.status} ${res.statusText}`);
 
-    // 4. Actualizar lista local sin recargar
+    // 5. Actualizar lista local sin recargar
     _pacientes = patients;
     status.className = 'csv-status ok';
     status.textContent = `✓ ${patients.length} pacientes actualizados`;
@@ -3058,14 +3378,18 @@ async function generatePDF() {
     dlBtn.classList.add('visible');
     dlBtn.textContent = `↓ Descargar — ${filename}`;
 
-    // WhatsApp button
-    const waBtn = document.getElementById('btnWhatsapp');
-    const waPhone = normalizeArgPhone(window._patientCelular || '');
-    const waText = encodeURIComponent(`Hola${patientName ? ' ' + patientName : ''}, te envío tu material educativo de Losinno.`);
-    waBtn.href = `https://wa.me/${waPhone}?text=${waText}`;
-    waBtn.classList.add('visible');
-    // Restore icon + text
-    waBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Enviar por WhatsApp`;
+    // Compartir button — se habilita, el upload real ocurre al hacer click
+    const compartirBtn = document.getElementById('btnCompartir');
+    compartirBtn.classList.add('visible');
+    // Guardar estado actual para cuando se haga click en compartir
+    window._materialActual = {
+      paciente: patientName,
+      celular: window._patientCelular || '',
+      temas: [...selectedOrder],
+      fotos: { ...selectedImages },
+      orden: [...selectedOrder],
+      creado: new Date().toISOString().split('T')[0]
+    };
 
     // Photo selector panel — incluir banner intermedio si aplica
     const activeBannerIds = bannersPerPage.some(n => n > 0)
