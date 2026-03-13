@@ -155,6 +155,30 @@
       border-radius: 50%;
     }
 
+    /* Quote */
+    .tema-quote {
+      margin: 16px 0 8px;
+      padding: 16px 20px;
+      background: var(--cream);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+    }
+    .tema-quote p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--dark);
+      font-style: italic;
+      margin: 0;
+    }
+    .tema-quote cite {
+      display: block;
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 700;
+      font-style: normal;
+      margin-top: 8px;
+    }
+
     /* Banner intermedio */
     .mid-banner {
       margin: 16px 16px 0;
@@ -1611,6 +1635,404 @@ const TOPICS = [
       ]},
       { type: 'quote', content: 'Aprender a contar carbohidratos es una herramienta de autonomia: te permite tomar decisiones informadas en cada comida y mantener un mejor control glucemico sin resignar calidad de vida.', author: 'Dra. Silvia Losinno' }
     ]
+  },
+  {
+    id: 'jugos_desintoxicantes',
+    imageUrl: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '🥤', label: 'Jugos Desintoxicantes',
+    title: 'Jugos Desintoxicantes',
+    subtitle: 'Combinaciones de frutas y vegetales para depurar, nutrir y energizar',
+    sections: [
+      { type: 'heading', content: 'Por qué tomar jugos verdes' },
+      { type: 'text', content: 'Los jugos de vegetales y frutas frescas concentran vitaminas, minerales y enzimas en forma biodisponible. Tomados en ayunas o a media mañana, favorecen la depuración hepática, alcalinizan el organismo y aportan energía sin sobrecargar la digestión. Siempre prepararlos al momento y consumirlos de inmediato para conservar sus propiedades.' },
+      { type: 'heading', content: 'Combinaciones recomendadas' },
+      { type: 'bullets', content: [
+        'Apio + pepino + manzana verde + limón + jengibre + agua fría. Endulzar con dátiles si se desea. Licuar con hielo.',
+        'Apio + pera + pepino + espinaca + jengibre + limón + agua. Endulzar con dátiles si se desea.',
+        'Manzana roja + espinaca + pepino + hinojo + limón + jengibre + agua.',
+        'Manzana verde + espinaca + limón + ralladura de limón. Endulzar con dátiles si se desea.',
+        'Zanahoria + remolacha + espinaca + perejil + wheat grass + aceite de oliva + cúrcuma + coriandro.',
+        'Ananá + pepino + apio + manzana verde + jengibre + limón.',
+      ]},
+      { type: 'heading', content: 'Consejos de preparación' },
+      { type: 'bullets', content: [
+        'Usar siempre verduras y frutas frescas, idealmente orgánicas.',
+        'Lavar bien todos los ingredientes (20 min en remojo con vinagre).',
+        'Licuar a alta potencia para romper bien las fibras.',
+        'Consumir de inmediato: los jugos se oxidan rápido y pierden propiedades.',
+        'No colar si se desea aprovechar la fibra — simplemente licuar.',
+        'Tomar despacio y "masticar" el jugo para activar las enzimas digestivas.',
+      ]},
+      { type: 'quote', content: 'Un jugo verde en ayunas es uno de los mejores regalos que podés hacerle a tu hígado y a tu sistema inmune.', author: 'Dra. Silvia Losinno' }
+    ]
+  },
+  {
+    id: 'recetas_horneadas',
+    imageUrl: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1542838132-92c53300491e?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '🥕', label: 'Budines y Recetas al Horno',
+    title: 'Budines y Recetas al Horno',
+    subtitle: 'Preparaciones nutritivas y sin gluten para el horno',
+    sections: [
+      { type: 'heading', content: 'Budín de zanahoria y espinaca' },
+      { type: 'text', content: 'Una preparación versátil, nutritiva y sin gluten. Se puede servir caliente o frío, como plato principal o guarnición.' },
+      { type: 'bullets', content: [
+        'INGREDIENTES: 1 taza de quínoa cocida, 1 taza de zanahorias ralladas crudas, 2 tazas de espinaca o acelga cruda bien picada, 1 cebolla picada, 1 cebolla de verdeo, 1 diente de ajo, 3 huevos (o 2-3 cdas de semillas de lino activadas molidas), 1 cda de aceite de oliva, sal rosada, pimienta, nuez moscada, cúrcuma.',
+        'PREPARACIÓN: Rehogar el ajo y las cebollas. Mezclar con la quínoa cocida, los huevos y los condimentos. Dividir en dos partes: una con zanahoria rallada, otra con la espinaca picada.',
+        'Aceitar una budinera. Volcar primero la mezcla de zanahoria y luego la de espinaca.',
+        'Cocinar en horno moderado hasta que esté firme (aproximadamente 35-40 minutos).',
+      ]},
+      { type: 'heading', content: 'Budín de calabaza y zapallitos' },
+      { type: 'bullets', content: [
+        'INGREDIENTES: 1 kg de calabaza, 2 zapallitos redondos o zucchinis, ½ ají amarillo y ½ rojo, 1 cebolla chica, perejil o cilantro, tomillo fresco, 3 huevos (o semillas de lino activadas molidas), ½ taza de tomates deshidratados rehidratados, sal marina, jengibre, nuez moscada, 3 cdas de avena arrollada, 2 cdas de aceite de primera presión, semillas de zapallo.',
+        'PREPARACIÓN: Rallar la calabaza y los zapallitos crudos. Rehogar la cebolla y agregar a los vegetales. Remojar la avena 20 minutos. Batir los huevos e incorporar todo.',
+        'Verter en budinera aceitada. Cocinar a horno moderado 30-35 minutos.',
+        'Retirar del horno y decorar con los tomates deshidratados picados y semillas de zapallo recién molidas.',
+      ]},
+      { type: 'heading', content: 'Creps integrales de arroz' },
+      { type: 'bullets', content: [
+        'PANQUEQUES: dejar 24 hs en remojo arroz integral yamaní. A la mañana tirar el agua, cubrir con agua nueva (1 cm por encima del arroz), condimentar con sal marina, pimienta y hierbas. Licuar y cocinar igual que un panqueque tradicional.',
+        'RELLENO DE CHAMPIGNONES: 1 cebolla de verdeo + 2 puerros + 100-150 g de champignones + 1 cda de aceite de oliva + ½ taza de agua + fécula de maíz (optativo) + condimentos a elección.',
+        'Preparar el nituke con las cebollas y el puerro. Agregar los champignones en fetas unos minutos antes de finalizar. Disolver la fécula en el agua y agregar para espesar. Condimentar a gusto.',
+        'Reservar una parte del relleno, licuarla con agua y usarla como salsa.',
+      ]},
+      { type: 'heading', content: 'Milanesas de calabaza, berenjenas o zucchinis' },
+      { type: 'bullets', content: [
+        'Lavar y cortar longitudinalmente. Dar una breve cocción al vapor.',
+        'Pasar por huevo batido (o agua) condimentado con perejil, ajo y sal rosada.',
+        'Rebozar con salvado de avena.',
+        'Acomodar en fuente aceitada. Dorar de ambos lados en horno bien caliente durante unos minutos.',
+      ]},
+      { type: 'heading', content: 'Salsa de calabaza' },
+      { type: 'bullets', content: [
+        'Cocinar calabaza al vapor. Licuar con aceite de oliva o de girasol primera presión, agua caliente, nuez moscada, pimienta, sal y estragón.',
+        'Ajustar la cantidad de agua según la consistencia deseada.',
+        'Variante — Salsa blanca de arroz yamaní: mismo procedimiento pero reemplazando la calabaza por arroz yamaní cocido.',
+      ]},
+      { type: 'quote', content: 'Cocinar con vegetales de estación, de colores variados, es la forma más simple de garantizarle al cuerpo la diversidad de micronutrientes que necesita.', author: 'Dra. Silvia Losinno' }
+    ]
+  },
+  {
+    id: 'granola_mermerlada',
+    imageUrl: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '🫐', label: 'Granola y Mermelada Viva',
+    title: 'Granola y Mermelada Viva',
+    subtitle: 'Desayunos y meriendas naturales, sin azúcar refinada',
+    sections: [
+      { type: 'heading', content: 'Granola casera' },
+      { type: 'bullets', content: [
+        'INGREDIENTES: 2 tazas de avena arrollada mediana (remojada 12 hs y deshidratada a horno bajo) + 2 cdas soperas de miel orgánica + 1 cda de semillas de sésamo + 1 cda de semillas de girasol + 2 cdas de frutas secas picadas + 2 cdas de frutas desecadas (pasas, manzana, ananá, ciruelas, damascos) + 1 cda de coco rallado.',
+        'Tostar la avena en sartén seca hasta que tome color dorado.',
+        'Apagar el fuego, agregar todos los ingredientes y, con la preparación aún caliente, incorporar la miel. Mezclar hasta que todo quede ligeramente húmedo.',
+        'Una vez fría, guardar en frasco de vidrio cerrado en la heladera.',
+        'VARIANTE: reemplazar la avena por quínoa tostada para una versión sin gluten.',
+      ]},
+      { type: 'heading', content: 'Mermelada Viva' },
+      { type: 'text', content: 'Una mermelada cruda, sin cocción ni azúcar refinada, que conserva todas las enzimas y nutrientes de la fruta.' },
+      { type: 'bullets', content: [
+        'Rehidratar durante toda la noche cualquier fruta deshidratada: higos, dátiles, ciruelas, orejones de durazno, pera, etc.',
+        'A la mañana siguiente, colar el agua pero reservarla.',
+        'Procesar con minipimer agregando de a poco pequeñas cantidades del agua de remojo hasta obtener la consistencia deseada.',
+        'Saborizar con esencia natural de vainilla, stevia, ralladura de limón o naranja.',
+        'Dura 3 a 4 días en la heladera en frasco de vidrio.',
+      ]},
+      { type: 'heading', content: 'Picadita vegetariana' },
+      { type: 'bullets', content: [
+        'Bastones de zanahoria y apio.',
+        'Rodajitas de pepino.',
+        'Untables en potes: mayonesa de vegetales, guacamole, hummus.',
+        'Mini brochettes de tomatitos cherry + hojita de albahaca + olivas negras.',
+        'Frutos secos activados.',
+      ]},
+      { type: 'heading', content: 'Batido de semillas para el tránsito intestinal' },
+      { type: 'bullets', content: [
+        'La noche anterior: dejar en remojo en la heladera 1 cda de semillas de chía o zaragatona (o de lino si la constipación no cede) + 3 a 4 orejones de ciruelas.',
+        'A la mañana siguiente el agua se habrá gelificado — esto es el mucílago, sumamente beneficioso.',
+        'Licuar las ciruelas con las semillas y el agua de remojo + una fruta madura a elección (preferentemente frutillas, pera, durazno). No usar manzana ni banana.',
+        'Debe quedar como una crema para comer a cucharadas. Recordar masticar — el movimiento masticatorio estimula el intestino.',
+      ]},
+      { type: 'quote', content: 'El desayuno es el momento ideal para incorporar fibra, semillas y fruta fresca. Lo que elegís en la primera comida del día marca el tono metabólico de las siguientes horas.', author: 'Dra. Silvia Losinno' }
+    ]
+  },
+  {
+    id: 'aceitunas_aliño',
+    imageUrl: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '🫒', label: 'Aceitunas Aliñadas',
+    title: 'Aceitunas Aliñadas',
+    subtitle: 'Una preparación simple, antiinflamatoria y llena de sabor',
+    sections: [
+      { type: 'heading', content: '¿Por qué incorporar aceitunas?' },
+      { type: 'text', content: 'Las aceitunas son una fuente excelente de Omega 9 (ácido oleico), con propiedades antiinflamatorias y antioxidantes. Aportan grasas saludables, vitamina E y polifenoles protectores del sistema cardiovascular. Las aceitunas negras, en particular, son las más recomendadas dentro del plan antiinflamatorio.' },
+      { type: 'heading', content: 'Preparación' },
+      { type: 'bullets', content: [
+        'Tirar el agua que traen del almacén y enjuagar con agua limpia para quitarles el exceso de sal.',
+        'Apretar suavemente cada aceituna para que suelte lo salado.',
+        'Preparar el aliño: comino + orégano + ajos machacados + un chorro de vinagre de manzana orgánico + aceite de oliva extra virgen.',
+        'Mezclar todo y dejar reposar al menos una hora antes de consumir (mejor de un día para el otro).',
+        'Los condimentos van a ojo — no hay una medida exacta, se ajusta al gusto personal.',
+      ]},
+      { type: 'heading', content: 'Variantes y usos' },
+      { type: 'bullets', content: [
+        'Agregar rodajas de limón o naranja al aliño para un toque cítrico.',
+        'Incorporar hierbas frescas: romero, tomillo, perejil.',
+        'Usar como untable: procesar aceitunas negras aliñadas + aceite de oliva = pasta de aceitunas.',
+        'Acompañan ensaladas, tapas vegetarianas, picaditas o tostadas.',
+        'Se conservan en frasco de vidrio con el aliño hasta 1 semana en heladera.',
+      ]},
+      { type: 'quote', content: 'Las aceitunas y el aceite de oliva extra virgen son dos de los alimentos más poderosos de la dieta mediterránea. Incorporarlos a diario es un acto de medicina preventiva.', author: 'Dra. Silvia Losinno' }
+    ]
+  },
+  {
+    id: 'mate_infusiones',
+    imageUrl: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '🧉', label: 'Mate e Infusiones',
+    title: 'Mate e Infusiones Saludables',
+    subtitle: 'Cómo disfrutar el mate sin acidificar y qué infusiones incorporar',
+    sections: [
+      { type: 'heading', content: 'El problema del mate solo' },
+      { type: 'text', content: 'La yerba mate en exceso es acidificante y estimulante. Sin embargo, bien preparado y en cantidades moderadas, puede seguir siendo parte de la rutina. La clave está en cortar la yerba con hierbas alcalinizantes que neutralizan su efecto ácido y hacen la infusión más suave para el organismo.' },
+      { type: 'heading', content: 'Mezcla de hierbas para el mate' },
+      { type: 'bullets', content: [
+        'Comprar aproximadamente 50 g de cada una de las siguientes hierbas: manzanilla, melisa, diente de león, cola de caballo, menta, poleo, ginkgo biloba.',
+        'Mezclar todas en un frasco y guardar en un lugar fresco y seco.',
+        'Al preparar el mate: usar 50% de yerba mate orgánica + 50% de esta mezcla de hierbas.',
+        'El resultado es una infusión más suave, menos acidificante y con propiedades digestivas y antiinflamatorias.',
+      ]},
+      { type: 'heading', content: 'Otras infusiones recomendadas' },
+      { type: 'bullets', content: [
+        'Jengibre + limón + cúrcuma: antiinflamatoria, digestiva y depurativa. Ideal en ayunas.',
+        'Manzanilla + melisa: calmante del sistema nervioso y digestivo.',
+        'Diente de León: depurativa hepática y diurética.',
+        'Cola de caballo: remineralizante, especialmente para el cabello, uñas y articulaciones.',
+        'Boldo: protector y regenerador del hígado. No usar en exceso.',
+        'Tilo + menta: relajante, ideal para la noche.',
+      ]},
+      { type: 'heading', content: 'Consejos generales para las infusiones' },
+      { type: 'bullets', content: [
+        'No hervir el agua — la temperatura ideal es de 70° a 80°. El hervor destruye enzimas y aromas.',
+        'No agregar azúcar. Endulzar con stevia o dejar natural.',
+        'Las infusiones tomadas cerca de las comidas pueden inhibir la absorción de hierro. Esperar al menos 1 hora.',
+        'Hidratarse principalmente con agua pura durante el día — las infusiones son un complemento, no un reemplazo.',
+      ]},
+      { type: 'quote', content: 'El mate no tiene que desaparecer de tu vida — tiene que transformarse. Con las hierbas correctas, puede ser un ritual de salud y no de acidificación.', author: 'Dra. Silvia Losinno' }
+    ]
+  },
+  {
+    id: 'habitos_vida',
+    imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1482349212652-744925b7b2ad?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '🌞', label: 'Hábitos de Vida Saludable',
+    title: 'Hábitos de Vida Saludable',
+    subtitle: 'Pequeñas acciones diarias que transforman la salud a largo plazo',
+    sections: [
+      { type: 'heading', content: 'Alimentación y organización' },
+      { type: 'bullets', content: [
+        'Planificar el menú semanal: este estilo de alimentación requiere organizar la compra, la alacena, la heladera y el freezer.',
+        'Cocinar de más: casi todo dura 3-4 días en la heladera. Los cereales y legumbres cocidos se pueden frizar en porciones hasta 2 meses.',
+        'Lavar toda la verdura al llegar de la verdulería (20 min en remojo con vinagre) y guardar lista para usar.',
+        'Tener siempre vegetales ya cocidos disponibles: al wok, al horno, al vapor o a la plancha.',
+        'Llevar siempre un snack saludable cuando salís de casa: frutos secos, frutas, crackers.',
+        'No saltear comidas. Intentar establecer una rutina y respetarla.',
+        'Beber abundante agua durante todo el día, especialmente en la mañana y primeras horas de la tarde. Reducir la ingesta a partir de las 18 hs para asegurar un buen descanso.',
+      ]},
+      { type: 'heading', content: 'Cuidado del cuerpo' },
+      { type: 'bullets', content: [
+        'Limpieza de lengua: cada mañana, antes de cepillar los dientes, limpiar la lengua con un raspalengua o cuchara raspando de atrás hacia adelante. Elimina bacterias acumuladas durante la noche.',
+        'Cepillado en seco: dos veces por semana, antes de entrar a la ducha, cepillar toda la piel del cuerpo con un cepillo de cerda natural. Activa la circulación y elimina células muertas.',
+        'Tomar sol responsablemente: unos minutos todos los días que sea posible. Favorece la síntesis de vitamina D y genera sensación de bienestar.',
+        'Actividad física regular: aeróbica y de musculación. Controla el peso, la glucemia, el colesterol y la salud cardiovascular. Fija calcio en los huesos y produce endorfinas.',
+      ]},
+      { type: 'heading', content: 'Descanso y bienestar emocional' },
+      { type: 'bullets', content: [
+        'Dormir 8 horas aproximadamente. Buscar la mayor oscuridad y silencio posibles. Recurrir a tapones o antifaz si es necesario.',
+        'Dedicar un momento del día a respirar conscientemente y meditar.',
+        'Regalar tiempo personal para hacer cosas que generen placer: música, lectura, un hobby, una conversación con alguien querido.',
+        'Sonreír: el cuerpo reconoce la emoción y pone en marcha una alquimia sanadora real.',
+      ]},
+      { type: 'quote', content: 'La salud no es solo lo que comés. Es cómo dormís, cómo te movés, cómo respirás, cómo te relacionás y cómo te tratás a vos mismo cada día.', author: 'Dra. Silvia Losinno' }
+    ]
+  },
+  {
+    id: 'plan_alimentacion',
+    imageUrl: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '🍽️', label: 'Plan de Alimentación',
+    title: 'Plan de Alimentación — Recomendaciones Generales',
+    subtitle: 'Pautas para organizar desayunos, meriendas, almuerzos y cenas de forma saludable',
+    sections: [
+      { type: 'text', content: 'Recordá comenzar el plan luego de haberte sacado sangre para los análisis correspondientes.' },
+      { type: 'heading', content: 'Desayunos y meriendas' },
+      { type: 'heading', content: 'Jugo verde' },
+      { type: 'text', content: 'Súper saludable, alto contenido de vitaminas y minerales, elevado poder de saciedad. Detox natural.' },
+      { type: 'bullets', content: [
+        '1 manzana verde o kiwi, 7 hojas de espinaca, una rama de apio, medio pepino, una rodaja de jengibre, jugo de medio limón + 1 vaso de agua. Todo a la licuadora.',
+        'Podés remojar 1 cucharada de semillas de chía durante la noche y agregarla al jugo verde. Ayuda con el tránsito intestinal y a evitar la constipación.',
+      ]},
+      { type: 'heading', content: 'Otras opciones de desayuno o merienda' },
+      { type: 'bullets', content: [
+        '1 yogur descremado (vaso de 200 cc) + ½ banana o 1 fruta.',
+        '1 yogur con colchón de frutas.',
+        '2 mitades de durazno diet con una cucharadita de queso untable light.',
+        '1 manzana o 1 pera asada con 1 cucharadita de queso untable light.',
+        'Licuado de frutas: 1 taza de leche descremada + 1 fruta.',
+        '4 fetas de queso de máquina.',
+      ]},
+      { type: 'heading', content: 'Almuerzos' },
+      { type: 'text', content: '20 minutos antes de comer, tomar medio vaso de agua con el jugo de medio limón. Si no es posible, un vaso de agua es suficiente.' },
+      { type: 'heading', content: 'Opción 1 — Carne con ensalada' },
+      { type: 'bullets', content: [
+        'Carne de vaca (cortes magros: cuadril, peceto, nalga), pollo (pata muslo sin piel) o pescado.',
+        'Ensalada completa: debe corresponder al 75 % del plato.',
+        'Siempre una parte de los vegetales debería estar cruda para garantizar recibir todos los nutrientes, ya que las enzimas, parte de las proteínas y parte de las vitaminas se destruyen en contacto con el calor.',
+        'Esta opción se recomienda al mediodía. De esta manera, evitamos que a la noche el proceso digestivo sea lento, dificultoso e incluso altere el descanso.',
+      ]},
+      { type: 'heading', content: 'Opción 2 — Sopa de verduras' },
+      { type: 'bullets', content: [
+        'Sopa de verduras: hojas verdes, apio, repollo, cebolla y poca zanahoria.',
+        'En la sopa se puede agregar 1 cucharadita de levadura de cerveza sin cocción.',
+        'Se pueden agregar verduras cocidas; las verduras crudas hay que priorizarlas en los almuerzos.',
+      ]},
+      { type: 'quote', content: 'Organizá tu alimentación como un acto de cuidado hacia vos misma. Cada elección cuenta.', author: 'Dra. Silvia Losinno' }
+    ]
+  },
+  {
+    id: 'desayunos_hiperproteicos',
+    imageUrl: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '🥚', label: 'Desayunos Hiperproteicos',
+    title: 'Desayunos Hiperproteicos de Bajo Índice Glucémico',
+    subtitle: 'Opciones con 30–40 g de proteína para empezar el día con saciedad y energía estable',
+    sections: [
+      { type: 'heading', content: '1. Omelette completo' },
+      { type: 'bullets', content: [
+        '2 huevos + 3 claras.',
+        '40 g de queso.',
+        'Espinaca o champiñones.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 32–35 g.' },
+      { type: 'heading', content: '2. Yogur griego con semillas' },
+      { type: 'bullets', content: [
+        '250 g de yogur griego natural.',
+        '1 cucharada de chía.',
+        '10–15 almendras.',
+        '½ taza de frutos rojos.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 25–30 g.' },
+      { type: 'heading', content: '3. Huevos con salmón' },
+      { type: 'bullets', content: [
+        '2 huevos.',
+        '80 g de salmón ahumado.',
+        'Tomate o pepino.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 30–32 g.' },
+      { type: 'heading', content: '4. Omelette + yogur' },
+      { type: 'bullets', content: [
+        '2 huevos + 2 claras.',
+        'Verduras (espinaca, zucchini o champiñones).',
+        '1 yogur griego natural (150 g).',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 35–40 g.' },
+      { type: 'heading', content: '5. Desayuno salado' },
+      { type: 'bullets', content: [
+        '100 g de jamón natural o pechuga de pavo.',
+        '1 huevo duro.',
+        '½ palta.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 30–35 g.' },
+      { type: 'heading', content: '6. Yogur proteico' },
+      { type: 'bullets', content: [
+        '300 g de yogur griego natural.',
+        '1 cucharada de semillas de lino o chía.',
+        '10 nueces.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 28–32 g.' },
+      { type: 'heading', content: '7. Huevos y queso' },
+      { type: 'bullets', content: [
+        '3 huevos revueltos.',
+        '30–40 g de queso.',
+        'Tomate o rúcula.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 30–32 g.' },
+      { type: 'heading', content: '8. Desayuno con pescado' },
+      { type: 'bullets', content: [
+        '100 g de atún o salmón.',
+        '1 huevo duro.',
+        'Tomate o pepino con aceite de oliva.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 32–35 g.' },
+      { type: 'heading', content: 'Principios para este tipo de desayuno' },
+      { type: 'bullets', content: [
+        'Objetivo frecuente: 30 g o más de proteína.',
+        'Priorizar huevos, yogur griego, pescado y carnes magras.',
+        'Mantener los carbohidratos bajos (verduras, frutos rojos, semillas).',
+        'Evitar harinas, jugos, mermeladas y cereales refinados.',
+      ]}
+    ]
+  },
+  {
+    id: 'meriendas_saludables',
+    imageUrl: 'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1595475207225-428b62bda831?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '🥤', label: 'Meriendas Saludables',
+    title: 'Meriendas Saludables',
+    subtitle: 'Ideas prácticas y nutritivas para la media mañana o la tarde',
+    sections: [
+      { type: 'heading', content: 'Jugo verde' },
+      { type: 'text', content: 'Súper saludable, alto contenido de vitaminas y minerales, elevado poder de saciedad. Detox natural.' },
+      { type: 'bullets', content: [
+        '1 manzana verde o kiwi, 7 hojas de espinaca, una rama de apio, medio pepino, una rodaja de jengibre, jugo de medio limón + 1 vaso de agua. Todo a la licuadora.',
+        'Podés remojar 1 cucharada de semillas de chía durante la noche y agregarla al jugo verde. Ayuda con el tránsito intestinal y a evitar la constipación.',
+      ]},
+      { type: 'heading', content: 'Otras opciones' },
+      { type: 'bullets', content: [
+        '1 yogur descremado (vaso de 200 cc) + ½ banana o 1 fruta.',
+        '1 yogur con colchón de frutas.',
+        '2 mitades de durazno diet con una cucharadita de queso untable light.',
+        '1 manzana o 1 pera asada con 1 cucharadita de queso untable light.',
+        'Licuado de frutas: 1 taza de leche descremada + 1 fruta.',
+        '4 fetas de queso de máquina.',
+      ]}
+    ]
   }
 ];
 
@@ -1740,6 +2162,8 @@ function renderMaterial(data) {
         sectionsHtml += `<p class="tema-text">${s.content}</p>`;
       } else if (s.type === 'bullets') {
         sectionsHtml += `<ul class="tema-bullets">${s.content.map(b => `<li>${b}</li>`).join('')}</ul>`;
+      } else if (s.type === 'quote') {
+        sectionsHtml += `<blockquote class="tema-quote"><p>"${s.content}"</p>${s.author ? `<cite>— ${s.author}</cite>` : ''}</blockquote>`;
       }
     });
 
