@@ -25,7 +25,7 @@
     "celular": "2325 594849"
   },
   {
-    "apellido": "FarigÃ±on",
+    "apellido": "FarigÃÂ±on",
     "nombres": "Jose",
     "celular": "2325 434867"
   },
@@ -86,7 +86,7 @@
   },
   {
     "apellido": "Belo",
-    "nombres": "MarÃ­a LÃ­a",
+    "nombres": "MarÃÂ­a LÃÂ­a",
     "celular": "2326 410081"
   },
   {
@@ -161,7 +161,7 @@
   },
   {
     "apellido": "Rienzi",
-    "nombres": "GastÃ³n",
+    "nombres": "GastÃÂ³n",
     "celular": "2325 516344"
   },
   {
@@ -466,7 +466,7 @@
   },
   {
     "apellido": "Zanou",
-    "nombres": "Susana NoemÃ­",
+    "nombres": "Susana NoemÃÂ­",
     "celular": "2325 565422"
   },
   {
@@ -491,7 +491,7 @@
   },
   {
     "apellido": "Maggi",
-    "nombres": "AdriÃ¡n JosÃ©",
+    "nombres": "AdriÃÂ¡n JosÃÂ©",
     "celular": "2325 458094"
   },
   {
@@ -551,7 +551,7 @@
   },
   {
     "apellido": "Cairo",
-    "nombres": "CÃ©sar",
+    "nombres": "CÃÂ©sar",
     "celular": "92325 682922"
   },
   {
@@ -590,12 +590,12 @@
     "celular": "2324 680023"
   },
   {
-    "apellido": "ArÃ©valo",
+    "apellido": "ArÃÂ©valo",
     "nombres": "Gabriela Alejandra",
     "celular": "2325 653759"
   },
   {
-    "apellido": "AcuÃ±a",
+    "apellido": "AcuÃÂ±a",
     "nombres": "Adriana Silvia",
     "celular": "2325 687235"
   },
@@ -603,62 +603,11 @@
     "apellido": "Martinez",
     "nombres": "Juan Carlos",
     "celular": "11 01133165416",
-    "materiales": [
-      {
-        "id": "martinez_jc_20260313_1",
-        "creado": "2026-03-13",
-        "temas": [
-          "desayunos_hiperproteicos",
-          "plan_alimentacion"
-        ],
-        "fotos": {
-          "antiinflamatorio": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=840&h=240&fit=crop&crop=center",
-          "nutrientes_clave": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "semillas": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=840&h=240&fit=crop&crop=center",
-          "combinacion": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
-          "utensilios": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
-          "tips_organizacion": "https://images.unsplash.com/photo-1543362906-acfc16c67564?w=840&h=240&fit=crop&crop=center",
-          "listado_compras": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=840&h=240&fit=crop&crop=center",
-          "untables": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
-          "recetas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
-          "caldo_huesos": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
-          "leches_vegetales": "https://images.unsplash.com/photo-1600718374662-0483d2b9da44?w=840&h=240&fit=crop&crop=center",
-          "mindfulness": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
-          "rutina_matutina": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=840&h=240&fit=crop&crop=center",
-          "elementos": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=840&h=240&fit=crop&crop=center",
-          "ozempic": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "ejercicios_sensoriales": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=840&h=240&fit=crop&crop=center",
-          "ejercicios_elementos_practicos": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=840&h=240&fit=crop&crop=center",
-          "ritmos_circadianos": "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=840&h=240&fit=crop&crop=center",
-          "plantas_descanso": "https://images.unsplash.com/photo-1487530811015-780bdbbca90f?w=840&h=240&fit=crop&crop=center",
-          "ondas_cerebrales": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=840&h=240&fit=crop&crop=center",
-          "meditaciones": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=840&h=240&fit=crop&crop=center",
-          "neurotransmisores": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=840&h=240&fit=crop&crop=center",
-          "autocuidado_integral": "https://images.unsplash.com/photo-1482349212652-744925b7b2ad?w=840&h=240&fit=crop&crop=center",
-          "conteo_carbohidratos": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "jugos_desintoxicantes": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
-          "recetas_horneadas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
-          "granola_mermerlada": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
-          "aceitunas_aliño": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
-          "mate_infusiones": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
-          "habitos_vida": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
-          "plan_alimentacion": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "desayunos_hiperproteicos": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
-          "meriendas_saludables": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=840&h=240&fit=crop&crop=center",
-          "mid_banner_1": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=840&h=200&fit=crop&crop=center",
-          "mid_banner_2": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=200&fit=crop&crop=center",
-          "mid_banner_3": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=840&h=200&fit=crop&crop=center"
-        },
-        "orden": [
-          "desayunos_hiperproteicos",
-          "plan_alimentacion"
-        ]
-      }
-    ]
+    "materiales": []
   },
   {
     "apellido": "Paciente De Prueba",
-    "nombres": "MarÃ­a",
+    "nombres": "MarÃÂ­a",
     "celular": "11 46007905"
   },
   {
@@ -668,7 +617,7 @@
   },
   {
     "apellido": "Marchesi",
-    "nombres": "Maria De Los Ãngeles",
+    "nombres": "Maria De Los ÃÂngeles",
     "celular": "2325 683143"
   },
   {
@@ -677,8 +626,8 @@
     "celular": "2324 540012"
   },
   {
-    "apellido": "AcuÃ±a",
-    "nombres": "AnalÃ­a",
+    "apellido": "AcuÃÂ±a",
+    "nombres": "AnalÃÂ­a",
     "celular": "2325 565454"
   },
   {
@@ -698,7 +647,7 @@
   },
   {
     "apellido": "Capiello",
-    "nombres": "AnalÃ­a",
+    "nombres": "AnalÃÂ­a",
     "celular": "11 59631262"
   },
   {
@@ -708,7 +657,7 @@
   },
   {
     "apellido": "Valenzuela De La Torre",
-    "nombres": "Teresa Del NiÃ±o Jesus Ernestina",
+    "nombres": "Teresa Del NiÃÂ±o Jesus Ernestina",
     "celular": "11 63680730"
   }
 ]
