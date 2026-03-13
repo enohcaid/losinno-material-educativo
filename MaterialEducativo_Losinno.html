@@ -788,6 +788,10 @@
 </div>
 
 <script>
+// ── CONFIG ────────────────────────────────────────────────────────────────────
+const WORKER_URL = 'https://losinno-proxy.juan-c-m-1985.workers.dev';
+const PAGES_BASE = 'https://enohcaid.github.io/losinno-material-educativo/m/';
+
 // ── PACIENTES: carga desde Worker proxy ───────────────────────────────────────
 let _pacientes = [];
 let _patientActiveIdx = -1;
@@ -921,8 +925,6 @@ function normalizeArgPhone(raw) {
 }
 
 // ── HISTORIAL DE MATERIALES ────────────────────────────────────────────────────
-const WORKER_URL = 'https://losinno-proxy.juan-c-m-1985.workers.dev';
-const PAGES_BASE = 'https://enohcaid.github.io/losinno-material-educativo/m/';
 window._materialActual = null;
 
 function generateMaterialId(paciente) {
@@ -2861,6 +2863,131 @@ const TOPICS = [
         'Sonreír: el cuerpo reconoce la emoción y pone en marcha una alquimia sanadora real.',
       ]},
       { type: 'quote', content: 'La salud no es solo lo que comés. Es cómo dormís, cómo te movés, cómo respirás, cómo te relacionás y cómo te tratás a vos mismo cada día.', author: 'Dra. Silvia Losinno' }
+    ]
+  },
+  {
+    id: 'plan_alimentacion',
+    imageUrl: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '🍽️', label: 'Plan de Alimentación',
+    title: 'Plan de Alimentación — Recomendaciones Generales',
+    subtitle: 'Pautas para organizar desayunos, meriendas, almuerzos y cenas de forma saludable',
+    sections: [
+      { type: 'text', content: 'Recordá comenzar el plan luego de haberte sacado sangre para los análisis correspondientes.' },
+      { type: 'heading', content: 'Desayunos y meriendas' },
+      { type: 'heading', content: 'Jugo verde' },
+      { type: 'text', content: 'Súper saludable, alto contenido de vitaminas y minerales, elevado poder de saciedad. Detox natural.' },
+      { type: 'bullets', content: [
+        '1 manzana verde o kiwi, 7 hojas de espinaca, una rama de apio, medio pepino, una rodaja de jengibre, jugo de medio limón + 1 vaso de agua. Todo a la licuadora.',
+        'Podés remojar 1 cucharada de semillas de chía durante la noche y agregarla al jugo verde. Ayuda con el tránsito intestinal y a evitar la constipación.',
+      ]},
+      { type: 'heading', content: 'Otras opciones de desayuno o merienda' },
+      { type: 'bullets', content: [
+        '1 yogur descremado (vaso de 200 cc) + ½ banana o 1 fruta.',
+        '1 yogur con colchón de frutas.',
+        '2 mitades de durazno diet con una cucharadita de queso untable light.',
+        '1 manzana o 1 pera asada con 1 cucharadita de queso untable light.',
+        'Licuado de frutas: 1 taza de leche descremada + 1 fruta.',
+        '4 fetas de queso de máquina.',
+      ]},
+      { type: 'heading', content: 'Almuerzos' },
+      { type: 'text', content: '20 minutos antes de comer, tomar medio vaso de agua con el jugo de medio limón. Si no es posible, un vaso de agua es suficiente.' },
+      { type: 'heading', content: 'Opción 1 — Carne con ensalada' },
+      { type: 'bullets', content: [
+        'Carne de vaca (cortes magros: cuadril, peceto, nalga), pollo (pata muslo sin piel) o pescado.',
+        'Ensalada completa: debe corresponder al 75 % del plato.',
+        'Siempre una parte de los vegetales debería estar cruda para garantizar recibir todos los nutrientes, ya que las enzimas, parte de las proteínas y parte de las vitaminas se destruyen en contacto con el calor.',
+        'Esta opción se recomienda al mediodía. De esta manera, evitamos que a la noche el proceso digestivo sea lento, dificultoso e incluso altere el descanso.',
+      ]},
+      { type: 'heading', content: 'Opción 2 — Sopa de verduras' },
+      { type: 'bullets', content: [
+        'Sopa de verduras: hojas verdes, apio, repollo, cebolla y poca zanahoria.',
+        'En la sopa se puede agregar 1 cucharadita de levadura de cerveza sin cocción.',
+        'Se pueden agregar verduras cocidas; las verduras crudas hay que priorizarlas en los almuerzos.',
+      ]},
+      { type: 'quote', content: 'Organizá tu alimentación como un acto de cuidado hacia vos misma. Cada elección cuenta.', author: 'Dra. Silvia Losinno' }
+    ]
+  },
+  {
+    id: 'desayunos_hiperproteicos',
+    imageUrl: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '🥚', label: 'Desayunos Hiperproteicos',
+    title: 'Desayunos Hiperproteicos de Bajo Índice Glucémico',
+    subtitle: 'Opciones con 30–40 g de proteína para empezar el día con saciedad y energía estable',
+    sections: [
+      { type: 'heading', content: '1. Omelette completo' },
+      { type: 'bullets', content: [
+        '2 huevos + 3 claras.',
+        '40 g de queso.',
+        'Espinaca o champiñones.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 32–35 g.' },
+      { type: 'heading', content: '2. Yogur griego con semillas' },
+      { type: 'bullets', content: [
+        '250 g de yogur griego natural.',
+        '1 cucharada de chía.',
+        '10–15 almendras.',
+        '½ taza de frutos rojos.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 25–30 g.' },
+      { type: 'heading', content: '3. Huevos con salmón' },
+      { type: 'bullets', content: [
+        '2 huevos.',
+        '80 g de salmón ahumado.',
+        'Tomate o pepino.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 30–32 g.' },
+      { type: 'heading', content: '4. Omelette + yogur' },
+      { type: 'bullets', content: [
+        '2 huevos + 2 claras.',
+        'Verduras (espinaca, zucchini o champiñones).',
+        '1 yogur griego natural (150 g).',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 35–40 g.' },
+      { type: 'heading', content: '5. Desayuno salado' },
+      { type: 'bullets', content: [
+        '100 g de jamón natural o pechuga de pavo.',
+        '1 huevo duro.',
+        '½ palta.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 30–35 g.' },
+      { type: 'heading', content: '6. Yogur proteico' },
+      { type: 'bullets', content: [
+        '300 g de yogur griego natural.',
+        '1 cucharada de semillas de lino o chía.',
+        '10 nueces.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 28–32 g.' },
+      { type: 'heading', content: '7. Huevos y queso' },
+      { type: 'bullets', content: [
+        '3 huevos revueltos.',
+        '30–40 g de queso.',
+        'Tomate o rúcula.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 30–32 g.' },
+      { type: 'heading', content: '8. Desayuno con pescado' },
+      { type: 'bullets', content: [
+        '100 g de atún o salmón.',
+        '1 huevo duro.',
+        'Tomate o pepino con aceite de oliva.',
+      ]},
+      { type: 'text', content: 'Proteína aproximada: 32–35 g.' },
+      { type: 'heading', content: 'Principios para este tipo de desayuno' },
+      { type: 'bullets', content: [
+        'Objetivo frecuente: 30 g o más de proteína.',
+        'Priorizar huevos, yogur griego, pescado y carnes magras.',
+        'Mantener los carbohidratos bajos (verduras, frutos rojos, semillas).',
+        'Evitar harinas, jugos, mermeladas y cereales refinados.',
+      ]}
     ]
   }
 ];
