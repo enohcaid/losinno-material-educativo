@@ -923,12 +923,9 @@ function generateMaterialId(paciente) {
 }
 
 async function getNextMaterialId(base) {
-  // Busca si ya existen archivos con ese base en gh-pages
-  const apiUrl = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m?ref=${GH_PAGES_BRANCH}`;
-  const headers = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
   let n = 1;
   try {
-    const res = await fetch(apiUrl, { headers });
+    const res = await fetch(`${WORKER_URL}/listar-materiales`);
     if (res.ok) {
       const files = await res.json();
       const existing = files.filter(f => f.name.startsWith(base + '_') || f.name === base + '.json');
@@ -951,20 +948,14 @@ async function compartirMaterial() {
     const { base } = generateMaterialId(data.paciente || 'paciente');
     const id = await getNextMaterialId(base);
 
-    // 2. Subir JSON del material a gh-pages/m/
-    const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m/${id}.json`;
-    const ghHeaders = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
+    // 2. Subir JSON del material a gh-pages/m/ (via worker)
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
-    const res = await fetch(apiBase, {
+    const res = await fetch(`${WORKER_URL}/material/${id}`, {
       method: 'PUT',
-      headers: { ...ghHeaders, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        message: `Material ${id}`,
-        content,
-        branch: GH_PAGES_BRANCH
-      })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: `Material ${id}`, content })
     });
-    if (!res.ok) throw new Error(`GitHub: ${res.status}`);
+    if (!res.ok) throw new Error(`Worker: ${res.status}`);
 
     // 3. Guardar en historial del paciente en pacientes.json
     const materialEntry = {
@@ -1006,55 +997,47 @@ async function compartirMaterial() {
 }
 
 async function guardarEnHistorial(paciente, materialEntry) {
-  // Obtener pacientes.json actual
-  const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/pacientes.json`;
-  const headers = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
-  const existing = await fetch(`${apiBase}?ref=main`, { headers });
-  const existingData = await existing.json();
+  // GET pacientes.json via worker
+  const getRes = await fetch(`${WORKER_URL}/pacientes`);
+  const existingData = await getRes.json();
   const sha = existingData.sha;
   const patients = JSON.parse(atob(existingData.content.replace(/\n/g, '')));
 
-  // Encontrar el paciente y agregar el material
   const idx = patients.findIndex(p => `${p.apellido}, ${p.nombres}` === paciente);
   if (idx >= 0) {
     if (!patients[idx].materiales) patients[idx].materiales = [];
-    patients[idx].materiales.unshift(materialEntry); // más reciente primero
-    // Actualizar lista local también
+    patients[idx].materiales.unshift(materialEntry);
     _pacientes = patients;
   }
 
-  // Subir pacientes.json actualizado
+  // PUT pacientes.json via worker
   const content = btoa(unescape(encodeURIComponent(JSON.stringify(patients, null, 2))));
-  await fetch(apiBase, {
+  await fetch(`${WORKER_URL}/pacientes`, {
     method: 'PUT',
-    headers: { ...headers, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message: `Historial: ${materialEntry.id}`, content, branch: 'main', sha })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: `Historial: ${materialEntry.id}`, content, sha })
   });
 }
 
 async function borrarMaterial(paciente, materialId) {
   if (!confirm('¿Eliminás este material? La paciente ya no podrá acceder al link.')) return;
 
-  const headers = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
-
-  // 1. Borrar el JSON del material en gh-pages
+  // 1. Obtener sha del archivo y borrarlo via worker
   try {
-    const fileApi = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m/${materialId}.json?ref=${GH_PAGES_BRANCH}`;
-    const fileRes = await fetch(fileApi, { headers });
+    const fileRes = await fetch(`${WORKER_URL}/material/${materialId}`);
     if (fileRes.ok) {
       const fileData = await fileRes.json();
-      await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m/${materialId}.json`, {
+      await fetch(`${WORKER_URL}/material/${materialId}`, {
         method: 'DELETE',
-        headers: { ...headers, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: `Eliminar material ${materialId}`, sha: fileData.sha, branch: GH_PAGES_BRANCH })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: `Eliminar material ${materialId}`, sha: fileData.sha })
       });
     }
   } catch(_) {}
 
-  // 2. Quitar del historial en pacientes.json
-  const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/pacientes.json`;
-  const existing = await fetch(`${apiBase}?ref=main`, { headers });
-  const existingData = await existing.json();
+  // 2. Quitar del historial en pacientes.json via worker
+  const getRes = await fetch(`${WORKER_URL}/pacientes`);
+  const existingData = await getRes.json();
   const sha = existingData.sha;
   const patients = JSON.parse(atob(existingData.content.replace(/\n/g, '')));
   const idx = patients.findIndex(p => `${p.apellido}, ${p.nombres}` === paciente);
@@ -1063,10 +1046,10 @@ async function borrarMaterial(paciente, materialId) {
     _pacientes = patients;
   }
   const content = btoa(unescape(encodeURIComponent(JSON.stringify(patients, null, 2))));
-  await fetch(apiBase, {
+  await fetch(`${WORKER_URL}/pacientes`, {
     method: 'PUT',
-    headers: { ...headers, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message: `Eliminar historial: ${materialId}`, content, branch: 'main', sha })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: `Eliminar historial: ${materialId}`, content, sha })
   });
 
   renderHistorial(paciente);
@@ -1123,7 +1106,9 @@ function renderHistorial(paciente) {
 }
 
 // ── ACTUALIZAR PACIENTES DESDE CSV → REPO ─────────────────────────────────────
-const GH_TOKEN  = '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';
+// ── PROXY WORKER (sin token en el HTML) ────────────────────────────────────────
+const WORKER_URL = 'https://losinno-proxy.juan-c-m-1985.workers.dev';
+// GH_OWNER / GH_REPO / GH_PATH / GH_BRANCH mantenidos para referencia
 const GH_OWNER  = 'enohcaid';
 const GH_REPO   = 'losinno-material-educativo';
 const GH_PATH   = 'pacientes.json';
@@ -1161,14 +1146,11 @@ async function uploadCSV(input) {
       };
     }).filter(p => p.apellido || p.nombres);
 
-    // 2. Obtener pacientes.json actual (para hacer merge preservando historial)
-    const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`;
-    const headers2 = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
-
+    // 2. Obtener pacientes.json actual via worker (merge preservando historial)
     let sha = '';
     let existingPatients = [];
     try {
-      const existing = await fetch(`${apiBase}?ref=${GH_BRANCH}`, { headers: headers2 });
+      const existing = await fetch(`${WORKER_URL}/pacientes`);
       if (existing.ok) {
         const data = await existing.json();
         sha = data.sha;
@@ -1209,13 +1191,13 @@ async function uploadCSV(input) {
       ...(sha ? { sha } : {})
     };
 
-    const res = await fetch(apiBase, {
+    const res = await fetch(`${WORKER_URL}/pacientes`, {
       method: 'PUT',
-      headers: { ...headers2, 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body)
     });
 
-    if (!res.ok) throw new Error(`GitHub: ${res.status} ${res.statusText}`);
+    if (!res.ok) throw new Error(`Worker: ${res.status} ${res.statusText}`);
 
     // 5. Actualizar lista local sin recargar
     _pacientes = patients;
