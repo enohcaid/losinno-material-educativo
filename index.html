@@ -1775,10 +1775,9 @@ async function fetchMaterial(url, attempt) {
 }
 
 async function init() {
-  const parts = window.location.pathname.split('/');
-  const id = parts[parts.length - 1] || parts[parts.length - 2];
+  const id = window.location.hash.slice(1);
 
-  if (!id || id === 'index.html') {
+  if (!id) {
     showError('No se especificó ningún material. El link puede estar incompleto.');
     return;
   }
