@@ -10,8 +10,9 @@
       --teal: #1e6e6e;
       --teal-light: #a2d0d0;
       --gold: #c9a66b;
-      --cream: #f9f6f0;
+      --cream: #f7f3ec;
       --dark: #2c2c2c;
+      --mid: #6b6b6b;
       --white: #ffffff;
       --border: #e8e0d4;
     }
@@ -60,37 +61,44 @@
     .error-msg { font-size: 15px; color: #888; max-width: 340px; line-height: 1.6; }
 
     /* ── CONTENIDO ── */
-    #content { display: none; max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+    #content { display: none; max-width: 680px; margin: 0 auto; padding: 0; }
 
-    /* Header */
+    /* Header — imagen banner a ancho completo */
     .page-header {
-      background: var(--teal);
-      padding: 32px 24px 24px;
-      text-align: center;
+      position: relative;
+      background: var(--cream);
     }
-    .header-logo { width: 180px; margin-bottom: 16px; }
+    .header-banner {
+      width: 100%;
+      display: block;
+    }
+    .header-info {
+      padding: 14px 24px 18px;
+      text-align: center;
+      background: var(--cream);
+    }
     .header-paciente {
-      font-size: 13px;
-      color: rgba(255,255,255,0.7);
+      font-size: 11px;
+      color: var(--mid);
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
     .header-nombre {
       font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      color: var(--white);
-      line-height: 1.2;
+      font-size: 20px;
+      color: var(--dark);
+      line-height: 1.3;
     }
     .header-fecha {
-      font-size: 12px;
-      color: rgba(255,255,255,0.5);
-      margin-top: 10px;
+      font-size: 11px;
+      color: var(--mid);
+      margin-top: 4px;
     }
 
-    /* Temas */
+    /* Temas — fondo crema como el PDF */
     .tema {
-      background: var(--white);
+      background: var(--cream);
       margin: 0;
       overflow: hidden;
     }
@@ -124,10 +132,11 @@
       line-height: 1.3;
     }
     .tema-subtitle {
+      font-family: 'Playfair Display', serif;
       font-size: 13px;
       color: var(--teal);
-      font-weight: 700;
-      letter-spacing: 0.04em;
+      font-style: italic;
+      letter-spacing: 0.02em;
       margin-bottom: 12px;
     }
     .tema-separator {
@@ -137,40 +146,40 @@
       margin: 0 0 16px;
     }
     .tema-heading {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--dark);
-      margin: 16px 0 8px;
-      padding-bottom: 4px;
+      margin: 18px 0 8px;
+      padding-bottom: 5px;
       padding-left: 14px;
       position: relative;
-      border-bottom: 2px solid var(--teal-light);
+      border-bottom: 1.5px solid var(--teal-light);
     }
     .tema-heading::before {
       content: '';
       position: absolute;
       left: 0;
-      top: 5px;
-      width: 8px;
-      height: 8px;
+      top: 4px;
+      width: 7px;
+      height: 7px;
       background: var(--teal);
       border-radius: 50%;
     }
     .tema-heading:first-child { margin-top: 0; }
     .tema-text {
-      font-size: 14px;
-      line-height: 1.7;
+      font-size: 13.5px;
+      line-height: 1.75;
       color: var(--dark);
       margin-bottom: 8px;
     }
     .tema-bullets { list-style: none; margin: 0; padding: 0; }
     .tema-bullets li {
-      font-size: 14px;
-      line-height: 1.6;
+      font-size: 13.5px;
+      line-height: 1.65;
       color: var(--dark);
-      padding: 5px 0 5px 18px;
+      padding: 4px 0 4px 18px;
       position: relative;
       border-bottom: 1px solid var(--border);
     }
@@ -179,24 +188,24 @@
       content: '';
       position: absolute;
       left: 4px;
-      top: 13px;
+      top: 11px;
       width: 6px;
       height: 6px;
       background: var(--teal);
       border-radius: 50%;
     }
 
-    /* Quote */
+    /* Quote — fiel al PDF: fondo cálido, borde dorado, Playfair itálica */
     .tema-quote {
       margin: 14px 0 10px;
       padding: 14px 18px;
       background: #fdf5e8;
       border-left: 3px solid var(--gold);
-      border-radius: 0 8px 8px 0;
+      border-radius: 0;
     }
     .tema-quote p {
       font-family: 'Playfair Display', serif;
-      font-size: 14px;
+      font-size: 13.5px;
       line-height: 1.6;
       color: var(--dark);
       font-style: italic;
@@ -212,28 +221,44 @@
       margin-top: 8px;
     }
 
-    /* Banner intermedio */
+    /* Banner intermedio — decorativo entre temas */
     .mid-banner {
       margin: 0;
       overflow: hidden;
       height: 130px;
+      position: relative;
     }
     .mid-banner img {
       width: 100%; height: 100%;
       object-fit: cover;
       display: block;
     }
+    .mid-banner::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 36px;
+      background: linear-gradient(to top, rgba(0,0,0,0.22), transparent);
+    }
+
+    /* Separador de encabezado repetido entre temas */
+    .section-header-repeat {
+      width: 100%;
+      display: block;
+    }
 
     /* Social media box */
     .social-box {
-      margin: 24px 24px 0;
+      margin: 28px 24px 0;
       padding: 18px 16px;
       border: 1.5px solid var(--teal);
-      border-radius: 12px;
+      border-radius: 8px;
       text-align: center;
     }
     .social-box-title {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--teal);
       margin-bottom: 14px;
@@ -246,7 +271,7 @@
     }
     .social-icon-item { text-align: center; }
     .social-icon-circle {
-      width: 36px; height: 36px;
+      width: 34px; height: 34px;
       background: var(--teal);
       border-radius: 50%;
       display: flex;
@@ -254,38 +279,41 @@
       justify-content: center;
       margin: 0 auto 4px;
     }
-    .social-icon-circle svg { width: 18px; height: 18px; fill: white; }
+    .social-icon-circle svg { width: 16px; height: 16px; fill: white; }
     .social-icon-label {
       font-size: 10px;
       color: var(--teal);
     }
     .social-disclaimer {
       font-size: 10px;
-      color: #aaa;
+      color: var(--mid);
       margin-top: 8px;
       line-height: 1.5;
     }
 
-    /* Footer */
+    /* Footer — imagen banner a ancho completo */
     .page-footer {
-      margin: 24px 0 0;
+      margin: 28px 0 0;
       text-align: center;
-      padding-bottom: 16px;
     }
-    .footer-logo { width: 160px; opacity: 0.7; }
+    .footer-banner {
+      width: 100%;
+      display: block;
+    }
     .footer-text {
       font-size: 11px;
-      color: #aaa;
-      margin-top: 8px;
+      color: var(--mid);
+      margin-top: 0;
+      padding: 8px 16px;
       line-height: 1.5;
     }
 
     /* ── RESPONSIVE ── */
     @media (min-width: 600px) {
       .mid-banner { height: 160px; }
-      .page-footer { margin: 28px 0 0; }
       .tema-img-wrap { height: 220px; }
       .tema-body { padding: 24px 32px 32px; }
+      .header-info { padding: 16px 32px 20px; }
     }
   </style>
 </head>
@@ -311,20 +339,22 @@
 <!-- CONTENIDO -->
 <div id="content">
   <div class="page-header">
-    <img class="header-logo"
+    <img class="header-banner"
       src="https://raw.githubusercontent.com/enohcaid/losinno-material-educativo/refs/heads/main/assets/header.png"
       onerror="this.style.display='none'"
-      alt="Losinno">
-    <div class="header-paciente">Preparado para</div>
-    <div class="header-nombre" id="headerNombre"></div>
-    <div class="header-fecha" id="headerFecha"></div>
+      alt="Dra. Silvia Losinno">
+    <div class="header-info">
+      <div class="header-paciente">Preparado para</div>
+      <div class="header-nombre" id="headerNombre"></div>
+      <div class="header-fecha" id="headerFecha"></div>
+    </div>
   </div>
   <div id="temasContainer"></div>
   <div class="page-footer">
-    <img class="footer-logo"
+    <img class="footer-banner"
       src="https://raw.githubusercontent.com/enohcaid/losinno-material-educativo/refs/heads/main/assets/footer.png"
       onerror="this.style.display='none'"
-      alt="Losinno">
+      alt="Dra. Silvia Losinno">
     <div class="footer-text">Dra. Silvia Losinno · Material educativo personalizado</div>
   </div>
 </div>
@@ -2253,13 +2283,18 @@ function renderMaterial(data) {
       </div>`;
     container.appendChild(div);
 
-    // Insertar banner decorativo entre temas (no después del último)
+    // Insertar encabezado repetido + banner decorativo entre temas
     if (idx < data.orden.length - 1) {
       const nextId = data.orden[idx + 1];
       const nextTopic = allTopics.find(t => t.id === nextId);
-      // Solo si el siguiente no es ya un mid_banner
       if (nextTopic && !nextTopic.id.startsWith('mid_banner')) {
-        // Usar un banner rotativo de MID_BANNERS si hay disponibles
+        // Footer antes del corte
+        const footerRepeat = document.createElement('div');
+        footerRepeat.style.cssText = 'margin-top: 8px;';
+        footerRepeat.innerHTML = `<img class="footer-banner" src="https://raw.githubusercontent.com/enohcaid/losinno-material-educativo/refs/heads/main/assets/footer.png" onerror="this.style.display='none'" alt="" loading="lazy">`;
+        container.appendChild(footerRepeat);
+
+        // Banner decorativo
         if (MID_BANNERS.length > 0) {
           const banner = MID_BANNERS[idx % MID_BANNERS.length];
           const bannerUrl = (data.fotos && data.fotos[banner.id]) || banner.imageAlts[idx % banner.imageAlts.length];
@@ -2268,6 +2303,11 @@ function renderMaterial(data) {
           bannerDiv.innerHTML = `<img src="${bannerUrl}" alt="imagen decorativa" loading="lazy">`;
           container.appendChild(bannerDiv);
         }
+
+        // Header repetido después del corte
+        const headerRepeat = document.createElement('div');
+        headerRepeat.innerHTML = `<img class="section-header-repeat" src="https://raw.githubusercontent.com/enohcaid/losinno-material-educativo/refs/heads/main/assets/header.png" onerror="this.style.display='none'" alt="" loading="lazy">`;
+        container.appendChild(headerRepeat);
       }
     }
   });
