@@ -760,16 +760,19 @@
 </div>
 
 <script>
-// ── PACIENTES: carga desde JSON del repo ───────────────────────────────────────
-const PACIENTES_URL = 'https://raw.githubusercontent.com/enohcaid/losinno-material-educativo/refs/heads/main/pacientes.json';
+// ── PACIENTES: carga desde Worker proxy ───────────────────────────────────────
 let _pacientes = [];
 let _patientActiveIdx = -1;
 window._patientCelular = '';
 
 async function loadPacientes() {
   try {
-    const r = await fetch(PACIENTES_URL);
-    _pacientes = await r.json();
+    const r = await fetch(`${WORKER_URL}/pacientes`);
+    if (!r.ok) throw new Error(`Worker: ${r.status}`);
+    const data = await r.json();
+    // El Worker devuelve la respuesta de GitHub Contents API: { content, sha, ... }
+    const raw = atob(data.content.replace(/\n/g, ''));
+    _pacientes = JSON.parse(raw);
   } catch(e) {
     console.warn('No se pudo cargar la lista de pacientes:', e);
   }
@@ -890,7 +893,7 @@ function normalizeArgPhone(raw) {
 }
 
 // ── HISTORIAL DE MATERIALES ────────────────────────────────────────────────────
-const GH_PAGES_BRANCH = 'gh-pages';
+const WORKER_URL = 'https://losinno-proxy.juan-c-m-1985.workers.dev';
 const PAGES_BASE = 'https://enohcaid.github.io/losinno-material-educativo/m/';
 window._materialActual = null;
 
@@ -905,12 +908,10 @@ function generateMaterialId(paciente) {
 }
 
 async function getNextMaterialId(base) {
-  // Busca si ya existen archivos con ese base en gh-pages
-  const apiUrl = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m?ref=${GH_PAGES_BRANCH}`;
-  const headers = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
+  // Busca si ya existen archivos con ese base en gh-pages via Worker
   let n = 1;
   try {
-    const res = await fetch(apiUrl, { headers });
+    const res = await fetch(`${WORKER_URL}/listar-materiales`);
     if (res.ok) {
       const files = await res.json();
       const existing = files.filter(f => f.name.startsWith(base + '_') || f.name === base + '.json');
@@ -933,20 +934,17 @@ async function compartirMaterial() {
     const { base } = generateMaterialId(data.paciente || 'paciente');
     const id = await getNextMaterialId(base);
 
-    // 2. Subir JSON del material a gh-pages/m/
-    const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m/${id}.json`;
-    const ghHeaders = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
+    // 2. Subir JSON del material a gh-pages/m/ via Worker
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
-    const res = await fetch(apiBase, {
+    const res = await fetch(`${WORKER_URL}/material/${id}`, {
       method: 'PUT',
-      headers: { ...ghHeaders, 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         message: `Material ${id}`,
-        content,
-        branch: GH_PAGES_BRANCH
+        content
       })
     });
-    if (!res.ok) throw new Error(`GitHub: ${res.status}`);
+    if (!res.ok) throw new Error(`Worker: ${res.status}`);
 
     // 3. Guardar en historial del paciente en pacientes.json
     const materialEntry = {
@@ -988,10 +986,8 @@ async function compartirMaterial() {
 }
 
 async function guardarEnHistorial(paciente, materialEntry) {
-  // Obtener pacientes.json actual
-  const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/pacientes.json`;
-  const headers = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
-  const existing = await fetch(`${apiBase}?ref=main`, { headers });
+  // Obtener pacientes.json actual via Worker
+  const existing = await fetch(`${WORKER_URL}/pacientes`);
   const existingData = await existing.json();
   const sha = existingData.sha;
   const patients = JSON.parse(atob(existingData.content.replace(/\n/g, '')));
@@ -1005,37 +1001,33 @@ async function guardarEnHistorial(paciente, materialEntry) {
     _pacientes = patients;
   }
 
-  // Subir pacientes.json actualizado
+  // Subir pacientes.json actualizado via Worker
   const content = btoa(unescape(encodeURIComponent(JSON.stringify(patients, null, 2))));
-  await fetch(apiBase, {
+  await fetch(`${WORKER_URL}/pacientes`, {
     method: 'PUT',
-    headers: { ...headers, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message: `Historial: ${materialEntry.id}`, content, branch: 'main', sha })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: `Historial: ${materialEntry.id}`, content, sha })
   });
 }
 
 async function borrarMaterial(paciente, materialId) {
   if (!confirm('¿Eliminás este material? La paciente ya no podrá acceder al link.')) return;
 
-  const headers = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
-
-  // 1. Borrar el JSON del material en gh-pages
+  // 1. Borrar el JSON del material en gh-pages via Worker
   try {
-    const fileApi = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m/${materialId}.json?ref=${GH_PAGES_BRANCH}`;
-    const fileRes = await fetch(fileApi, { headers });
+    const fileRes = await fetch(`${WORKER_URL}/material/${materialId}`);
     if (fileRes.ok) {
       const fileData = await fileRes.json();
-      await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/m/${materialId}.json`, {
+      await fetch(`${WORKER_URL}/material/${materialId}`, {
         method: 'DELETE',
-        headers: { ...headers, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: `Eliminar material ${materialId}`, sha: fileData.sha, branch: GH_PAGES_BRANCH })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: `Eliminar material ${materialId}`, sha: fileData.sha })
       });
     }
   } catch(_) {}
 
-  // 2. Quitar del historial en pacientes.json
-  const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/pacientes.json`;
-  const existing = await fetch(`${apiBase}?ref=main`, { headers });
+  // 2. Quitar del historial en pacientes.json via Worker
+  const existing = await fetch(`${WORKER_URL}/pacientes`);
   const existingData = await existing.json();
   const sha = existingData.sha;
   const patients = JSON.parse(atob(existingData.content.replace(/\n/g, '')));
@@ -1045,10 +1037,10 @@ async function borrarMaterial(paciente, materialId) {
     _pacientes = patients;
   }
   const content = btoa(unescape(encodeURIComponent(JSON.stringify(patients, null, 2))));
-  await fetch(apiBase, {
+  await fetch(`${WORKER_URL}/pacientes`, {
     method: 'PUT',
-    headers: { ...headers, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message: `Eliminar historial: ${materialId}`, content, branch: 'main', sha })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: `Eliminar historial: ${materialId}`, content, sha })
   });
 
   renderHistorial(paciente);
@@ -1105,11 +1097,6 @@ function renderHistorial(paciente) {
 }
 
 // ── ACTUALIZAR PACIENTES DESDE CSV → REPO ─────────────────────────────────────
-const GH_TOKEN  = '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';
-const GH_OWNER  = 'enohcaid';
-const GH_REPO   = 'losinno-material-educativo';
-const GH_PATH   = 'pacientes.json';
-const GH_BRANCH = 'main';
 
 async function uploadCSV(input) {
   const file = input.files[0];
@@ -1143,14 +1130,11 @@ async function uploadCSV(input) {
       };
     }).filter(p => p.apellido || p.nombres);
 
-    // 2. Obtener pacientes.json actual (para hacer merge preservando historial)
-    const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`;
-    const headers2 = { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github+json' };
-
+    // 2. Obtener pacientes.json actual via Worker (para hacer merge preservando historial)
     let sha = '';
     let existingPatients = [];
     try {
-      const existing = await fetch(`${apiBase}?ref=${GH_BRANCH}`, { headers: headers2 });
+      const existing = await fetch(`${WORKER_URL}/pacientes`);
       if (existing.ok) {
         const data = await existing.json();
         sha = data.sha;
@@ -1182,22 +1166,21 @@ async function uploadCSV(input) {
       }
     });
 
-    // 4. Subir JSON al repo
+    // 4. Subir JSON al repo via Worker
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(patients, null, 2))));
     const body = {
       message: `Actualizar pacientes.json (${patients.length} pacientes)`,
       content,
-      branch: GH_BRANCH,
       ...(sha ? { sha } : {})
     };
 
-    const res = await fetch(apiBase, {
+    const res = await fetch(`${WORKER_URL}/pacientes`, {
       method: 'PUT',
-      headers: { ...headers2, 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body)
     });
 
-    if (!res.ok) throw new Error(`GitHub: ${res.status} ${res.statusText}`);
+    if (!res.ok) throw new Error(`Worker: ${res.status} ${res.statusText}`);
 
     // 5. Actualizar lista local sin recargar
     _pacientes = patients;
@@ -2610,11 +2593,11 @@ const TOPICS = [
   },
   {
     id: 'jugos_desintoxicantes',
-    imageUrl: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=840&h=240&fit=crop&crop=center',
+    imageUrl: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center',
     imageAlts: [
-      'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center',
     ],
     icon: '🥤', label: 'Jugos Desintoxicantes',
     title: 'Jugos Desintoxicantes',
@@ -2645,11 +2628,11 @@ const TOPICS = [
   },
   {
     id: 'recetas_horneadas',
-    imageUrl: 'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=840&h=240&fit=crop&crop=center',
+    imageUrl: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center',
     imageAlts: [
-      'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1574484284002-952d92456975?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1542838132-92c53300491e?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=840&h=240&fit=crop&crop=center',
     ],
     icon: '🥕', label: 'Budines y Recetas al Horno',
     title: 'Budines y Recetas al Horno',
@@ -2695,11 +2678,11 @@ const TOPICS = [
   },
   {
     id: 'granola_mermerlada',
-    imageUrl: 'https://images.unsplash.com/photo-1517093157656-b9eccef91cb1?w=840&h=240&fit=crop&crop=center',
+    imageUrl: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center',
     imageAlts: [
-      'https://images.unsplash.com/photo-1517093157656-b9eccef91cb1?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=840&h=240&fit=crop&crop=center',
     ],
     icon: '🫐', label: 'Granola y Mermelada Viva',
     title: 'Granola y Mermelada Viva',
@@ -2742,11 +2725,11 @@ const TOPICS = [
   },
   {
     id: 'aceitunas_aliño',
-    imageUrl: 'https://images.unsplash.com/photo-1601000938259-4e2e2ddbf7b3?w=840&h=240&fit=crop&crop=center',
+    imageUrl: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center',
     imageAlts: [
-      'https://images.unsplash.com/photo-1601000938259-4e2e2ddbf7b3?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center',
     ],
     icon: '🫒', label: 'Aceitunas Aliñadas',
     title: 'Aceitunas Aliñadas',
@@ -2775,11 +2758,11 @@ const TOPICS = [
   },
   {
     id: 'mate_infusiones',
-    imageUrl: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=840&h=240&fit=crop&crop=center',
+    imageUrl: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center',
     imageAlts: [
-      'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=840&h=240&fit=crop&crop=center',
     ],
     icon: '🧉', label: 'Mate e Infusiones',
     title: 'Mate e Infusiones Saludables',
@@ -2818,8 +2801,8 @@ const TOPICS = [
     imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center',
     imageAlts: [
       'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=840&h=240&fit=crop&crop=center',
-      'https://images.unsplash.com/photo-1501949997128-2fdb9f6428f1?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1482349212652-744925b7b2ad?w=840&h=240&fit=crop&crop=center',
     ],
     icon: '🌞', label: 'Hábitos de Vida Saludable',
     title: 'Hábitos de Vida Saludable',
