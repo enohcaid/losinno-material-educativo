@@ -649,6 +649,34 @@
   }
   .photo-thumb:hover { opacity:1; border-color:var(--teal-light); }
   .photo-thumb.active { opacity:1; border-color:var(--teal); box-shadow:0 0 0 1px var(--teal); }
+  .photo-no-img {
+    width:74px; height:46px; border-radius:6px; cursor:pointer; border:2px dashed #c8b8a2;
+    opacity:.6; transition:all .2s; display:flex; align-items:center; justify-content:center;
+    font-size:9px; color:#888; text-align:center; line-height:1.2; background:#faf7f3; flex-shrink:0;
+  }
+  .photo-no-img:hover { opacity:1; border-color:var(--teal-light); color:var(--teal); }
+  .photo-no-img.active { opacity:1; border-color:#c0392b; color:#c0392b; background:#fff5f5; box-shadow:0 0 0 1px #c0392b; }
+  .photo-row-newpage {
+    display:flex; align-items:center; gap:5px; margin-left:auto; flex-shrink:0;
+    font-size:10px; color:#999; white-space:nowrap; cursor:pointer; user-select:none;
+  }
+  .photo-row-newpage input[type=checkbox] { accent-color:var(--teal); cursor:pointer; }
+  .photo-row-spacing {
+    display:flex; align-items:center; gap:6px; margin-left:auto; flex-shrink:0;
+    font-size:10px; color:#999; white-space:nowrap;
+  }
+  .photo-row-spacing input[type=range] {
+    width:72px; accent-color:var(--teal); cursor:pointer;
+  }
+  .photo-row-spacing .spacing-val {
+    min-width:26px; text-align:right; color:var(--teal); font-weight:600;
+  }
+  .photo-row-spacing .spacing-newpage {
+    cursor:pointer; font-size:11px; opacity:.5; transition:opacity .15s; margin-left:2px;
+    user-select:none; title:"Nueva página";
+  }
+  .photo-row-spacing .spacing-newpage:hover { opacity:1; }
+  .photo-row-spacing .spacing-newpage.active { opacity:1; color:var(--teal); }
 </style>
 </head>
 <body>
@@ -2922,12 +2950,43 @@ const MID_BANNERS = [
 ];
 MID_BANNERS.forEach(b => { selectedImages[b.id] = b.imageAlts[0]; });
 
+// Temas con ajuste de inserción (topicIndex > 0)
+const topicSpacing = {};    // mm de espacio extra antes del banner separador
+const topicForceNewPage = {}; // forzar página nueva independientemente del espacio
+
+function removePhoto(topicId) {
+  selectedImages[topicId] = null;
+  document.querySelectorAll(`.photo-thumb[data-topic="${topicId}"]`).forEach(el => {
+    el.classList.remove('active');
+  });
+  const noBtn = document.querySelector(`.photo-no-img[data-topic="${topicId}"]`);
+  if (noBtn) noBtn.classList.add('active');
+  generatePDF();
+}
+
+function setTopicSpacing(topicId, mm) {
+  topicSpacing[topicId] = parseInt(mm) || 0;
+  generatePDF();
+}
+
+function setTopicForceNewPage(topicId, forced, btn) {
+  topicForceNewPage[topicId] = forced;
+  if (btn) {
+    btn.classList.toggle('active', forced);
+    btn.title = forced ? 'Quitar página nueva forzada' : 'Forzar página nueva';
+  }
+  generatePDF();
+}
+
 function changePhoto(topicId, url) {
   selectedImages[topicId] = url;
   // Actualizar visual del selector
   document.querySelectorAll(`.photo-thumb[data-topic="${topicId}"]`).forEach(el => {
     el.classList.toggle('active', el.dataset.url === url);
   });
+  // Limpiar estado del botón "sin imagen"
+  const noBtn = document.querySelector(`.photo-no-img[data-topic="${topicId}"]`);
+  if (noBtn) noBtn.classList.remove('active');
   // Si hay PDF generado, regenerar
   generatePDF();
 }
@@ -3357,25 +3416,67 @@ async function generatePDF() {
       _origNewDocPage();
     }
 
-    function drawPage(page, topicIndex, isLast) {
+    // drawPage devuelve la posición y final, para que el siguiente tema pueda continuar
+    function drawPage(page, topicIndex, isLast, yStart) {
       const ML = 18, MR = 18, CW = W - ML - MR;
       const BOTTOM = H - FOOTER_H - 14;
       const BANNER_H = 42;
+      const MIN_CONTENT_AFTER_BANNER = 30; // mm mínimos necesarios tras el banner
 
-      newDocPageTracked();
+      let y;
 
-      // Banner imagen del tema (primera página)
-      const imgUrl = selectedImages[page.id] || page.imageAlts[0];
-      const imgData = imgUrl ? imageCache[imgUrl] : null;
-      if (imgData) {
-        doc.addImage(imgData, 'JPEG', 0, HEADER_H, W, BANNER_H);
-        doc.setFillColor(0, 0, 0);
-        doc.setGState(new doc.GState({ opacity: 0.35 }));
-        doc.rect(0, HEADER_H + BANNER_H - 14, W, 14, 'F');
-        doc.setGState(new doc.GState({ opacity: 1.0 }));
+      if (topicIndex === 0 || yStart === undefined) {
+        // Primer tema: siempre página nueva
+        newDocPageTracked();
+        const imgUrl = selectedImages[page.id] || page.imageAlts[0];
+        const imgData = imgUrl ? imageCache[imgUrl] : null;
+        if (imgData) {
+          doc.addImage(imgData, 'JPEG', 0, HEADER_H, W, BANNER_H);
+          doc.setFillColor(0, 0, 0);
+          doc.setGState(new doc.GState({ opacity: 0.35 }));
+          doc.rect(0, HEADER_H + BANNER_H - 14, W, 14, 'F');
+          doc.setGState(new doc.GState({ opacity: 1.0 }));
+        }
+        y = HEADER_H + (imgData ? BANNER_H : 0) + 5;
+      } else {
+        // Temas siguientes: insertar banner separador en la página actual si hay espacio,
+        // o abrir página nueva si no hay suficiente espacio para el banner + contenido mínimo
+        const imgUrl = selectedImages[page.id] || page.imageAlts[0];
+        const imgData = imgUrl ? imageCache[imgUrl] : null;
+        const extraSpace = topicSpacing[page.id] || 0;
+        const forcedNew = !!topicForceNewPage[page.id];
+
+        const spaceNeeded = extraSpace + (imgData ? BANNER_H : 0) + MIN_CONTENT_AFTER_BANNER;
+        if (forcedNew || yStart + spaceNeeded > BOTTOM) {
+          // No entra: página nueva con banner de encabezado
+          newDocPageTracked();
+          if (imgData) {
+            doc.addImage(imgData, 'JPEG', 0, HEADER_H, W, BANNER_H);
+            doc.setFillColor(0, 0, 0);
+            doc.setGState(new doc.GState({ opacity: 0.35 }));
+            doc.rect(0, HEADER_H + BANNER_H - 14, W, 14, 'F');
+            doc.setGState(new doc.GState({ opacity: 1.0 }));
+          }
+          y = HEADER_H + (imgData ? BANNER_H : 0) + 5;
+        } else {
+          // Entra en la misma página: insertar banner como separador inline
+          y = yStart + 6 + extraSpace; // espaciado configurable antes del banner
+          if (imgData) {
+            doc.addImage(imgData, 'JPEG', 0, y, W, BANNER_H);
+            doc.setFillColor(0, 0, 0);
+            doc.setGState(new doc.GState({ opacity: 0.35 }));
+            doc.rect(0, y + BANNER_H - 14, W, 14, 'F');
+            doc.setGState(new doc.GState({ opacity: 1.0 }));
+            y += BANNER_H + 5;
+          } else {
+            // Sin imagen: línea separadora decorativa
+            doc.setDrawColor(...GOLD);
+            doc.setLineWidth(0.8);
+            doc.line(ML, y + 3, W - MR, y + 3);
+            y += 12;
+          }
+        }
       }
-
-      let y = HEADER_H + (imgData ? BANNER_H : 0) + 5;
 
       if (patientName && topicIndex === 0) {
         doc.setFont(FONT_BODY, 'normal');
@@ -3562,9 +3663,15 @@ async function generatePDF() {
         doc.setFont(FONT_BODY, 'normal'); doc.setFontSize(7); doc.setTextColor(...MID);
         doc.text('Este material es de uso educativo. No reemplaza la consulta medica personalizada.', W/2, boxY + BOX_H - 3, { align: 'center' });
       }
+
+      return y; // devuelve posición final para encadenar temas
     }
 
-    pages.forEach((page, i) => drawPage(page, i, i === pages.length - 1));
+    // Encadenar temas: pasar la posición y final de uno al siguiente
+    let currentY = undefined;
+    pages.forEach((page, i) => {
+      currentY = drawPage(page, i, i === pages.length - 1, currentY);
+    });
 
     // Output
     const filename = patientName
@@ -3619,7 +3726,7 @@ async function generatePDF() {
 }
 
 // ── SELECTOR DE FOTOS ─────────────────────────────────────────────────────────
-function buildPhotoRow(id, label, imageAlts) {
+function buildPhotoRow(id, label, imageAlts, showNewPageToggle) {
   const row = document.createElement('div');
   row.className = 'photo-row';
   const lbl = document.createElement('div');
@@ -3643,8 +3750,54 @@ function buildPhotoRow(id, label, imageAlts) {
     };
     thumbs.appendChild(img);
   });
+
+  // Botón "sin imagen"
+  const noImg = document.createElement('div');
+  noImg.className = 'photo-no-img' + (selectedImages[id] === null ? ' active' : '');
+  noImg.dataset.topic = id;
+  noImg.title = 'Sin imagen';
+  noImg.innerHTML = '✕<br>sin<br>imagen';
+  noImg.onclick = () => removePhoto(id);
+  thumbs.appendChild(noImg);
+
   row.appendChild(lbl);
   row.appendChild(thumbs);
+
+  // Control de inserción (solo para temas 2+ en adelante, no banners)
+  if (showNewPageToggle) {
+    const ctrl = document.createElement('div');
+    ctrl.className = 'photo-row-spacing';
+
+    const lbl2 = document.createElement('span');
+    lbl2.textContent = 'espacio:';
+
+    const slider = document.createElement('input');
+    slider.type = 'range';
+    slider.min = 0; slider.max = 40; slider.step = 5;
+    slider.value = topicSpacing[id] || 0;
+
+    const val = document.createElement('span');
+    val.className = 'spacing-val';
+    val.textContent = (topicSpacing[id] || 0) + 'mm';
+
+    slider.oninput = () => {
+      val.textContent = slider.value + 'mm';
+    };
+    slider.onchange = () => setTopicSpacing(id, slider.value);
+
+    const npBtn = document.createElement('span');
+    npBtn.className = 'spacing-newpage' + (topicForceNewPage[id] ? ' active' : '');
+    npBtn.title = topicForceNewPage[id] ? 'Quitar página nueva forzada' : 'Forzar página nueva';
+    npBtn.textContent = '⊞';
+    npBtn.onclick = () => setTopicForceNewPage(id, !topicForceNewPage[id], npBtn);
+
+    ctrl.appendChild(lbl2);
+    ctrl.appendChild(slider);
+    ctrl.appendChild(val);
+    ctrl.appendChild(npBtn);
+    row.appendChild(ctrl);
+  }
+
   return row;
 }
 
@@ -3654,7 +3807,7 @@ function renderPhotoSelector(pages, activeBannerIds) {
   grid.innerHTML = '';
 
   // Filas de los temas seleccionados
-  pages.forEach(page => grid.appendChild(buildPhotoRow(page.id, page.label, page.imageAlts)));
+  pages.forEach((page, i) => grid.appendChild(buildPhotoRow(page.id, page.label, page.imageAlts, i > 0)));
 
   // Banners intermedios activos — uno por cada banner insertado
   if (activeBannerIds && activeBannerIds.length > 0) {
