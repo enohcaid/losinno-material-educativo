@@ -5,6 +5,10 @@ on:
       - main
     paths:
       - 'MaterialEducativo_Losinno.html'
+
+permissions:
+  contents: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
