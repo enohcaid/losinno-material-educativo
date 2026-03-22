@@ -752,6 +752,29 @@
   .ed-inserted-img img { width:100%; height:100%; object-fit:cover; }
   .ed-inserted-img-overlay { position:absolute; inset:0; background:rgba(0,0,0,.2); display:flex; align-items:center; justify-content:center; gap:8px; }
   .ed-inserted-img-btn { padding:2px 10px; border-radius:4px; font-size:10px; color:#fff; cursor:pointer; border:none; font-family:'Lato',sans-serif; font-weight:700; }
+  .ed-img-picker { margin:6px 0; padding:10px; border:1px solid var(--border); border-radius:8px; background:#fff; }
+  .ed-img-picker-label { font-size:10px; font-weight:900; letter-spacing:.06em; color:var(--mid); text-transform:uppercase; margin-bottom:6px; }
+  .ed-img-picker-row { display:flex; gap:5px; }
+  .ed-img-picker-thumb { flex:1; height:46px; border-radius:6px; overflow:hidden; cursor:pointer; border:1px solid var(--border); opacity:.7; transition:all .15s; object-fit:cover; }
+  .ed-img-picker-thumb:hover { opacity:1; }
+  .ed-img-picker-thumb.active { border:2.5px solid var(--teal); opacity:1; }
+
+  /* Image cropper */
+  .ed-crop-overlay { display:none; position:fixed; inset:0; z-index:1100; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; padding:20px; }
+  .ed-crop-overlay.open { display:flex; }
+  .ed-crop-box { background:#fff; border-radius:12px; width:100%; max-width:480px; overflow:hidden; }
+  .ed-crop-header { padding:12px 16px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .ed-crop-header h4 { font-size:14px; font-weight:700; color:var(--dark); margin:0; font-family:'Lato',sans-serif; }
+  .ed-crop-viewport { width:100%; height:140px; overflow:hidden; position:relative; cursor:grab; background:#eee; touch-action:none; }
+  .ed-crop-viewport:active { cursor:grabbing; }
+  .ed-crop-viewport img { position:absolute; left:0; user-select:none; -webkit-user-drag:none; pointer-events:none; }
+  .ed-crop-controls { padding:12px 16px; display:flex; align-items:center; gap:12px; }
+  .ed-crop-controls label { font-size:11px; font-weight:700; color:var(--mid); font-family:'Lato',sans-serif; white-space:nowrap; }
+  .ed-crop-controls input[type=range] { flex:1; }
+  .ed-crop-actions { padding:10px 16px; border-top:1px solid var(--border); display:flex; justify-content:flex-end; gap:8px; }
+  .ed-crop-actions button { padding:7px 18px; border-radius:8px; font-size:12px; font-weight:700; font-family:'Lato',sans-serif; cursor:pointer; border:none; }
+  .ed-crop-btn-cancel { background:transparent; border:1px solid var(--border); color:var(--mid); }
+  .ed-crop-btn-ok { background:var(--teal); color:#fff; }
 </style>
 </head>
 <body>
@@ -875,6 +898,27 @@
     <div class="editor-body">
       <div id="editorPaletteBar"></div>
       <div id="editorThemes"></div>
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE CROPPER -->
+<div class="ed-crop-overlay" id="cropOverlay">
+  <div class="ed-crop-box">
+    <div class="ed-crop-header">
+      <h4>Encuadrar imagen</h4>
+      <span style="font-size:11px; color:var(--mid)">Arrastrá para mover</span>
+    </div>
+    <div class="ed-crop-viewport" id="cropViewport">
+      <img id="cropImg">
+    </div>
+    <div class="ed-crop-controls">
+      <label>Zoom</label>
+      <input type="range" id="cropZoom" min="100" max="400" value="100" step="5">
+    </div>
+    <div class="ed-crop-actions">
+      <button class="ed-crop-btn-cancel" onclick="closeCropper()">Cancelar</button>
+      <button class="ed-crop-btn-ok" onclick="confirmCrop()">Confirmar</button>
     </div>
   </div>
 </div>
@@ -4297,13 +4341,46 @@ function renderEditorSection(sec, ti, si) {
     </div>`;
 
   } else if (sec.type === 'image') {
-    html += `<div class="ed-inserted-img">
-      <img src="${sec.data}">
-      <div class="ed-inserted-img-overlay">
-        <button class="ed-inserted-img-btn" style="background:rgba(255,255,255,.3)" onclick="edChangeInsertedImage(${ti},${si})">Cambiar</button>
-        <button class="ed-inserted-img-btn" style="background:rgba(180,90,90,.6)" onclick="edDeleteSection(${ti},${si})">Quitar</button>
-      </div>
-    </div>`;
+    // Get 3 suggested images from MID_BANNERS
+    const suggestions = [];
+    MID_BANNERS.forEach(b => (b.imageAlts || []).forEach(u => { if (suggestions.length < 3) suggestions.push(u); }));
+
+    if (sec.data) {
+      // Image selected — show preview with change options
+      html += `<div class="ed-img-picker">
+        <div class="ed-img-picker-label">Imagen insertada</div>
+        <div class="ed-inserted-img" style="margin-bottom:8px">
+          <img src="${sec.data}">
+          <div class="ed-inserted-img-overlay">
+            <button class="ed-inserted-img-btn" style="background:rgba(255,255,255,.3)" onclick="edUploadInsertedImage(${ti},${si})">Subir otra</button>
+            <button class="ed-inserted-img-btn" style="background:rgba(180,90,90,.6)" onclick="edDeleteSection(${ti},${si})">Quitar</button>
+          </div>
+        </div>
+        <div class="ed-img-picker-row">
+          ${suggestions.map((url, ii) => `<img class="ed-img-picker-thumb ${sec.data === (imageCache[url] || url) ? 'active' : ''}" src="${imageCache[url] || url}" onclick="edSelectInsertedImage(${ti},${si},'${url}')" referrerpolicy="no-referrer">`).join('')}
+          <div class="ed-img-upload" onclick="edUploadInsertedImage(${ti},${si})" style="height:46px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <span style="color:var(--teal)">Subir</span>
+          </div>
+        </div>
+      </div>`;
+    } else {
+      // No image yet — show picker only
+      html += `<div class="ed-img-picker">
+        <div class="ed-img-picker-label">Elegir imagen</div>
+        <div class="ed-img-picker-row">
+          ${suggestions.map((url, ii) => `<img class="ed-img-picker-thumb" src="${imageCache[url] || url}" onclick="edSelectInsertedImage(${ti},${si},'${url}')" referrerpolicy="no-referrer">`).join('')}
+          <div class="ed-img-upload" onclick="edUploadInsertedImage(${ti},${si})" style="height:46px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <span style="color:var(--teal)">Subir</span>
+          </div>
+          <div class="ed-img-remove" onclick="edDeleteSection(${ti},${si})" style="height:46px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b45a5a" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+            <span style="color:#b45a5a">Quitar</span>
+          </div>
+        </div>
+      </div>`;
+    }
   }
   html += `</div>`;
   return html;
@@ -4342,11 +4419,14 @@ function edUploadImage(ti) {
     const file = input.files[0]; if (!file) return;
     const reader = new FileReader();
     reader.onload = function() {
-      const page = window._editorState.pages[ti];
-      page._customImage = reader.result;
-      selectedImages[page.id] = reader.result;
-      imageCache[reader.result] = reader.result;
-      renderEditorThemes();
+      openCropper(reader.result, function(cropped) {
+        const page = window._editorState.pages[ti];
+        page._customImage = cropped;
+        page._noImage = false;
+        selectedImages[page.id] = cropped;
+        imageCache[cropped] = cropped;
+        renderEditorThemes();
+      });
     };
     reader.readAsDataURL(file);
   };
@@ -4361,33 +4441,136 @@ function edRemoveImage(ti) {
 }
 
 function edInsertImageAt(ti, si) {
+  // Inserta un bloque de imagen vacío — el usuario elige después
+  window._editorState.pages[ti].sections.splice(si, 0, { type: 'image', data: null });
+  renderEditorThemes();
+}
+
+function edSelectInsertedImage(ti, si, url) {
+  // Cargar la imagen como base64 para que funcione en el PDF
+  if (imageCache[url]) {
+    window._editorState.pages[ti].sections[si].data = imageCache[url];
+    renderEditorThemes();
+  } else {
+    loadImageAsBase64(url).then(() => {
+      window._editorState.pages[ti].sections[si].data = imageCache[url] || url;
+      renderEditorThemes();
+    });
+  }
+}
+
+function edUploadInsertedImage(ti, si) {
   const input = document.createElement('input');
   input.type = 'file'; input.accept = 'image/*';
   input.onchange = function() {
     const file = input.files[0]; if (!file) return;
     const reader = new FileReader();
     reader.onload = function() {
-      window._editorState.pages[ti].sections.splice(si, 0, { type: 'image', data: reader.result });
-      renderEditorThemes();
+      openCropper(reader.result, function(cropped) {
+        window._editorState.pages[ti].sections[si].data = cropped;
+        renderEditorThemes();
+      });
     };
     reader.readAsDataURL(file);
   };
   input.click();
 }
 
-function edChangeInsertedImage(ti, si) {
-  const input = document.createElement('input');
-  input.type = 'file'; input.accept = 'image/*';
-  input.onchange = function() {
-    const file = input.files[0]; if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function() {
-      window._editorState.pages[ti].sections[si].data = reader.result;
-      renderEditorThemes();
-    };
-    reader.readAsDataURL(file);
+// ── IMAGE CROPPER ──────────────────────────────────────────────────────────────
+window._cropState = null;
+
+function openCropper(imgSrc, callback) {
+  const overlay = document.getElementById('cropOverlay');
+  const viewport = document.getElementById('cropViewport');
+  const img = document.getElementById('cropImg');
+  const zoom = document.getElementById('cropZoom');
+
+  zoom.value = 100;
+  img.src = imgSrc;
+
+  window._cropState = { callback, posX: 0, posY: 0, scale: 1, dragging: false, startX: 0, startY: 0, startPosX: 0, startPosY: 0 };
+
+  img.onload = function() {
+    const vpW = viewport.offsetWidth;
+    const vpH = viewport.offsetHeight;
+    const ratio = vpW / img.naturalWidth;
+    const scaledH = img.naturalHeight * ratio;
+    window._cropState.baseScale = ratio;
+    window._cropState.scale = 1;
+    window._cropState.posX = 0;
+    window._cropState.posY = scaledH > vpH ? -(scaledH - vpH) / 2 : 0;
+    updateCropPreview();
   };
-  input.click();
+
+  zoom.oninput = function() {
+    window._cropState.scale = parseInt(zoom.value) / 100;
+    updateCropPreview();
+  };
+
+  viewport.onpointerdown = function(e) {
+    e.preventDefault();
+    viewport.setPointerCapture(e.pointerId);
+    window._cropState.dragging = true;
+    window._cropState.startX = e.clientX;
+    window._cropState.startY = e.clientY;
+    window._cropState.startPosX = window._cropState.posX;
+    window._cropState.startPosY = window._cropState.posY;
+  };
+  viewport.onpointermove = function(e) {
+    if (!window._cropState || !window._cropState.dragging) return;
+    window._cropState.posX = window._cropState.startPosX + (e.clientX - window._cropState.startX);
+    window._cropState.posY = window._cropState.startPosY + (e.clientY - window._cropState.startY);
+    updateCropPreview();
+  };
+  viewport.onpointerup = function(e) {
+    if (window._cropState) window._cropState.dragging = false;
+  };
+
+  overlay.classList.add('open');
+}
+
+function updateCropPreview() {
+  const st = window._cropState; if (!st) return;
+  const img = document.getElementById('cropImg');
+  const viewport = document.getElementById('cropViewport');
+  const vpW = viewport.offsetWidth;
+  const w = img.naturalWidth * st.baseScale * st.scale;
+  const h = img.naturalHeight * st.baseScale * st.scale;
+  img.style.width = w + 'px';
+  img.style.height = h + 'px';
+  img.style.left = st.posX + 'px';
+  img.style.top = st.posY + 'px';
+}
+
+function closeCropper() {
+  document.getElementById('cropOverlay').classList.remove('open');
+  window._cropState = null;
+}
+
+function confirmCrop() {
+  const st = window._cropState; if (!st) return;
+  const img = document.getElementById('cropImg');
+  const viewport = document.getElementById('cropViewport');
+  const vpW = viewport.offsetWidth;
+  const vpH = viewport.offsetHeight;
+  const w = img.naturalWidth * st.baseScale * st.scale;
+  const h = img.naturalHeight * st.baseScale * st.scale;
+
+  const canvas = document.createElement('canvas');
+  canvas.width = vpW * 2;
+  canvas.height = vpH * 2;
+  const ctx = canvas.getContext('2d');
+
+  const srcX = (-st.posX / w) * img.naturalWidth;
+  const srcY = (-st.posY / h) * img.naturalHeight;
+  const srcW = (vpW / w) * img.naturalWidth;
+  const srcH = (vpH / h) * img.naturalHeight;
+
+  ctx.drawImage(img, srcX, srcY, srcW, srcH, 0, 0, canvas.width, canvas.height);
+
+  const cropped = canvas.toDataURL('image/jpeg', 0.85);
+  closeCropper();
+  if (st.callback) st.callback(cropped);
 }
 
 function editorGeneratePDF() {
