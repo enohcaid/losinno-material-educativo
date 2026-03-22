@@ -421,6 +421,10 @@
     line-height: 1.25;
   }
   .topic-card-hidden { display: none !important; }
+  .topic-edit-btn { position:absolute; bottom:4px; right:4px; width:18px; height:18px; border-radius:50%; background:var(--white); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; cursor:pointer; opacity:0; transition:opacity .15s; z-index:2; }
+  .topic-card:hover .topic-edit-btn { opacity:.6; }
+  .topic-edit-btn:hover { opacity:1 !important; background:var(--teal-bg); border-color:var(--teal); }
+  .topic-card-modified { box-shadow: inset 0 -2px 0 var(--gold); }
 
   /* ── ORDER LIST ── */
   .order-list {
@@ -740,6 +744,11 @@
   .ed-bullet-del { width:18px; height:18px; display:flex; align-items:center; justify-content:center; cursor:pointer; opacity:.35; flex-shrink:0; background:transparent; border:none; }
   .ed-add-item { padding:4px 8px; border-radius:4px; border:1px dashed var(--teal-light); font-family:'Lato',sans-serif; font-size:11px; color:var(--teal); text-align:center; cursor:pointer; margin:5px 0 0 12px; font-weight:700; background:transparent; display:block; width:calc(100% - 12px); }
   .ed-insert-img { padding:6px; border-radius:6px; border:1px dashed var(--teal-light); font-family:'Lato',sans-serif; font-size:11px; color:var(--teal); text-align:center; cursor:pointer; margin:6px 0; font-weight:700; background:transparent; display:block; width:100%; }
+  .ed-pagebreak { margin:8px 0; padding:8px 14px; border:1px dashed #b0a898; border-radius:8px; display:flex; align-items:center; justify-content:space-between; background:#f7f3ec; }
+  .ed-pagebreak-label { font-family:'Lato',sans-serif; font-size:11px; font-weight:700; color:#6b6b6b; display:flex; align-items:center; gap:6px; }
+  .ed-pagebreak-line { flex:1; height:1px; border-top:1px dashed #b0a898; margin:0 10px; }
+  .ed-pagebreak-del { width:22px; height:22px; border-radius:4px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0; background:transparent; }
+  .btn-back-editor { display:none; margin:8px auto 0; padding:8px 18px; border-radius:8px; font-size:12px; font-weight:700; font-family:'Lato',sans-serif; cursor:pointer; border:1px solid var(--teal); background:transparent; color:var(--teal); }
   .ed-add-section { padding:8px 16px; border-radius:8px; border:1px dashed var(--gold); text-align:center; cursor:pointer; margin-top:12px; background:transparent; display:block; width:100%; }
   .ed-add-section-title { font-family:'Lato',sans-serif; font-size:12px; color:var(--gold); font-weight:700; }
   .ed-add-section-types { display:flex; justify-content:center; gap:12px; margin-top:5px; }
@@ -880,6 +889,9 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Enviar por WhatsApp
       </button>
+      <button class="btn-back-editor" id="btnBackEditor" onclick="reopenEditor()">
+        ✎ Volver al editor
+      </button>
     </div>
   </main>
 
@@ -891,7 +903,7 @@
     <div class="editor-topbar">
       <h3>Editor de contenido</h3>
       <div class="editor-actions">
-        <button class="editor-btn editor-btn-cancel" onclick="closeEditor()">Cancelar</button>
+        <button class="editor-btn editor-btn-cancel" onclick="closeEditor(false)">Cancelar</button>
         <button class="editor-btn editor-btn-generate" onclick="editorGeneratePDF()">Generar PDF</button>
       </div>
     </div>
@@ -3348,12 +3360,16 @@ function renderTopicGrid() {
   topics.forEach(t => {
     const matches = !searchQuery || t.label.toLowerCase().includes(searchQuery);
     const uses = getUsage(t.id);
+    const isModified = !!window._topicOverrides[t.id];
     const card = document.createElement('div');
-    card.className = 'topic-card' + (selectedOrder.includes(t.id) ? ' selected' : '') + (matches ? '' : ' topic-card-hidden');
+    card.className = 'topic-card' + (selectedOrder.includes(t.id) ? ' selected' : '') + (matches ? '' : ' topic-card-hidden') + (isModified ? ' topic-card-modified' : '');
     card.innerHTML = `
       ${sortMode === 'usos' && uses > 0 ? `<span class="topic-uses">${uses}</span>` : ''}
       <span class="topic-icon">${t.icon}</span>
-      <div class="topic-name">${t.label}</div>`;
+      <div class="topic-name">${t.label}</div>
+      <div class="topic-edit-btn" onclick="event.stopPropagation(); openBaseEditor('${t.id}')" title="Editar contenido base">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+      </div>`;
     card.onclick = () => toggleTopic(t.id);
     grid.appendChild(card);
     if (matches) visible++;
@@ -3666,6 +3682,14 @@ async function generatePDF() {
         for (let si = 0; si < page.sections.length; si++) {
           const sec = page.sections[si];
 
+          if (sec.type === 'pagebreak') {
+            physPage++;
+            pageHeadingSlots[physPage - 1] = 0;
+            y = HEADER_H + 8;
+            isFirstHeading = true;
+            continue;
+          }
+
           if (sec.type === 'heading') {
             y += 3;
             if (y + 14 > BOTTOM_SIM) {
@@ -3889,6 +3913,15 @@ async function generatePDF() {
 
       for (let si = 0; si < page.sections.length; si++) {
         const sec = page.sections[si];
+
+        // Salto de página forzado
+        if (sec.type === 'pagebreak') {
+          newDocPageTracked();
+          y = HEADER_H + 8;
+          bannersUsed = 0;
+          isFirstHeading = true;
+          continue;
+        }
 
         // Insertar banner antes de heading intermedio si corresponde
         if (sec.type === 'heading' && !isFirstHeading) {
@@ -4197,6 +4230,139 @@ function renderPhotoSelector(pages, activeBannerIds) {
   panel.style.display = 'block';
 }
 
+// ── TOPIC OVERRIDES (persistencia en Worker) ─────────────────────────────────
+window._topicOverrides = {};
+window._topicOverridesSha = null;
+
+async function loadTopicOverrides() {
+  try {
+    const r = await fetch(`${WORKER_URL}/topic-overrides`);
+    if (!r.ok) return;
+    const data = await r.json();
+    window._topicOverridesSha = data.sha || null;
+    const json = JSON.parse(decodeURIComponent(escape(atob(data.content.replace(/\n/g, '')))));
+    window._topicOverrides = json || {};
+    // Aplicar overrides a TOPICS en memoria
+    applyTopicOverrides();
+  } catch(e) {
+    console.warn('No se pudieron cargar topic overrides:', e.message);
+  }
+}
+
+function applyTopicOverrides() {
+  for (const [id, ov] of Object.entries(window._topicOverrides)) {
+    const t = TOPICS.find(x => x.id === id);
+    if (!t) continue;
+    if (ov.title) { t.title = ov.title; t.label = ov.title; }
+    if (ov.subtitle) t.subtitle = ov.subtitle;
+    if (ov.sections) t.sections = ov.sections;
+  }
+}
+
+async function saveTopicOverrides() {
+  try {
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(window._topicOverrides, null, 2))));
+    const body = { message: 'Actualizar topic overrides', content };
+    if (window._topicOverridesSha) body.sha = window._topicOverridesSha;
+    const r = await fetch(`${WORKER_URL}/topic-overrides`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (r.ok) {
+      const data = await r.json();
+      if (data && data.content && data.content.sha) window._topicOverridesSha = data.content.sha;
+    }
+  } catch(e) {
+    console.error('Error guardando topic overrides:', e);
+    alert('Error al guardar los cambios: ' + e.message);
+  }
+}
+
+// Editor base: editar el contenido por defecto de un tema
+window._baseEditTopicId = null;
+
+async function openBaseEditor(topicId) {
+  const t = TOPICS.find(x => x.id === topicId);
+  if (!t) return;
+
+  const page = JSON.parse(JSON.stringify(t));
+
+  // Pre-cargar imágenes de banners
+  const bannerUrls = [];
+  MID_BANNERS.forEach(b => b.imageAlts.forEach(u => bannerUrls.push(u)));
+  await Promise.all(bannerUrls.map(url => loadImageAsBase64(url)));
+
+  window._baseEditTopicId = topicId;
+  window._editorState = { paletteIdx: 0, pages: [page], expandedIdx: 0 };
+
+  // Cambiar botones del editor
+  renderEditor();
+  const topbar = document.querySelector('.editor-topbar');
+  topbar.querySelector('h3').textContent = 'Editar contenido base: ' + t.label;
+  const actions = topbar.querySelector('.editor-actions');
+  actions.innerHTML = `
+    <button class="editor-btn editor-btn-cancel" onclick="cancelBaseEditor()">Cancelar</button>
+    <button class="editor-btn" style="background:#b45a5a;color:#fff;border:none;padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;font-family:'Lato',sans-serif;cursor:pointer;" onclick="resetBaseTopic()">Restaurar original</button>
+    <button class="editor-btn editor-btn-generate" onclick="saveBaseEditor()">Guardar</button>`;
+
+  document.getElementById('editorOverlay').classList.add('open');
+}
+
+function cancelBaseEditor() {
+  window._baseEditTopicId = null;
+  window._editorState = null;
+  document.getElementById('editorOverlay').classList.remove('open');
+}
+
+async function saveBaseEditor() {
+  const topicId = window._baseEditTopicId;
+  if (!topicId || !window._editorState) return;
+
+  const editedPage = window._editorState.pages[0];
+  // Filtrar secciones vacías tipo pagebreak que no aplican a base
+  const cleanSections = editedPage.sections.filter(s => s.type !== 'pagebreak');
+
+  // Guardar override
+  window._topicOverrides[topicId] = {
+    title: editedPage.title,
+    subtitle: editedPage.subtitle,
+    sections: cleanSections
+  };
+
+  // Aplicar en memoria
+  const t = TOPICS.find(x => x.id === topicId);
+  if (t) {
+    t.title = editedPage.title;
+    t.label = editedPage.title;
+    t.subtitle = editedPage.subtitle;
+    t.sections = cleanSections;
+  }
+
+  // Guardar en Worker
+  await saveTopicOverrides();
+
+  // Cerrar y refrescar
+  window._baseEditTopicId = null;
+  window._editorState = null;
+  document.getElementById('editorOverlay').classList.remove('open');
+  renderTopicGrid();
+}
+
+async function resetBaseTopic() {
+  const topicId = window._baseEditTopicId;
+  if (!topicId) return;
+  if (!confirm('¿Restaurar el contenido original de este tema? Se perderán todos los cambios.')) return;
+
+  // Borrar override
+  delete window._topicOverrides[topicId];
+
+  // Recargar la página para obtener el original del código fuente
+  // (más simple que mantener una copia del original en memoria)
+  await saveTopicOverrides();
+  location.reload();
+}
+
 // ── EDITOR DE CONTENIDO ──────────────────────────────────────────────────────
 const PALETTES = [
   { name: 'Original',     bgHex: 'F8F6F2', bg: [248,246,242], teal: [30,110,110],  tealLight: [162,208,208], wine: [180,79,117] },
@@ -4298,32 +4464,54 @@ async function openEditor() {
     });
   }
 
+  // Insertar salto de página al inicio de cada tema (excepto el primero)
+  pages.forEach((page, i) => {
+    if (i > 0) {
+      page.sections.unshift({ type: 'pagebreak' });
+    }
+  });
+
   window._editorState = { paletteIdx: 0, pages, expandedIdx: 0 };
   renderEditor();
   document.getElementById('editorOverlay').classList.add('open');
+  document.getElementById('btnBackEditor').style.display = 'none';
 }
 
-function closeEditor() {
+function closeEditor(preserveState) {
   document.getElementById('editorOverlay').classList.remove('open');
-  window._editorState = null;
+  if (!preserveState) {
+    window._editorState = null;
+    document.getElementById('btnBackEditor').style.display = 'none';
+  }
+}
+
+function reopenEditor() {
+  if (!window._editorState) return;
+  renderEditor();
+  document.getElementById('editorOverlay').classList.add('open');
+  document.getElementById('btnBackEditor').style.display = 'none';
 }
 
 function renderEditor() {
   const st = window._editorState;
-  // Palette bar
   const bar = document.getElementById('editorPaletteBar');
-  bar.className = 'palette-bar';
-  bar.innerHTML = PALETTES.map((p, i) => `
-    <div class="palette-chip ${i === st.paletteIdx ? 'active' : ''}" onclick="selectPalette(${i})">
-      <div class="palette-chip-bg" style="background:#${p.bgHex}"></div>
-      <div class="palette-chip-colors">
-        <div class="palette-chip-dot" style="background:rgb(${p.teal})"></div>
-        <div class="palette-chip-dot" style="background:rgb(${p.wine})"></div>
+  // Ocultar paleta en modo edición base
+  if (window._baseEditTopicId) {
+    bar.className = '';
+    bar.innerHTML = '';
+  } else {
+    bar.className = 'palette-bar';
+    bar.innerHTML = PALETTES.map((p, i) => `
+      <div class="palette-chip ${i === st.paletteIdx ? 'active' : ''}" onclick="selectPalette(${i})">
+        <div class="palette-chip-bg" style="background:#${p.bgHex}"></div>
+        <div class="palette-chip-colors">
+          <div class="palette-chip-dot" style="background:rgb(${p.teal})"></div>
+          <div class="palette-chip-dot" style="background:rgb(${p.wine})"></div>
+        </div>
+        <span class="palette-chip-name">${p.name}</span>
       </div>
-      <span class="palette-chip-name">${p.name}</span>
-    </div>
-  `).join('');
-  // Themes
+    `).join('');
+  }
   renderEditorThemes();
 }
 
@@ -4398,6 +4586,7 @@ function renderEditorThemeBody(page, ti) {
       <button class="ed-add-section-type" onclick="edAddSection(${ti},'bullets')">Lista</button>
       <button class="ed-add-section-type" onclick="edAddSection(${ti},'quote')">Cita</button>
       <button class="ed-add-section-type" onclick="edInsertImageAt(${ti},${page.sections.length})">Imagen</button>
+      <button class="ed-add-section-type" onclick="edAddSection(${ti},'pagebreak')">Salto de página</button>
     </div>
   </div>`;
   return html;
@@ -4407,7 +4596,14 @@ function renderEditorSection(sec, ti, si) {
   const delBtn = `<button class="ed-section-del" onclick="edDeleteSection(${ti},${si})" title="Eliminar sección"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#b45a5a" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>`;
   let html = `<div class="ed-section">`;
 
-  if (sec.type === 'heading') {
+  if (sec.type === 'pagebreak') {
+    html += `<div class="ed-pagebreak">
+      <span class="ed-pagebreak-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg> Salto de página</span>
+      <div class="ed-pagebreak-line"></div>
+      <button class="ed-pagebreak-del" onclick="edDeleteSection(${ti},${si})" title="Quitar salto de página"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#b45a5a" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>`;
+
+  } else if (sec.type === 'heading') {
     html += `<div class="ed-section-head">
       <div class="ed-section-dot"></div>
       <input class="ed-section-input" value="${escH(sec.content)}" onchange="edEditSection(${ti},${si},'content',this.value)">
@@ -4493,6 +4689,7 @@ function edAddSection(ti, type) {
   const sec = type === 'heading' ? { type:'heading', content:'Nuevo encabezado' }
     : type === 'text' ? { type:'text', content:'Nuevo texto' }
     : type === 'bullets' ? { type:'bullets', content:['Item 1','Item 2'] }
+    : type === 'pagebreak' ? { type:'pagebreak' }
     : { type:'quote', content:'Texto de la cita', author:'Dra. Silvia Losinno' };
   window._editorState.pages[ti].sections.push(sec);
   renderEditorThemes();
@@ -4681,23 +4878,32 @@ function editorGeneratePDF() {
     }
   };
 
+  const launchPDF = () => {
+    window._editorOverrides = overrides;
+    closeEditor(true); // preservar estado para poder volver
+    generatePDF().then(() => {
+      document.getElementById('btnBackEditor').style.display = 'block';
+    });
+  };
+
   // If palette needs recolored images, do it async
   if (st.paletteIdx > 0) {
     const cmap = buildRecolorMap(palette);
     let done = 0;
-    const checkDone = () => { if (++done === 2) { window._editorOverrides = overrides; closeEditor(); generatePDF(); } };
+    const checkDone = () => { if (++done === 2) launchPDF(); };
     recolorImageCanvas(HEADER_B64, cmap, (b64) => { overrides.headerB64 = b64; checkDone(); });
     recolorImageCanvas(FOOTER_B64, cmap, (b64) => { overrides.footerB64 = b64; checkDone(); });
   } else {
-    window._editorOverrides = overrides;
-    closeEditor();
-    generatePDF();
+    launchPDF();
   }
 }
 
 // ── INIT ───────────────────────────────────────────────────────────────────────
-renderTopicGrid();
-renderOrderList();
+// Cargar topic overrides y luego renderizar
+loadTopicOverrides().then(() => {
+  renderTopicGrid();
+  renderOrderList();
+});
 </script>
 </body>
 </html>
