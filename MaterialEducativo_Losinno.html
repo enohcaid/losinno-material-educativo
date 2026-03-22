@@ -3539,8 +3539,6 @@ async function generatePDF() {
     const MID        = [107, 107, 107];
     const CREAM_BG   = _c ? _c.creamBg : [247, 243, 236];
 
-    console.log('[PDF] Overrides:', _ov ? 'SÍ' : 'NO', '| CREAM_BG:', CREAM_BG, '| Header recolored:', !!(_ov && _ov.headerB64));
-
     // Header/footer images (override-able)
     const _HEADER_IMG = (_ov && _ov.headerB64) ? _ov.headerB64 : HEADER_B64;
     const _FOOTER_IMG = (_ov && _ov.footerB64) ? _ov.footerB64 : FOOTER_B64;
@@ -3722,24 +3720,23 @@ async function generatePDF() {
     // ── DECIDIR CUÁNTOS BANNERS Y EN QUÉ PÁGINAS ─────────────────────────────────
     // bannersPerPage[i] = cantidad de banners inline a insertar en la página i (0-indexed)
     const bannersPerPage = new Array(sim.totalPages).fill(0);
+
+    // Si viene del editor, los banners ya están como secciones editables — no insertar automáticamente
+    if (!_fromEditor) {
     const SPACE_THRESHOLD = 55; // mm sobrantes para activar banners
 
     if (sim.spaceLeft > SPACE_THRESHOLD) {
       const totalContent = sim.totalPages; // páginas con contenido real
 
       if (totalContent >= 3) {
-        // Caso general: 1 banner en cada una de 3 páginas distintas
-        // Priorizar páginas con más slots de headings disponibles
         const sorted = sim.pageHeadingSlots
           .map((slots, i) => ({ i, slots }))
           .filter(p => p.slots > 0)
           .sort((a, b) => b.slots - a.slots);
         const targets = sorted.slice(0, 3).map(p => p.i);
-        // Si no hay suficientes páginas con slots, repartir en las que haya
         targets.forEach(i => { bannersPerPage[i] = 1; });
 
       } else if (totalContent === 2) {
-        // 2 páginas: 2 banners en la que tenga más slots, 1 en la otra
         const slots0 = sim.pageHeadingSlots[0] || 0;
         const slots1 = sim.pageHeadingSlots[1] || 0;
         if (slots0 >= slots1) {
@@ -3749,10 +3746,10 @@ async function generatePDF() {
         }
 
       } else {
-        // 1 página: 1 banner en la página de contenido
         bannersPerPage[0] = 1;
       }
     }
+    } // fin if (!_fromEditor)
 
     // ── GENERACIÓN REAL ───────────────────────────────────────────────────────────
     let physPageCounter = -1; // se incrementa en cada newDocPage()
@@ -4251,7 +4248,7 @@ function buildRecolorMap(palette) {
   return map;
 }
 
-function openEditor() {
+async function openEditor() {
   const err = document.getElementById('errorMsg');
   err.classList.remove('visible');
   if (selectedOrder.length === 0) {
@@ -4263,6 +4260,44 @@ function openEditor() {
     const t = TOPICS.find(x => x.id === id);
     return JSON.parse(JSON.stringify(t));
   });
+
+  // Pre-cargar imágenes de banners decorativos
+  const bannerUrls = [];
+  MID_BANNERS.forEach(b => b.imageAlts.forEach(u => bannerUrls.push(u)));
+  await Promise.all(bannerUrls.map(url => loadImageAsBase64(url)));
+
+  // Distribuir hasta 3 banners decorativos entre los headings de todos los temas
+  // Contar posiciones elegibles (headings no-primeros de cada tema)
+  const positions = []; // {ti, si} — posiciones antes de las cuales insertar
+  pages.forEach((page, ti) => {
+    let isFirst = true;
+    page.sections.forEach((sec, si) => {
+      if (sec.type === 'heading') {
+        if (!isFirst) positions.push({ ti, si });
+        isFirst = false;
+      }
+    });
+  });
+
+  // Distribuir hasta 3 banners equitativamente
+  const maxBanners = Math.min(3, positions.length);
+  if (maxBanners > 0 && positions.length >= 2) {
+    const step = Math.floor(positions.length / (maxBanners + 1));
+    const insertions = []; // {ti, si, bannerIdx}
+    for (let b = 0; b < maxBanners; b++) {
+      const pos = positions[step * (b + 1)] || positions[positions.length - 1 - b];
+      if (pos) insertions.push({ ...pos, bannerIdx: b });
+    }
+    // Insertar de atrás para adelante para no desplazar índices
+    insertions.sort((a, b) => b.ti - a.ti || b.si - a.si);
+    insertions.forEach(ins => {
+      const banner = MID_BANNERS[ins.bannerIdx % MID_BANNERS.length];
+      const url = selectedImages[banner.id] || banner.imageAlts[0];
+      const imgData = imageCache[url] || url;
+      pages[ins.ti].sections.splice(ins.si, 0, { type: 'image', data: imgData, _isMidBanner: true });
+    });
+  }
+
   window._editorState = { paletteIdx: 0, pages, expandedIdx: 0 };
   renderEditor();
   document.getElementById('editorOverlay').classList.add('open');
