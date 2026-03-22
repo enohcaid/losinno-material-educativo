@@ -2017,6 +2017,62 @@ const TOPICS = [
     ]
   },
   {
+    id: 'analogos_glp1',
+    imageUrl: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center',
+    imageAlts: [
+      'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=840&h=240&fit=crop&crop=center',
+      'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=840&h=240&fit=crop&crop=center',
+    ],
+    icon: '💊', label: 'Alimentación con Análogos de GLP-1 y GIF',
+    title: 'Alimentación con Análogos de GLP-1 y GIF',
+    subtitle: 'Cómo proteger tu músculo y aprovechar al máximo el tratamiento',
+    sections: [
+      { type: 'heading', content: '¿Por qué prestar atención a la proteína?' },
+      { type: 'text', content: 'La dieta hiperproteica no es opcional, es parte del tratamiento. Te permite bajar de peso sin perder músculo, hueso ni cartílagos. Te da más saciedad con menos cantidad de comida. Y lo más importante: no sube el azúcar rápido, lo que mantiene la insulina baja y estable. Sin eso, el medicamento no puede hacer bien su trabajo. Por eso es fundamental que todos los días haya proteína suficiente.' },
+      { type: 'heading', content: 'Recordatorio simple' },
+      { type: 'bullets', content: [
+        'Que tu desayuno tenga huevos o un yogur griego completo.',
+        'Que en el almuerzo haya una porción clara y generosa de pollo, carne o pescado (que sea lo principal del plato).',
+        'Que a la tarde sumes un refuerzo proteico (yogur griego, queso magro, atún o huevos).',
+        'Que en la cena vuelva a haber proteína real, no solo verduras.'
+      ]},
+      { type: 'text', content: 'Si un día tenés poco apetito, priorizá primero la proteína y después lo demás. Eso es lo que protege tu músculo, tu fuerza y tu metabolismo mientras bajás de peso.' },
+      { type: 'heading', content: 'Regla simple del día: 3 porciones grandes + 1 refuerzo proteico' },
+      { type: 'heading', content: '1) Desayuno — 20 a 30 g de proteína' },
+      { type: 'bullets', content: ['2 huevos + 2 claras (aprox. 20-24 g de proteína).','Yogur griego natural (1 pote grande) + 1 cucharada de semillas (aprox. 18-22 g).'] },
+      { type: 'heading', content: '2) Almuerzo — 30 a 40 g de proteína' },
+      { type: 'bullets', content: ['150-180 g de pollo / carne magra (tamaño palma grande, una porción generosa).','Que sea lo principal del plato, acompañado de vegetales.'] },
+      { type: 'heading', content: '3) Merienda / colación — 15 a 25 g de proteína' },
+      { type: 'bullets', content: ['Yogur griego natural.','Queso magro 100-150 g.','1 lata de atún al natural.'] },
+      { type: 'heading', content: '4) Cena — 30 a 35 g de proteína' },
+      { type: 'bullets', content: ['150 g de pescado.','150 g de pollo o carne magra.','Que en la cena vuelva a haber proteína real, no solo verduras.'] },
+      { type: 'heading', content: 'Ejemplo real de un día completo' },
+      { type: 'bullets', content: ['Desayuno: 2 huevos + 2 claras: ~22 g','Almuerzo: 170 g pollo: ~40 g','Merienda: yogur griego: ~17 g','Cena: 150 g pescado: ~30 g','Total: ~109 g (perfecto)'] },
+      { type: 'heading', content: 'Yogur Griego — Beneficios' },
+      { type: 'bullets', content: [
+        'Mayor saciedad por su contenido proteico.',
+        'Útil en planes de descenso de peso o recomposición corporal.',
+        'Puede favorecer la salud intestinal.',
+        'Fuente de calcio y proteína de alto valor biológico.'
+      ]},
+      { type: 'heading', content: 'Cómo elegir un yogur griego de buena calidad' },
+      { type: 'bullets', content: [
+        'Que diga "natural" o "sin azúcar agregada".',
+        'Lista de ingredientes corta: leche + fermentos lácticos.',
+        'Evitar versiones saborizadas con azúcar o jarabes.'
+      ]},
+      { type: 'heading', content: 'Ideas de uso del yogur griego' },
+      { type: 'bullets', content: [
+        'Desayuno con frutas y semillas.',
+        'Base para aderezos saludables.',
+        'Reemplazo de crema en preparaciones.',
+        'Postre con cacao amargo y nueces.'
+      ]},
+      { type: 'quote', content: 'La proteína no es opcional en este tratamiento. Es lo que protege tu músculo, tu fuerza y tu metabolismo mientras bajás de peso.', author: 'Dra. Silvia Losinno' }
+    ]
+  },
+  {
     id: 'ejercicios_sensoriales',
     imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=840&h=240&fit=crop&crop=center',
     imageAlts: [
@@ -3482,6 +3538,8 @@ async function generatePDF() {
     const DARK       = [44, 44, 44];
     const MID        = [107, 107, 107];
     const CREAM_BG   = _c ? _c.creamBg : [247, 243, 236];
+
+    console.log('[PDF] Overrides:', _ov ? 'SÍ' : 'NO', '| CREAM_BG:', CREAM_BG, '| Header recolored:', !!(_ov && _ov.headerB64));
 
     // Header/footer images (override-able)
     const _HEADER_IMG = (_ov && _ov.headerB64) ? _ov.headerB64 : HEADER_B64;
