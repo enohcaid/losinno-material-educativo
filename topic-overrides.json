@@ -1,0 +1,52 @@
+{
+  "antiinflamatorio": {
+    "title": "Alimentación Antiinflamatoria",
+    "subtitle": "Hacia una dieta que sana y protege el organismo",
+    "sections": [
+      {
+        "type": "heading",
+        "content": "Objetivo"
+      },
+      {
+        "type": "text",
+        "content": "Lograr una alimentación antiinflamatoria, antiácida y antioxidante. La oxidación produce inflamación y viceversa, y ambas llevan a lesiones y posteriormente a enfermedades crónicas."
+      },
+      {
+        "type": "heading",
+        "content": "Alimentos que inflaman y acidifican — EVITAR"
+      },
+      {
+        "type": "bullets",
+        "content": [
+          "Lácteos y derivados.",
+          "Gaseosas (alto contenido en ácido fosfórico — le roba calcio a huesos y dientes).",
+          "Azúcares y todos sus derivados.",
+          "Alimentos con gluten y harinas refinadas.",
+          "Alcohol, soja y derivados, vinagre y aceto balsámico.",
+          "Maní, exceso de té, café y mate.",
+          "Alimentos industrializados, agrotóxicos y transgénicos.",
+          "Estrés, exceso de actividad física, poco descanso."
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Alimentos antiinflamatorios — INCORPORAR"
+      },
+      {
+        "type": "bullets",
+        "content": [
+          "Verduras y frutas frescas de temporada (preferentemente orgánicas).",
+          "Pescados y carnes de animales de pastoreo.",
+          "Huevos de campo.",
+          "Cereales integrales sin gluten: quínoa, amaranto, mijo, arroz integral.",
+          "Legumbres bien preparadas (remojo + cocción adecuada).",
+          "Frutos secos y semillas activadas.",
+          "Aceite de oliva extra virgen, palta, aceite de coco.",
+          "Vinagre de manzana orgánico para condimentar. ",
+          "Cúrcuma + pimienta negra, jengibre, ajo, cebolla. ",
+          "Para cocinar utilizar aceite de girasol alto linoleico."
+        ]
+      }
+    ]
+  }
+}
