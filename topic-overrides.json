@@ -261,5 +261,87 @@
         "author": "Dra. Silvia Losinno"
       }
     ]
+  },
+  "plan_alimentacion": {
+    "title": "Plan de Alimentación — Recomendaciones Generales",
+    "subtitle": "Pautas para organizar desayunos, meriendas, almuerzos y cenas de forma saludable",
+    "sections": [
+      {
+        "type": "text",
+        "content": "🥗 El orden en que comés importa. Empezá siempre por la verdura, después la proteína y dejá los hidratos para el final. Este orden solo **reduce el pico de glucosa hasta un 40%** después de comer.\n\n🏃 Hacé actividad física a la mañana. El ejercicio de la mañana, antes o después del desayuno, es el momento del día en que más beneficio glucémico genera. Ayuda a que el cuerpo use mejor la glucosa durante todo el día.\n\n🌾 No es solo el azúcar: el almidón también sube la glucosa. Pan blanco, arroz blanco y papa suben el azúcar tan rápido como el azúcar misma. Elegí siempre la versión integral y controla  la porción.\n\nPero hay un truco: \"cocinar, enfriar y recalentar\" estos alimentos transforma su almidón en almidón resistente. Ese proceso se llama \"retrogradación del almidón\"  y hace que el cuerpo los absorba mucho más lento, sin generar un pico de glucosa. El arroz o la papa cocidos, guardados en la heladera y recalentados al día siguiente, son metabólicamente distintos al mismo alimento recién hecho.\n\n 🥩 El desayuno con proteína cambia todo el día. Un desayuno con huevo, queso o yogur sin azúcar reduce el hambre y los picos de glucosa durante el resto del día, más que uno basado en pan o cereales.\n\n💧 La deshidratación sube el azúcar. Cuando tomás poca agua, la glucosa se concentra más en sangre. Tomá entre 2 y 3 litros de agua por día, todos los días.\n\n 🍽️ Comer rápido también sube la glucosa. El mismo plato, comido en 5 minutos o en 20, genera picos de glucosa distintos. Comé despacio, masticá bien.\n\n🍬 \"Sin azúcar\" no significa que no afecta. Muchos productos \"diet\" o \"sin azúcar\" tienen harinas refinadas que suben igual la glucosa. Leé los ingredientes, no solo el frente del envase.\n\nBajar el 5% del peso ya es un resultado\nNo es necesario llegar al peso ideal. Una persona de 90 kg que baja 4 o 5 kg ya mejora su glucemia, su presión y sus valores de colesterol de forma clínicamente significativa.\n\n\n"
+      },
+      {
+        "type": "heading",
+        "content": "Desayunos y meriendas"
+      },
+      {
+        "type": "heading",
+        "content": "Jugo verde"
+      },
+      {
+        "type": "text",
+        "content": "Súper saludable, alto contenido de vitaminas y minerales, elevado poder de saciedad. Detox natural."
+      },
+      {
+        "type": "bullets",
+        "content": [
+          "1 manzana verde o kiwi, 7 hojas de espinaca, una rama de apio, medio pepino, una rodaja de jengibre, jugo de medio limón + 1 vaso de agua. Todo a la licuadora.",
+          "Podés remojar 1 cucharada de semillas de chía durante la noche y agregarla al jugo verde. Ayuda con el tránsito intestinal y a evitar la constipación."
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Otras opciones de desayuno o merienda"
+      },
+      {
+        "type": "bullets",
+        "content": [
+          "1 yogur descremado (vaso de 200 cc) + ½ banana o 1 fruta.",
+          "1 yogur con colchón de frutas.",
+          "2 mitades de durazno diet con una cucharadita de queso untable light.",
+          "1 manzana o 1 pera asada con 1 cucharadita de queso untable light.",
+          "Licuado de frutas: 1 taza de leche descremada + 1 fruta.",
+          "4 fetas de queso de máquina."
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Almuerzos"
+      },
+      {
+        "type": "text",
+        "content": "20 minutos antes de comer, tomar medio vaso de agua con el jugo de medio limón. Si no es posible, un vaso de agua es suficiente."
+      },
+      {
+        "type": "heading",
+        "content": "Opción 1 — Carne con ensalada"
+      },
+      {
+        "type": "bullets",
+        "content": [
+          "Carne de vaca (cortes magros: cuadril, peceto, nalga), pollo (pata muslo sin piel) o pescado.",
+          "Ensalada completa: debe corresponder al 75 % del plato.",
+          "Siempre una parte de los vegetales debería estar cruda para garantizar recibir todos los nutrientes, ya que las enzimas, parte de las proteínas y parte de las vitaminas se destruyen en contacto con el calor.",
+          "Esta opción se recomienda al mediodía. De esta manera, evitamos que a la noche el proceso digestivo sea lento, dificultoso e incluso altere el descanso."
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Opción 2 — Sopa de verduras"
+      },
+      {
+        "type": "bullets",
+        "content": [
+          "Sopa de verduras: hojas verdes, apio, repollo, cebolla y poca zanahoria.",
+          "En la sopa se puede agregar 1 cucharadita de levadura de cerveza sin cocción.",
+          "Se pueden agregar verduras cocidas; las verduras crudas hay que priorizarlas en los almuerzos."
+        ]
+      },
+      {
+        "type": "quote",
+        "content": "Organizá tu alimentación como un acto de cuidado hacia vos misma. Cada elección cuenta.",
+        "author": "Dra. Silvia Losinno"
+      }
+    ]
   }
 }
