@@ -720,10 +720,10 @@
   .ed-imgs { display:flex; gap:5px; margin-bottom:12px; }
   .ed-img-thumb { flex:1; height:46px; border-radius:6px; overflow:hidden; cursor:pointer; border:1px solid var(--border); opacity:.6; transition:all .15s; object-fit:cover; }
   .ed-img-thumb.active { border:2.5px solid var(--teal); opacity:1; }
-  .ed-img-upload, .ed-img-remove { width:46px; height:46px; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; cursor:pointer; flex-shrink:0; }
-  .ed-img-upload { border:1px dashed var(--teal-light); }
+  .ed-img-upload, .ed-img-remove { width:46px; height:46px; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; cursor:pointer; flex-shrink:0; background:#fff; }
+  .ed-img-upload { border:1px dashed var(--teal-light); background:#f0fafa; }
   .ed-img-upload span, .ed-img-remove span { font-size:8px; font-weight:700; }
-  .ed-img-remove { border:1px dashed #d4a0a0; }
+  .ed-img-remove { border:1px dashed #d4a0a0; background:#fdf0f0; }
 
   /* Section editing */
   .ed-label { font-size:10px; font-weight:900; letter-spacing:.06em; color:var(--mid); text-transform:uppercase; margin-bottom:3px; }
@@ -4455,10 +4455,10 @@ async function openEditor() {
     });
   }
 
-  // Insertar salto de página al inicio de cada tema (excepto el primero)
+  // Insertar salto de página al final de cada tema (excepto el último)
   pages.forEach((page, i) => {
-    if (i > 0) {
-      page.sections.unshift({ type: 'pagebreak' });
+    if (i < pages.length - 1) {
+      page.sections.push({ type: 'pagebreak' });
     }
   });
 
@@ -4555,16 +4555,30 @@ function toggleEditorTheme(idx) {
 function renderEditorThemeBody(page, ti) {
   let html = '';
   // Image selector
-  html += `<div class="ed-label">Imagen del tema</div><div class="ed-imgs">`;
+  const customImg = page._customImage || null;
+  const currentImg = customImg || selectedImages[page.id] || (page.imageAlts && page.imageAlts[0]);
+  html += `<div class="ed-label">Imagen del tema</div>`;
+
+  // Si hay imagen custom, mostrar preview
+  if (customImg) {
+    html += `<div class="ed-inserted-img" style="margin-bottom:8px; height:50px;">
+      <img src="${customImg}">
+      <div class="ed-inserted-img-overlay">
+        <span style="font-size:10px; color:#fff; font-weight:700;">Imagen personalizada</span>
+      </div>
+    </div>`;
+  }
+
+  html += `<div class="ed-imgs">`;
   (page.imageAlts || []).forEach((url, ii) => {
-    const isActive = (selectedImages[page.id] || page.imageAlts[0]) === url;
-    html += `<img class="ed-img-thumb ${isActive ? 'active' : ''}" src="${imageCache[url] || url}" onclick="edSelectImage(${ti},${ii})" referrerpolicy="no-referrer">`;
+    const isActive = !customImg && (selectedImages[page.id] || page.imageAlts[0]) === url;
+    html += `<img class="ed-img-thumb ${isActive ? 'active' : ''}" src="${imageCache[url] || url}" onclick="event.stopPropagation(); edSelectImage(${ti},${ii})" referrerpolicy="no-referrer">`;
   });
-  html += `<div class="ed-img-upload" onclick="edUploadImage(${ti})">
+  html += `<div class="ed-img-upload" onclick="event.stopPropagation(); edUploadImage(${ti})">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
     <span style="color:var(--teal)">Subir</span>
   </div>`;
-  html += `<div class="ed-img-remove" onclick="edRemoveImage(${ti})">
+  html += `<div class="ed-img-remove" onclick="event.stopPropagation(); edRemoveImage(${ti})">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b45a5a" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
     <span style="color:#b45a5a">Sin img</span>
   </div></div>`;
@@ -4708,6 +4722,7 @@ function edSelectImage(ti, ii) {
   const page = window._editorState.pages[ti];
   selectedImages[page.id] = page.imageAlts[ii];
   page._customImage = null;
+  page._noImage = false;
   renderEditorThemes();
 }
 
