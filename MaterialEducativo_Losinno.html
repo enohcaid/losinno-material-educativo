@@ -4296,16 +4296,7 @@ async function openBaseEditor(topicId) {
   window._baseEditTopicId = topicId;
   window._editorState = { paletteIdx: 0, pages: [page], expandedIdx: 0 };
 
-  // Cambiar botones del editor
-  renderEditor();
-  const topbar = document.querySelector('.editor-topbar');
-  topbar.querySelector('h3').textContent = 'Editar contenido base: ' + t.label;
-  const actions = topbar.querySelector('.editor-actions');
-  actions.innerHTML = `
-    <button class="editor-btn editor-btn-cancel" onclick="cancelBaseEditor()">Cancelar</button>
-    <button class="editor-btn" style="background:#b45a5a;color:#fff;border:none;padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;font-family:'Lato',sans-serif;cursor:pointer;" onclick="resetBaseTopic()">Restaurar original</button>
-    <button class="editor-btn editor-btn-generate" onclick="saveBaseEditor()">Guardar</button>`;
-
+  renderEditor(); // topbar se configura automáticamente según _baseEditTopicId
   document.getElementById('editorOverlay').classList.add('open');
 }
 
@@ -4494,8 +4485,26 @@ function reopenEditor() {
 
 function renderEditor() {
   const st = window._editorState;
+
+  // Restaurar topbar según el modo
+  const topbar = document.querySelector('.editor-topbar');
+  const h3 = topbar.querySelector('h3');
+  const actions = topbar.querySelector('.editor-actions');
+  if (window._baseEditTopicId) {
+    const t = TOPICS.find(x => x.id === window._baseEditTopicId);
+    h3.textContent = 'Editar contenido base: ' + (t ? t.label : '');
+    actions.innerHTML = `
+      <button class="editor-btn editor-btn-cancel" onclick="cancelBaseEditor()">Cancelar</button>
+      <button class="editor-btn" style="background:#b45a5a;color:#fff;border:none;padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;font-family:'Lato',sans-serif;cursor:pointer;" onclick="resetBaseTopic()">Restaurar original</button>
+      <button class="editor-btn editor-btn-generate" onclick="saveBaseEditor()">Guardar</button>`;
+  } else {
+    h3.textContent = 'Editor de contenido';
+    actions.innerHTML = `
+      <button class="editor-btn editor-btn-cancel" onclick="closeEditor(false)">Cancelar</button>
+      <button class="editor-btn editor-btn-generate" onclick="editorGeneratePDF()">Generar PDF</button>`;
+  }
+
   const bar = document.getElementById('editorPaletteBar');
-  // Ocultar paleta en modo edición base
   if (window._baseEditTopicId) {
     bar.className = '';
     bar.innerHTML = '';
