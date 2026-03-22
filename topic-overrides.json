@@ -48,5 +48,66 @@
         ]
       }
     ]
+  },
+  "nutrientes_clave": {
+    "title": "Nutrientes Clave y sus Fuentes",
+    "subtitle": "Cómo obtener todos los nutrientes sin lácteos ni suplementos industriales",
+    "sections": [
+      {
+        "type": "heading",
+        "content": "Calcio"
+      },
+      {
+        "type": "bullets",
+        "content": [
+          "Frutos secos, especialmente almendras.",
+          "Semillas, especialmente de sésamo.",
+          "Vegetales verdes: brócoli, espinaca, kale.",
+          "Espirulina, quínoa, mijo, garbanzos, clorofila."
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Proteínas"
+      },
+      {
+        "type": "bullets",
+        "content": [
+          "Huevo, carnes de pastoreo (pescado, vaca, pollo).",
+          "Frutos secos y semillas.",
+          "Quínoa, mijo, amaranto.",
+          "Algas en general, espirulina, clorofila."
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Ácidos Grasos Esenciales (Omega 3 · 6 · 9)"
+      },
+      {
+        "type": "bullets",
+        "content": [
+          "OMEGA 3 (antiinflamatorio): lino, chía, nueces, pescados grasos.",
+          "OMEGA 6 (antiinflamatorio): semillas de girasol y zapallo activadas.",
+          "OMEGA 9 (antiinflamatorio): aceite de oliva extra virgen, palta."
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Hierro"
+      },
+      {
+        "type": "bullets",
+        "content": [
+          "Priorizar el consumo de carnes cuanto más roja es la carne, mayor es su contenido de mioglobina y, por lo tanto, de hierro. Por eso el solomillo de ternera tiene más hierro que la pechuga de pollo.",
+          "Consumir junto con vitamina C para mejorar la absorción.",
+          "Evitar tomar té o mate cerca de las comidas (inhiben la absorción)."
+        ]
+      },
+      {
+        "type": "quote",
+        "content": "Los alimentos industrializados inflaman, acidifican, intoxican y atacan nuestro sistema inmunitario. Tu alimentación es la mejor medicina.",
+        "author": "Dra. Silvia Losinno"
+      }
+    ]
   }
 }
