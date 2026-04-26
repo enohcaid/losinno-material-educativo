@@ -1,5 +1,9 @@
 # CHANGELOG — Material Educativo Losinno
 
+## [1.1.0] — 2026-04-26
+### Nuevo tema
+- Agregado tema "Jarabe de Maíz de Alta Fructosa" (id: `jmaf`): 7 efectos sobre la salud, alternativas por categoría (bebidas, lácteos, panificados, snacks, salsas, postres), tabla de cambios prácticos y guía para elegir en el supermercado.
+
 ## [1.0.0] — 2026-03-12
 ### Inicial
 - Primera versión funcional de la aplicación
