@@ -3326,8 +3326,7 @@ const TOPICS = [
     sections: [
       { type: 'text', content: 'Muchos productos envasados contienen azúcares añadidos que no se ven a simple vista. Si los consumís de forma habitual, pueden favorecer el desarrollo de hígado graso, insulinorresistencia, diabetes y enfermedad cardiovascular.' },
       { type: 'text', content: 'La forma más simple de cuidarte es aprender a leer la lista de ingredientes en el dorso del envase y dejar en la góndola los productos que contienen los nombres que te detallo a continuación.' },
-      { type: 'heading', content: 'Si tenés (o querés prevenir) hígado graso, diabetes, insulinorresistencia o enfermedad cardiovascular, evitá los productos cuya etiqueta contenga:' },
-      { type: 'bullets', content: [
+      { type: 'callout', color: 'red', title: 'Si tenés (o querés prevenir) hígado graso, diabetes, insulinorresistencia o enfermedad cardiovascular, evitá los productos cuya etiqueta contenga:', bullets: [
         'Jarabe de maíz de alta fructosa (JMAF, JAF, HFCS, jarabe de fructosa)',
         'Jarabe de glucosa-fructosa / isoglucosa',
         'Jarabe de maíz / sólidos de jarabe de maíz',
@@ -3336,31 +3335,28 @@ const TOPICS = [
         'Concentrados o jugos concentrados de fruta (manzana, pera, uva)',
         'Azúcar, sacarosa, azúcar invertido, jarabe de agave o arroz',
       ]},
-      { type: 'heading', content: 'Regla rápida' },
-      { type: 'text', content: 'Cuanto más arriba en la lista de ingredientes aparece uno de estos nombres, mayor es la cantidad presente en el producto. Si está entre los primeros 3, dejalo en la góndola.' },
-      { type: 'text', content: 'Cuantos más sellos negros tenga el envase ("exceso de azúcares", "exceso de calorías", etc.), peor el perfil. Más de 2 sellos = consumo esporádico, no diario.' },
+      { type: 'callout', color: 'gold', title: 'Regla rápida', content: 'Cuanto más arriba en la lista de ingredientes aparece uno de estos nombres, mayor es la cantidad presente en el producto. Si está entre los primeros 3, dejalo en la góndola.\nCuantos más sellos negros tenga el envase ("exceso de azúcares", "exceso de calorías", etc.), peor el perfil. Más de 2 sellos = consumo esporádico, no diario.' },
       { type: 'heading', content: 'Dónde están y con qué los reemplazo' },
       { type: 'text', content: 'La idea no es prohibir nada, sino reemplazar lo industrial por opciones más naturales que cuidan tu metabolismo:' },
-      { type: 'bullets', content: [
-        'Gaseosas y refrescos azucarados (Coca-Cola, Pepsi, Sprite, Manaos) → Agua, soda, agua saborizada en casa con limón, menta o jengibre. Si necesitás dulce, gaseosa "zero" en cantidad moderada.',
-        'Jugos y néctares en caja (Cepita, Baggio, Ades) → Fruta entera o jugo recién exprimido en casa, en porciones moderadas.',
-        'Bebidas energéticas e isotónicas (Speed, Red Bull, Monster, Gatorade, Powerade) → Agua con una pizca de sal y limón si hacés deporte. En general no son necesarias.',
-        'Yogures saborizados o frutados (Ser, Yogurísimo, Serenito, Danette) → Yogur natural sin saborizar + fruta fresca picada + un toque de miel o avena.',
-        'Chocolatadas y leches saborizadas (Cindor, Nesquik, La Serenísima Vainilla) → Leche común + cacao amargo en polvo (sin azúcar) o canela.',
-        'Cereales azucarados (Zucaritas, Choco Krispis, Froot Loops, granolas dulces) → Avena tradicional con leche o yogur, frutas y un toque de canela.',
-        'Galletitas dulces y rellenas (Oreo, Pepitos, Sonrisas, Chocolinas, Rumba) → Fruta fresca, un puñado de frutos secos, tostadas con queso untable, galletas de arroz simples.',
-        'Barras de cereal industriales (Cerealitas, Quaker, Tofi, Ser barras) → Mix de frutos secos + 1 fruta + un cuadradito de chocolate amargo, o barras caseras.',
-        'Alfajores industriales (Jorgito, Guaymallén, Terrabusi, Águila) → Fruta + 1 cuadradito de chocolate amargo 70%, o alfajor casero ocasional.',
-        'Caramelos, gomitas y golosinas (Mogul, Sugus, Halls, Tofi, Misky) → Fruta fresca, fruta deshidratada sin azúcar, 1 dátil con un fruto seco adentro.',
-        'Helados industriales (Frigor, Noel, Grido, Massalin) → Helado casero de yogur con frutas, palitos de fruta natural, fruta congelada (banana, frutillas) procesada.',
-        'Ketchup, BBQ y aderezos (Hellmann\'s, Fanacoa, Heinz) → Salsa de tomate casera con ajo, orégano y aceite de oliva. Mostaza tradicional sin azúcar.',
-        'Mermeladas y dulces industriales (Arcor, BC, La Campagnola, Orieta) → Mermelada casera con poca azúcar, fruta fresca pisada o ricota con frutos rojos.',
-        'Dulce de leche industrial → Cantidad pequeña ocasional, o dulce de leche casero. Mejor: ricota con un toque de miel y canela.',
-        'Pan blanco industrial (Bimbo, Fargo, Lactal) → Pan de panadería tradicional (mignón, francés, criollo), pan casero o pan integral artesanal.',
-        'Comidas precocidas (pollo empanado, hamburguesas saborizadas, sopas instantáneas) → Cocción casera con ingredientes frescos: pollo, carne, vegetales, legumbres, huevos, pescado.',
+      { type: 'table', headers: ['En lugar de…', 'Elegí…'], rows: [
+        ['Gaseosas y refrescos azucarados (Coca-Cola, Pepsi, Sprite, Manaos)', 'Agua, soda, agua saborizada en casa con limón, menta o jengibre. Si necesitás dulce, gaseosa "zero" en cantidad moderada.'],
+        ['Jugos y néctares en caja (Cepita, Baggio, Ades)', 'Fruta entera o jugo recién exprimido en casa, en porciones moderadas.'],
+        ['Bebidas energéticas e isotónicas (Speed, Red Bull, Monster, Gatorade, Powerade)', 'Agua con una pizca de sal y limón si hacés deporte. En general no son necesarias.'],
+        ['Yogures saborizados o frutados (Ser, Yogurísimo, Serenito, Danette)', 'Yogur natural sin saborizar + fruta fresca picada + un toque de miel o avena.'],
+        ['Chocolatadas y leches saborizadas (Cindor, Nesquik, La Serenísima Vainilla)', 'Leche común + cacao amargo en polvo (sin azúcar) o canela.'],
+        ['Cereales azucarados (Zucaritas, Choco Krispis, Froot Loops, granolas dulces)', 'Avena tradicional con leche o yogur, frutas y un toque de canela.'],
+        ['Galletitas dulces y rellenas (Oreo, Pepitos, Sonrisas, Chocolinas, Rumba)', 'Fruta fresca, un puñado de frutos secos, tostadas con queso untable, galletas de arroz simples.'],
+        ['Barras de cereal industriales (Cerealitas, Quaker, Tofi, Ser barras)', 'Mix de frutos secos + 1 fruta + un cuadradito de chocolate amargo, o barras caseras.'],
+        ['Alfajores industriales (Jorgito, Guaymallén, Terrabusi, Águila)', 'Fruta + 1 cuadradito de chocolate amargo 70%, o alfajor casero ocasional.'],
+        ['Caramelos, gomitas y golosinas (Mogul, Sugus, Halls, Tofi, Misky)', 'Fruta fresca, fruta deshidratada sin azúcar, 1 dátil con un fruto seco adentro.'],
+        ['Helados industriales (Frigor, Noel, Grido, Massalin)', 'Helado casero de yogur con frutas, palitos de fruta natural, fruta congelada (banana, frutillas) procesada.'],
+        ['Ketchup, BBQ y aderezos (Hellmann\'s, Fanacoa, Heinz)', 'Salsa de tomate casera con ajo, orégano y aceite de oliva. Mostaza tradicional sin azúcar.'],
+        ['Mermeladas y dulces industriales (Arcor, BC, La Campagnola, Orieta)', 'Mermelada casera con poca azúcar, fruta fresca pisada o ricota con frutos rojos.'],
+        ['Dulce de leche industrial', 'Cantidad pequeña ocasional, o dulce de leche casero. Mejor: ricota con un toque de miel y canela.'],
+        ['Pan blanco industrial (Bimbo, Fargo, Lactal)', 'Pan de panadería tradicional (mignón, francés, criollo), pan casero o pan integral artesanal.'],
+        ['Comidas precocidas (pollo empanado, hamburguesas saborizadas, sopas instantáneas)', 'Cocción casera con ingredientes frescos: pollo, carne, vegetales, legumbres, huevos, pescado.'],
       ]},
-      { type: 'heading', content: 'Tres cambios para empezar hoy' },
-      { type: 'bullets', content: [
+      { type: 'callout', color: 'green', title: 'Tres cambios para empezar hoy', bullets: [
         'Reemplazá una bebida azucarada por día por agua o agua saborizada en casa.',
         'Cambiá el yogur saborizado por yogur natural con fruta fresca.',
         'Antes de comprar un producto envasado, dale vuelta el envase y leé los primeros 5 ingredientes.',
@@ -3874,6 +3870,28 @@ async function generatePDF() {
             const imgH = 36 + 4;
             if (y + imgH > BOTTOM_SIM) { physPage++; pageHeadingSlots[physPage - 1] = 0; y = HEADER_H + 18; }
             y += imgH;
+
+          } else if (sec.type === 'callout') {
+            let _cH = 10;
+            if (sec.title) { const _tL = doc.splitTextToSize(safeText(sec.title), CW_SIM - 10); _cH += _tL.length * 5 + 4; }
+            if (sec.content) { const _cL = doc.splitTextToSize(safeText(sec.content), CW_SIM - 10); _cH += _cL.length * 5.2 + 2; }
+            if (sec.bullets) { for (const _b of sec.bullets) { const _bL = doc.splitTextToSize(safeText(_b), CW_SIM - 14); _cH += _bL.length * 5 + 1; } _cH += 2; }
+            _cH = Math.max(18, _cH);
+            if (y + _cH + 6 > BOTTOM_SIM) { physPage++; pageHeadingSlots[physPage - 1] = 0; y = HEADER_H + 18; }
+            y += _cH + 5;
+
+          } else if (sec.type === 'table') {
+            const _C1 = CW_SIM * 0.43, _C2 = CW_SIM * 0.57;
+            if (y + 8 > BOTTOM_SIM) { physPage++; pageHeadingSlots[physPage - 1] = 0; y = HEADER_H + 18; }
+            y += 8;
+            for (const _row of (sec.rows || [])) {
+              const _l1 = doc.splitTextToSize(safeText(_row[0]), _C1 - 6);
+              const _l2 = doc.splitTextToSize(safeText(_row[1]), _C2 - 6);
+              const _rH = Math.max(_l1.length, _l2.length) * 5 + 6;
+              if (y + _rH > BOTTOM_SIM) { physPage++; pageHeadingSlots[physPage - 1] = 0; y = HEADER_H + 18; y += 8; }
+              y += _rH;
+            }
+            y += 4;
           }
         }
         lastY = y;
@@ -4156,6 +4174,82 @@ async function generatePDF() {
           if (physPageCounter !== prevPage) bannersUsed = 0;
           doc.addImage(sec.data, 'JPEG', ML, y, CW, IMG_H);
           y += IMG_H + 4;
+
+        } else if (sec.type === 'callout') {
+          const _CC = {red:[255,244,244],gold:[253,248,232],green:[240,255,248],teal:[235,248,248]};
+          const _CB = {red:[192,57,43],gold:[180,140,60],green:[42,157,92],teal:[30,110,110]};
+          const _CT = {red:[192,57,43],gold:[150,110,30],green:[42,157,92],teal:[30,110,110]};
+          const _col = sec.color || 'teal';
+          const _tLines = sec.title ? doc.splitTextToSize(safeText(sec.title), CW - 14) : [];
+          const _cLines = sec.content ? doc.splitTextToSize(safeText(sec.content), CW - 14) : [];
+          const _bArr = sec.bullets ? sec.bullets.map(b => doc.splitTextToSize(safeText(b), CW - 18)) : [];
+          let _cH = 8;
+          if (_tLines.length) _cH += _tLines.length * 5 + 4;
+          if (_cLines.length) _cH += _cLines.length * 5.2 + 2;
+          _bArr.forEach(_bl => { _cH += _bl.length * 5 + 1; });
+          if (_bArr.length) _cH += 2;
+          _cH = Math.max(18, _cH);
+          const _pp = physPageCounter;
+          ensureSpace(_cH + 6);
+          if (physPageCounter !== _pp) bannersUsed = 0;
+          doc.setFillColor(...(_CC[_col] || _CC.teal));
+          doc.roundedRect(ML, y, CW, _cH, 2, 2, 'F');
+          doc.setFillColor(...(_CB[_col] || _CB.teal));
+          doc.rect(ML, y, 3.5, _cH, 'F');
+          let _cy = y + 6;
+          if (_tLines.length) {
+            doc.setFont(FONT_BODY, 'bold'); doc.setFontSize(9);
+            doc.setTextColor(...(_CT[_col] || _CT.teal));
+            doc.text(_tLines, ML + 8, _cy + 3); _cy += _tLines.length * 5 + 4;
+          }
+          if (_cLines.length) {
+            doc.setFont(FONT_BODY, 'normal'); doc.setFontSize(8.5);
+            doc.setTextColor(...DARK);
+            doc.text(_cLines, ML + 8, _cy + 3); _cy += _cLines.length * 5.2 + 2;
+          }
+          if (_bArr.length) {
+            doc.setFont(FONT_BODY, 'normal'); doc.setFontSize(8.5); doc.setTextColor(...DARK);
+            for (const _bl of _bArr) {
+              doc.setFillColor(...DARK); doc.circle(ML + 11, _cy + 2.5, 0.8, 'F');
+              doc.text(_bl, ML + 14, _cy + 3.5); _cy += _bl.length * 5 + 1;
+            }
+          }
+          y += _cH + 5;
+
+        } else if (sec.type === 'table') {
+          const _C1 = CW * 0.43, _C2 = CW - _C1, _CP = 3, _HH = 8;
+          const _drawHdr = (yy) => {
+            doc.setFillColor(...TEAL); doc.rect(ML, yy, CW, _HH, 'F');
+            doc.setFont(FONT_BODY, 'bold'); doc.setFontSize(8.5); doc.setTextColor(255,255,255);
+            if (sec.headers && sec.headers[0]) doc.text(safeText(sec.headers[0]), ML + _CP, yy + 5.5);
+            if (sec.headers && sec.headers[1]) doc.text(safeText(sec.headers[1]), ML + _C1 + _CP, yy + 5.5);
+            return yy + _HH;
+          };
+          const _pp0 = physPageCounter;
+          ensureSpace(_HH + 12);
+          if (physPageCounter !== _pp0) bannersUsed = 0;
+          y = _drawHdr(y);
+          let _alt = false;
+          for (const _row of (sec.rows || [])) {
+            const _l1 = doc.splitTextToSize(safeText(_row[0]), _C1 - _CP * 2);
+            const _l2 = doc.splitTextToSize(safeText(_row[1]), _C2 - _CP * 2);
+            const _rH = Math.max(_l1.length, _l2.length) * 5 + _CP * 2;
+            const _pp1 = physPageCounter;
+            ensureSpace(_rH);
+            if (physPageCounter !== _pp1) { bannersUsed = 0; y = _drawHdr(y); }
+            doc.setFillColor(_alt?248:255, _alt?248:255, _alt?244:255);
+            doc.rect(ML, y, CW, _rH, 'F');
+            _alt = !_alt;
+            doc.setDrawColor(220,220,215); doc.setLineWidth(0.25);
+            doc.line(ML, y+_rH, ML+CW, y+_rH);
+            doc.line(ML+_C1, y, ML+_C1, y+_rH);
+            doc.setFont(FONT_BODY,'bold'); doc.setFontSize(8); doc.setTextColor(160,40,30);
+            doc.text(_l1, ML+_CP, y+_CP+3);
+            doc.setFont(FONT_BODY,'normal'); doc.setFontSize(8); doc.setTextColor(...DARK);
+            doc.text(_l2, ML+_C1+_CP, y+_CP+3);
+            y += _rH;
+          }
+          y += 4;
         }
       }
 
@@ -4837,6 +4931,22 @@ function renderEditorSection(sec, ti, si) {
         </div>
       </div>`;
     }
+
+  } else if (sec.type === 'callout') {
+    const _cs = {red:{bg:'#fff4f4',border:'#c0392b',title:'#c0392b'},gold:{bg:'#fdf8e8',border:'#c9a84c',title:'#a07020'},green:{bg:'#f0fff8',border:'#2a9d5c',title:'#2a9d5c'},teal:{bg:'#ebf8f8',border:'#1e6e6e',title:'#1e6e6e'}};
+    const cs = _cs[sec.color] || _cs.teal;
+    let inner = '';
+    if (sec.title) inner += `<div style="font-weight:700;color:${cs.title};font-size:.82rem;margin-bottom:6px;line-height:1.35">${escH(sec.title)}</div>`;
+    if (sec.content) inner += `<div style="font-size:.8rem;color:#333;line-height:1.5">${escH(sec.content).replace(/\n/g,'<br>')}</div>`;
+    if (sec.bullets) { inner += `<ul style="margin:4px 0 0 0;padding-left:16px;font-size:.8rem;color:#333">`; (sec.bullets||[]).forEach(b => { inner += `<li style="margin-bottom:3px">${escH(b)}</li>`; }); inner += `</ul>`; }
+    html += `<div style="background:${cs.bg};border-left:4px solid ${cs.border};border-radius:4px;padding:10px 12px;margin:4px 0">${inner}</div>`;
+
+  } else if (sec.type === 'table') {
+    let th = `<table style="width:100%;border-collapse:collapse;font-size:.78rem;margin:4px 0">`;
+    if (sec.headers) th += `<tr>${sec.headers.map(h=>`<th style="background:#1e6e6e;color:#fff;padding:5px 8px;text-align:left;font-weight:700">${escH(h)}</th>`).join('')}</tr>`;
+    (sec.rows||[]).forEach((row,ri) => { const bg=ri%2===0?'#fff':'#f8f8f4'; th+=`<tr style="background:${bg}"><td style="padding:5px 8px;border-bottom:1px solid #e8e8e4;color:#a02820;font-weight:700;vertical-align:top;width:43%">${escH(row[0]||'')}</td><td style="padding:5px 8px;border-bottom:1px solid #e8e8e4;color:#333;vertical-align:top">${escH(row[1]||'')}</td></tr>`; });
+    th += `</table>`;
+    html += th;
   }
   html += `</div>`;
   return html;
