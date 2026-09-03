@@ -156,15 +156,15 @@
     "materiales": []
   },
   {
-    "apellido": "Losinno",
-    "nombres": "Marcelo Daniel",
-    "celular": "2325 413671",
+    "apellido": "Curita",
+    "nombres": "Curita",
+    "celular": "11 64998834",
     "materiales": []
   },
   {
-    "apellido": "Flores",
-    "nombres": "Monica  Cristina",
-    "celular": "2325 657139",
+    "apellido": "Losinno",
+    "nombres": "Marcelo Daniel",
+    "celular": "2325 413671",
     "materiales": []
   },
   {
@@ -198,15 +198,51 @@
     "materiales": []
   },
   {
+    "apellido": "Jorgelina",
+    "nombres": "Aranda",
+    "celular": "2325 658884",
+    "materiales": []
+  },
+  {
+    "apellido": "Anibal",
+    "nombres": "Silva",
+    "celular": "237 4851084",
+    "materiales": []
+  },
+  {
+    "apellido": "Carrizo",
+    "nombres": "Maria Soledad",
+    "celular": "2325 569974",
+    "materiales": []
+  },
+  {
+    "apellido": "Zunino",
+    "nombres": "Alcides",
+    "celular": "2325 657472",
+    "materiales": []
+  },
+  {
     "apellido": "Gonzalez",
     "nombres": "Gladys Noemi",
     "celular": "2325 458023",
     "materiales": []
   },
   {
+    "apellido": "Erramuspe",
+    "nombres": "Hernan",
+    "celular": "2323 442115",
+    "materiales": []
+  },
+  {
     "apellido": "Tito",
     "nombres": "Balmaceda",
     "celular": "2325 684451",
+    "materiales": []
+  },
+  {
+    "apellido": "Zunino",
+    "nombres": "Oscar",
+    "celular": "2325 658687",
     "materiales": []
   },
   {
@@ -240,392 +276,6 @@
     "materiales": []
   },
   {
-    "apellido": "Dinardi",
-    "nombres": "Lucia",
-    "celular": "2325 443374",
-    "materiales": []
-  },
-  {
-    "apellido": "Jufre",
-    "nombres": "Mirta",
-    "celular": "2325 440221",
-    "materiales": []
-  },
-  {
-    "apellido": "Monti",
-    "nombres": "Sebastian",
-    "celular": "11 25443333",
-    "materiales": []
-  },
-  {
-    "apellido": "Valeria",
-    "nombres": "Amondaray",
-    "celular": "2325 569974",
-    "materiales": []
-  },
-  {
-    "apellido": "Pucharnau",
-    "nombres": "Ester",
-    "celular": "2325 569682",
-    "materiales": []
-  },
-  {
-    "apellido": "Flores",
-    "nombres": "Andres",
-    "celular": "2325 595344",
-    "materiales": []
-  },
-  {
-    "apellido": "Furriol",
-    "nombres": "Claudia Edith",
-    "celular": "2325 513244",
-    "materiales": []
-  },
-  {
-    "apellido": "Casas",
-    "nombres": "Julian",
-    "celular": "2325 471768",
-    "materiales": []
-  },
-  {
-    "apellido": "Contreras",
-    "nombres": "Marisa",
-    "celular": "2323 410700",
-    "materiales": []
-  },
-  {
-    "apellido": "Zanou",
-    "nombres": "Susana Noemí",
-    "celular": "2325 565422",
-    "materiales": []
-  },
-  {
-    "apellido": "Alzuarte",
-    "nombres": "Jorge",
-    "celular": "2325 568474",
-    "materiales": []
-  },
-  {
-    "apellido": "Martin",
-    "nombres": "Margarita",
-    "celular": "2324 411113",
-    "materiales": []
-  },
-  {
-    "apellido": "Barrera",
-    "nombres": "Luis Sebastian",
-    "celular": "2325 411041",
-    "materiales": []
-  },
-  {
-    "apellido": "Erramuspe",
-    "nombres": "Myrian Karina",
-    "celular": "92325 414876",
-    "materiales": []
-  },
-  {
-    "apellido": "Elvira Cristina",
-    "nombres": "Legal",
-    "celular": "92325 565027",
-    "materiales": []
-  },
-  {
-    "apellido": "Valli",
-    "nombres": "Armando",
-    "celular": "2325 412296",
-    "materiales": []
-  },
-  {
-    "apellido": "Bucconi",
-    "nombres": "Tania",
-    "celular": "2325 561111",
-    "materiales": []
-  },
-  {
-    "apellido": "Pereira",
-    "nombres": "Marcelo Omar",
-    "celular": "2325 655657",
-    "materiales": []
-  },
-  {
-    "apellido": "Jacket",
-    "nombres": "Pedro Jose Manuel",
-    "celular": "2325 420354",
-    "materiales": []
-  },
-  {
-    "apellido": "Rios",
-    "nombres": "Antonella",
-    "celular": "2325 569187",
-    "materiales": []
-  },
-  {
-    "apellido": "Furlaro",
-    "nombres": "Patricia Noemí",
-    "celular": "2474 661164",
-    "materiales": []
-  },
-  {
-    "apellido": "Ricci",
-    "nombres": "Gianluca",
-    "celular": "2474 449001",
-    "materiales": []
-  },
-  {
-    "apellido": "Lofrano",
-    "nombres": "Camila",
-    "celular": "2324 680023",
-    "materiales": []
-  },
-  {
-    "apellido": "Marchesi",
-    "nombres": "Maria De Los Ángeles",
-    "celular": "2325 683143",
-    "materiales": []
-  },
-  {
-    "apellido": "Cordal",
-    "nombres": "Maria Soledad",
-    "celular": "2324 540012",
-    "materiales": []
-  },
-  {
-    "apellido": "Acuña",
-    "nombres": "Analía",
-    "celular": "2325 565454",
-    "materiales": []
-  },
-  {
-    "apellido": "Andrade",
-    "nombres": "Maria Odete",
-    "celular": "11 35133417",
-    "materiales": []
-  },
-  {
-    "apellido": "Narvaez",
-    "nombres": "Claudia Fernanda",
-    "celular": "11 619800370",
-    "materiales": [
-      {
-        "id": "narvaez_cf_20260501_1",
-        "creado": "2026-05-01",
-        "temas": [
-          "plan_alimentacion",
-          "ozempic",
-          "etiquetas"
-        ],
-        "fotos": {
-          "antiinflamatorio": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=840&h=240&fit=crop&crop=center",
-          "nutrientes_clave": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "semillas": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=840&h=240&fit=crop&crop=center",
-          "combinacion": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
-          "utensilios": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
-          "tips_organizacion": "https://images.unsplash.com/photo-1543362906-acfc16c67564?w=840&h=240&fit=crop&crop=center",
-          "listado_compras": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=840&h=240&fit=crop&crop=center",
-          "untables": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
-          "recetas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
-          "caldo_huesos": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
-          "leches_vegetales": "https://images.unsplash.com/photo-1600718374662-0483d2b9da44?w=840&h=240&fit=crop&crop=center",
-          "mindfulness": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
-          "rutina_matutina": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=840&h=240&fit=crop&crop=center",
-          "elementos": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=840&h=240&fit=crop&crop=center",
-          "ozempic": "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=840&h=240&fit=crop&crop=center",
-          "analogos_glp1": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "ejercicios_sensoriales": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=840&h=240&fit=crop&crop=center",
-          "ejercicios_elementos_practicos": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=840&h=240&fit=crop&crop=center",
-          "ritmos_circadianos": "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=840&h=240&fit=crop&crop=center",
-          "plantas_descanso": "https://images.unsplash.com/photo-1487530811015-780bdbbca90f?w=840&h=240&fit=crop&crop=center",
-          "ondas_cerebrales": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=840&h=240&fit=crop&crop=center",
-          "meditaciones": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=840&h=240&fit=crop&crop=center",
-          "neurotransmisores": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=840&h=240&fit=crop&crop=center",
-          "autocuidado_integral": "https://images.unsplash.com/photo-1482349212652-744925b7b2ad?w=840&h=240&fit=crop&crop=center",
-          "conteo_carbohidratos": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "jugos_desintoxicantes": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
-          "recetas_horneadas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
-          "granola_mermerlada": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
-          "aceitunas_aliÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±o": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
-          "mate_infusiones": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
-          "habitos_vida": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
-          "plan_alimentacion": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "desayunos_hiperproteicos": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=840&h=240&fit=crop&crop=center",
-          "meriendas_saludables": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=840&h=240&fit=crop&crop=center",
-          "jmaf": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=840&h=240&fit=crop&crop=center",
-          "etiquetas": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=840&h=240&fit=crop&crop=center",
-          "mid_banner_1": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=840&h=200&fit=crop&crop=center",
-          "mid_banner_2": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=200&fit=crop&crop=center",
-          "mid_banner_3": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=840&h=200&fit=crop&crop=center"
-        },
-        "orden": [
-          "plan_alimentacion",
-          "ozempic",
-          "etiquetas"
-        ]
-      }
-    ]
-  },
-  {
-    "apellido": "Tutti",
-    "nombres": "Eleonora",
-    "celular": "2325 516344",
-    "materiales": []
-  },
-  {
-    "apellido": "Ferretti",
-    "nombres": "Stella",
-    "celular": "2325 681682",
-    "materiales": []
-  },
-  {
-    "apellido": "Bert",
-    "nombres": "Matilde",
-    "celular": "2325 404835",
-    "materiales": []
-  },
-  {
-    "apellido": "Vieytes",
-    "nombres": "Elisa Noemi",
-    "celular": "2234 396779",
-    "materiales": []
-  },
-  {
-    "apellido": "Pallante",
-    "nombres": "Cecilia Alejandra",
-    "celular": "2236 895660",
-    "materiales": []
-  },
-  {
-    "apellido": "Borobia",
-    "nombres": "Mirta Liliana",
-    "celular": "2920 474972",
-    "materiales": []
-  },
-  {
-    "apellido": "Fiscella",
-    "nombres": "Marta Irene",
-    "celular": "2325 560251",
-    "materiales": []
-  },
-  {
-    "apellido": "Pereyra",
-    "nombres": "Leonardo",
-    "celular": "2325 478037",
-    "materiales": []
-  },
-  {
-    "apellido": "Carlotta",
-    "nombres": "María Alejandra",
-    "celular": "2325 411341",
-    "materiales": []
-  },
-  {
-    "apellido": "Espinosa",
-    "nombres": "Liliana",
-    "celular": "2325 414392",
-    "materiales": []
-  },
-  {
-    "apellido": "Ruiz",
-    "nombres": "Carolina",
-    "celular": "2326 470132",
-    "materiales": []
-  },
-  {
-    "apellido": "Vallejos Orellana",
-    "nombres": "Ruth Nelly",
-    "celular": "11 27735296",
-    "materiales": []
-  },
-  {
-    "apellido": "Barraza",
-    "nombres": "Maria Vanesa",
-    "celular": "2325 590633",
-    "materiales": []
-  },
-  {
-    "apellido": "Llamazares",
-    "nombres": "Mario",
-    "celular": "2325 424190",
-    "materiales": []
-  },
-  {
-    "apellido": "Brito",
-    "nombres": "Francisco Nahuel",
-    "celular": "2325 417431",
-    "materiales": []
-  },
-  {
-    "apellido": "Giraldi",
-    "nombres": "Maria Cristina",
-    "celular": "11 32005764",
-    "materiales": []
-  },
-  {
-    "apellido": "Zampieri",
-    "nombres": "Ricardo Jorge",
-    "celular": "11 37996458",
-    "materiales": []
-  },
-  {
-    "apellido": "Giordano",
-    "nombres": "Karen",
-    "celular": "11 65225376",
-    "materiales": []
-  },
-  {
-    "apellido": "Dómine",
-    "nombres": "Carlos Damián",
-    "celular": "2325 592898",
-    "materiales": []
-  },
-  {
-    "apellido": "Crivelli",
-    "nombres": "Estela Alejandra",
-    "celular": "2325 597775",
-    "materiales": []
-  },
-  {
-    "apellido": "Rolón",
-    "nombres": "Sergio Oscar",
-    "celular": "2325 428711",
-    "materiales": []
-  },
-  {
-    "apellido": "Tula",
-    "nombres": "Cristina Del Valle",
-    "celular": "00549388 6854730",
-    "materiales": []
-  },
-  {
-    "apellido": "Marta",
-    "nombres": "Puglielli",
-    "celular": "2325 457966",
-    "materiales": []
-  },
-  {
-    "apellido": "Achaga",
-    "nombres": "Griselda Beatriz",
-    "celular": "2325 475627",
-    "materiales": []
-  },
-  {
-    "apellido": "Curita",
-    "nombres": "Curita",
-    "celular": "11 64998834",
-    "materiales": []
-  },
-  {
-    "apellido": "Erramuspe",
-    "nombres": "Hernan",
-    "celular": "2323 442115",
-    "materiales": []
-  },
-  {
-    "apellido": "Zunino",
-    "nombres": "Oscar",
-    "celular": "2325 658687",
-    "materiales": []
-  },
-  {
     "apellido": "Malaisi",
     "nombres": "Belen",
     "celular": "2325 595227",
@@ -641,462 +291,6 @@
     "apellido": "Montes",
     "nombres": "Rosa Leonor",
     "celular": "2325 491005",
-    "materiales": []
-  },
-  {
-    "apellido": "Vanini",
-    "nombres": "Emilia",
-    "celular": "2325 687968",
-    "materiales": []
-  },
-  {
-    "apellido": "Russo",
-    "nombres": "Teodora Rosa",
-    "celular": "02325 566807",
-    "materiales": []
-  },
-  {
-    "apellido": "Sena",
-    "nombres": "Alba",
-    "celular": "5411 61510935",
-    "materiales": []
-  },
-  {
-    "apellido": "Bava",
-    "nombres": "Victor Ramon",
-    "celular": "2325 682620",
-    "materiales": []
-  },
-  {
-    "apellido": "Mendoza",
-    "nombres": "Agustin",
-    "celular": "2325 417716",
-    "materiales": []
-  },
-  {
-    "apellido": "Fernanda",
-    "nombres": "Fernanda Derivada De Nora Macchi",
-    "celular": "011 45288161",
-    "materiales": []
-  },
-  {
-    "apellido": "Paganini",
-    "nombres": "Rodrigo",
-    "celular": "2325 686196",
-    "materiales": []
-  },
-  {
-    "apellido": "Rosso",
-    "nombres": "Ana",
-    "celular": "2325 434867",
-    "materiales": []
-  },
-  {
-    "apellido": "Ponchione",
-    "nombres": "David",
-    "celular": "2325 651955",
-    "materiales": []
-  },
-  {
-    "apellido": "Almeira",
-    "nombres": "Patricia",
-    "celular": "2324 552957",
-    "materiales": []
-  },
-  {
-    "apellido": "Marincovich",
-    "nombres": "Marcelo",
-    "celular": "2325 593612",
-    "materiales": []
-  },
-  {
-    "apellido": "Corbetta",
-    "nombres": "Isaias",
-    "celular": "2325 404703",
-    "materiales": []
-  },
-  {
-    "apellido": "Gonzalez",
-    "nombres": "Cecilia",
-    "celular": "2325 435678",
-    "materiales": []
-  },
-  {
-    "apellido": "Verminetti",
-    "nombres": "Adela Verónica",
-    "celular": "2325 422515",
-    "materiales": []
-  },
-  {
-    "apellido": "Argoita",
-    "nombres": "María José",
-    "celular": "2325 596697",
-    "materiales": []
-  },
-  {
-    "apellido": "Ferretto",
-    "nombres": "Haydee Susana",
-    "celular": "2325 400160",
-    "materiales": []
-  },
-  {
-    "apellido": "Decastelli",
-    "nombres": "Malvina Olga",
-    "celular": "2325 568682",
-    "materiales": []
-  },
-  {
-    "apellido": "Mendoza",
-    "nombres": "Miguel",
-    "celular": "2325 417716",
-    "materiales": []
-  },
-  {
-    "apellido": "Monte",
-    "nombres": "Beatriz",
-    "celular": "11 60317789",
-    "materiales": []
-  },
-  {
-    "apellido": "Camarano",
-    "nombres": "Silvia Noemi",
-    "celular": "2325 653465",
-    "materiales": []
-  },
-  {
-    "apellido": "Rios",
-    "nombres": "Luis Oscar",
-    "celular": "2325 478978",
-    "materiales": []
-  },
-  {
-    "apellido": "Losinno",
-    "nombres": "Silvita Losinno",
-    "celular": "011 01160485075",
-    "materiales": []
-  },
-  {
-    "apellido": "Cairo",
-    "nombres": "César",
-    "celular": "92325 682922",
-    "materiales": []
-  },
-  {
-    "apellido": "Cooke",
-    "nombres": "Federico",
-    "celular": "11 41936647",
-    "materiales": []
-  },
-  {
-    "apellido": "Bilancieri",
-    "nombres": "Alicia",
-    "celular": "2325 435003",
-    "materiales": []
-  },
-  {
-    "apellido": "De Lellis",
-    "nombres": "María Celeste",
-    "celular": "2325 595467",
-    "materiales": []
-  },
-  {
-    "apellido": "Andreani",
-    "nombres": "Beatriz",
-    "celular": "2325 567432",
-    "materiales": []
-  },
-  {
-    "apellido": "Martinez",
-    "nombres": "Juan Carlos",
-    "celular": "11 01133165416",
-    "materiales": []
-  },
-  {
-    "apellido": "Veneroni",
-    "nombres": "Diego",
-    "celular": "2325 658680",
-    "materiales": []
-  },
-  {
-    "apellido": "Maldonado",
-    "nombres": "Rebeca Magali",
-    "celular": "2325 404302",
-    "materiales": []
-  },
-  {
-    "apellido": "Ceriani",
-    "nombres": "Carolina",
-    "celular": "2325 474680",
-    "materiales": []
-  },
-  {
-    "apellido": "Martinez",
-    "nombres": "Juan Carlos",
-    "celular": "11 57239259",
-    "materiales": []
-  },
-  {
-    "apellido": "Barbato",
-    "nombres": "Micaela",
-    "celular": "2325 414109",
-    "materiales": [
-      {
-        "id": "barbato_m_20260519_1",
-        "creado": "2026-05-19",
-        "temas": [
-          "conteo_carbohidratos"
-        ],
-        "fotos": {
-          "antiinflamatorio": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=840&h=240&fit=crop&crop=center",
-          "nutrientes_clave": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "semillas": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=840&h=240&fit=crop&crop=center",
-          "combinacion": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
-          "utensilios": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
-          "tips_organizacion": "https://images.unsplash.com/photo-1543362906-acfc16c67564?w=840&h=240&fit=crop&crop=center",
-          "listado_compras": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=840&h=240&fit=crop&crop=center",
-          "untables": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
-          "recetas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
-          "caldo_huesos": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
-          "leches_vegetales": "https://images.unsplash.com/photo-1600718374662-0483d2b9da44?w=840&h=240&fit=crop&crop=center",
-          "mindfulness": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
-          "rutina_matutina": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=840&h=240&fit=crop&crop=center",
-          "elementos": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=840&h=240&fit=crop&crop=center",
-          "ozempic": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "analogos_glp1": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "ejercicios_sensoriales": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=840&h=240&fit=crop&crop=center",
-          "ejercicios_elementos_practicos": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=840&h=240&fit=crop&crop=center",
-          "ritmos_circadianos": "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=840&h=240&fit=crop&crop=center",
-          "plantas_descanso": "https://images.unsplash.com/photo-1487530811015-780bdbbca90f?w=840&h=240&fit=crop&crop=center",
-          "ondas_cerebrales": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=840&h=240&fit=crop&crop=center",
-          "meditaciones": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=840&h=240&fit=crop&crop=center",
-          "neurotransmisores": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=840&h=240&fit=crop&crop=center",
-          "autocuidado_integral": "https://images.unsplash.com/photo-1482349212652-744925b7b2ad?w=840&h=240&fit=crop&crop=center",
-          "conteo_carbohidratos": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "jugos_desintoxicantes": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
-          "recetas_horneadas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
-          "granola_mermerlada": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
-          "aceitunas_aliÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±o": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
-          "mate_infusiones": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
-          "habitos_vida": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
-          "plan_alimentacion": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "desayunos_hiperproteicos": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=840&h=240&fit=crop&crop=center",
-          "meriendas_saludables": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=840&h=240&fit=crop&crop=center",
-          "jmaf": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=840&h=240&fit=crop&crop=center",
-          "etiquetas": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=840&h=240&fit=crop&crop=center",
-          "mid_banner_1": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=840&h=200&fit=crop&crop=center",
-          "mid_banner_2": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=200&fit=crop&crop=center",
-          "mid_banner_3": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=840&h=200&fit=crop&crop=center"
-        },
-        "orden": [
-          "conteo_carbohidratos"
-        ]
-      }
-    ]
-  },
-  {
-    "apellido": "Arévalo",
-    "nombres": "Gabriela Alejandra",
-    "celular": "2325 653759",
-    "materiales": []
-  },
-  {
-    "apellido": "Muñoz",
-    "nombres": "Paola Viviana",
-    "celular": "2325 469587",
-    "materiales": []
-  },
-  {
-    "apellido": "Tapella",
-    "nombres": "Karina Vanesa",
-    "celular": "2325 401335",
-    "materiales": []
-  },
-  {
-    "apellido": "Botta",
-    "nombres": "Juan Manuel",
-    "celular": "2325 515130",
-    "materiales": [
-      {
-        "id": "botta_jm_20260419_1",
-        "creado": "2026-04-19",
-        "temas": [
-          "plan_alimentacion"
-        ],
-        "fotos": {
-          "antiinflamatorio": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=840&h=240&fit=crop&crop=center",
-          "nutrientes_clave": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "semillas": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=840&h=240&fit=crop&crop=center",
-          "combinacion": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
-          "utensilios": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
-          "tips_organizacion": "https://images.unsplash.com/photo-1543362906-acfc16c67564?w=840&h=240&fit=crop&crop=center",
-          "listado_compras": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=840&h=240&fit=crop&crop=center",
-          "untables": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
-          "recetas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
-          "caldo_huesos": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
-          "leches_vegetales": "https://images.unsplash.com/photo-1600718374662-0483d2b9da44?w=840&h=240&fit=crop&crop=center",
-          "mindfulness": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
-          "rutina_matutina": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=840&h=240&fit=crop&crop=center",
-          "elementos": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=840&h=240&fit=crop&crop=center",
-          "ozempic": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "analogos_glp1": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "ejercicios_sensoriales": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=840&h=240&fit=crop&crop=center",
-          "ejercicios_elementos_practicos": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=840&h=240&fit=crop&crop=center",
-          "ritmos_circadianos": "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=840&h=240&fit=crop&crop=center",
-          "plantas_descanso": "https://images.unsplash.com/photo-1487530811015-780bdbbca90f?w=840&h=240&fit=crop&crop=center",
-          "ondas_cerebrales": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=840&h=240&fit=crop&crop=center",
-          "meditaciones": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=840&h=240&fit=crop&crop=center",
-          "neurotransmisores": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=840&h=240&fit=crop&crop=center",
-          "autocuidado_integral": "https://images.unsplash.com/photo-1482349212652-744925b7b2ad?w=840&h=240&fit=crop&crop=center",
-          "conteo_carbohidratos": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "jugos_desintoxicantes": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
-          "recetas_horneadas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
-          "granola_mermerlada": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
-          "aceitunas_aliÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±o": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
-          "mate_infusiones": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
-          "habitos_vida": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
-          "plan_alimentacion": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
-          "desayunos_hiperproteicos": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=840&h=240&fit=crop&crop=center",
-          "meriendas_saludables": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=840&h=240&fit=crop&crop=center",
-          "mid_banner_1": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=840&h=200&fit=crop&crop=center",
-          "mid_banner_2": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=200&fit=crop&crop=center",
-          "mid_banner_3": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=840&h=200&fit=crop&crop=center"
-        },
-        "orden": [
-          "plan_alimentacion"
-        ]
-      }
-    ]
-  },
-  {
-    "apellido": "Centeleghe",
-    "nombres": "Karina",
-    "celular": "2325 469288",
-    "materiales": []
-  },
-  {
-    "apellido": "Allende",
-    "nombres": "Pablo",
-    "celular": "2325 513956",
-    "materiales": []
-  },
-  {
-    "apellido": "Vergagni",
-    "nombres": "Rubén Darío",
-    "celular": "011 23905150",
-    "materiales": []
-  },
-  {
-    "apellido": "Ferreyra",
-    "nombres": "Giselle Natalia",
-    "celular": "11 31426084",
-    "materiales": []
-  },
-  {
-    "apellido": "Martinez",
-    "nombres": "Alfonso",
-    "celular": "2325 564516",
-    "materiales": []
-  },
-  {
-    "apellido": "Lanzone",
-    "nombres": "Romina",
-    "celular": "2325 418943",
-    "materiales": []
-  },
-  {
-    "apellido": "Gallo",
-    "nombres": "Juliana",
-    "celular": "11 58944841",
-    "materiales": []
-  },
-  {
-    "apellido": "Bonaparte",
-    "nombres": "Marcela Edith",
-    "celular": "2325 410571",
-    "materiales": []
-  },
-  {
-    "apellido": "Schubert",
-    "nombres": "Maria Claudia",
-    "celular": "0226 488208",
-    "materiales": []
-  },
-  {
-    "apellido": "Colombo",
-    "nombres": "Silvina Valeria",
-    "celular": "11 60019177",
-    "materiales": []
-  },
-  {
-    "apellido": "Gómez",
-    "nombres": "Susana",
-    "celular": "2325 651849",
-    "materiales": []
-  },
-  {
-    "apellido": "Elizondo",
-    "nombres": "Maria Evangelina",
-    "celular": "2325 596252",
-    "materiales": []
-  },
-  {
-    "apellido": "Larroque",
-    "nombres": "Julio Francisco",
-    "celular": "2325 400102",
-    "materiales": []
-  },
-  {
-    "apellido": "Defelippe",
-    "nombres": "Rosana",
-    "celular": "2325 680470",
-    "materiales": []
-  },
-  {
-    "apellido": "Uncal Baso",
-    "nombres": "Maria Magdalena",
-    "celular": "11 46735477",
-    "materiales": []
-  },
-  {
-    "apellido": "Cejas",
-    "nombres": "Luis",
-    "celular": "2325 411041",
-    "materiales": []
-  },
-  {
-    "apellido": "Antico",
-    "nombres": "Estela",
-    "celular": "2325 688018",
-    "materiales": []
-  },
-  {
-    "apellido": "Rojas",
-    "nombres": "Felix",
-    "celular": "2325 427888",
-    "materiales": []
-  },
-  {
-    "apellido": "Jorgelina",
-    "nombres": "Aranda",
-    "celular": "2325 658884",
-    "materiales": []
-  },
-  {
-    "apellido": "Anibal",
-    "nombres": "Silva",
-    "celular": "237 4851084",
-    "materiales": []
-  },
-  {
-    "apellido": "Carrizo",
-    "nombres": "Maria Soledad",
-    "celular": "2325 569974",
-    "materiales": []
-  },
-  {
-    "apellido": "Zunino",
-    "nombres": "Alcides",
-    "celular": "2325 657472",
     "materiales": []
   },
   {
@@ -1196,6 +390,18 @@
     "materiales": []
   },
   {
+    "apellido": "Vanini",
+    "nombres": "Emilia",
+    "celular": "2325 687968",
+    "materiales": []
+  },
+  {
+    "apellido": "Russo",
+    "nombres": "Teodora Rosa",
+    "celular": "02325 566807",
+    "materiales": []
+  },
+  {
     "apellido": "Gonzalez",
     "nombres": "Daniel",
     "celular": "2325 682787",
@@ -1205,6 +411,510 @@
     "apellido": "Cintia",
     "nombres": "Gonzalez",
     "celular": "2325 419852",
+    "materiales": []
+  },
+  {
+    "apellido": "Dinardi",
+    "nombres": "Lucia",
+    "celular": "2325 443374",
+    "materiales": []
+  },
+  {
+    "apellido": "Ponchione",
+    "nombres": "David",
+    "celular": "2325 651955",
+    "materiales": []
+  },
+  {
+    "apellido": "Barbato",
+    "nombres": "Micaela",
+    "celular": "2325 414109",
+    "materiales": [
+      {
+        "id": "barbato_m_20260519_1",
+        "creado": "2026-05-19",
+        "temas": [
+          "conteo_carbohidratos"
+        ],
+        "fotos": {
+          "antiinflamatorio": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=840&h=240&fit=crop&crop=center",
+          "nutrientes_clave": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "semillas": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=840&h=240&fit=crop&crop=center",
+          "combinacion": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
+          "utensilios": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
+          "tips_organizacion": "https://images.unsplash.com/photo-1543362906-acfc16c67564?w=840&h=240&fit=crop&crop=center",
+          "listado_compras": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=840&h=240&fit=crop&crop=center",
+          "untables": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
+          "recetas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
+          "caldo_huesos": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
+          "leches_vegetales": "https://images.unsplash.com/photo-1600718374662-0483d2b9da44?w=840&h=240&fit=crop&crop=center",
+          "mindfulness": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
+          "rutina_matutina": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=840&h=240&fit=crop&crop=center",
+          "elementos": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=840&h=240&fit=crop&crop=center",
+          "ozempic": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "analogos_glp1": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "ejercicios_sensoriales": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=840&h=240&fit=crop&crop=center",
+          "ejercicios_elementos_practicos": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=840&h=240&fit=crop&crop=center",
+          "ritmos_circadianos": "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=840&h=240&fit=crop&crop=center",
+          "plantas_descanso": "https://images.unsplash.com/photo-1487530811015-780bdbbca90f?w=840&h=240&fit=crop&crop=center",
+          "ondas_cerebrales": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=840&h=240&fit=crop&crop=center",
+          "meditaciones": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=840&h=240&fit=crop&crop=center",
+          "neurotransmisores": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=840&h=240&fit=crop&crop=center",
+          "autocuidado_integral": "https://images.unsplash.com/photo-1482349212652-744925b7b2ad?w=840&h=240&fit=crop&crop=center",
+          "conteo_carbohidratos": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "jugos_desintoxicantes": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
+          "recetas_horneadas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
+          "granola_mermerlada": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
+          "aceitunas_aliÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±o": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
+          "mate_infusiones": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
+          "habitos_vida": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
+          "plan_alimentacion": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "desayunos_hiperproteicos": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=840&h=240&fit=crop&crop=center",
+          "meriendas_saludables": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=840&h=240&fit=crop&crop=center",
+          "jmaf": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=840&h=240&fit=crop&crop=center",
+          "etiquetas": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=840&h=240&fit=crop&crop=center",
+          "mid_banner_1": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=840&h=200&fit=crop&crop=center",
+          "mid_banner_2": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=200&fit=crop&crop=center",
+          "mid_banner_3": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=840&h=200&fit=crop&crop=center"
+        },
+        "orden": [
+          "conteo_carbohidratos"
+        ]
+      }
+    ]
+  },
+  {
+    "apellido": "Tutti",
+    "nombres": "Eleonora",
+    "celular": "2325 516344",
+    "materiales": []
+  },
+  {
+    "apellido": "Ferretti",
+    "nombres": "Stella",
+    "celular": "2325 681682",
+    "materiales": []
+  },
+  {
+    "apellido": "Bert",
+    "nombres": "Matilde",
+    "celular": "2325 404835",
+    "materiales": []
+  },
+  {
+    "apellido": "Valenzuela De La Torre",
+    "nombres": "Teresa Del Niño Jesus Ernestina",
+    "celular": "11 63680730",
+    "materiales": []
+  },
+  {
+    "apellido": "Arévalo",
+    "nombres": "Gabriela Alejandra",
+    "celular": "2325 653759",
+    "materiales": []
+  },
+  {
+    "apellido": "Boiero",
+    "nombres": "Daniel Alejandro",
+    "celular": "11 58499204",
+    "materiales": []
+  },
+  {
+    "apellido": "Muñoz",
+    "nombres": "Paola Viviana",
+    "celular": "2325 469587",
+    "materiales": []
+  },
+  {
+    "apellido": "Tapella",
+    "nombres": "Karina Vanesa",
+    "celular": "2325 401335",
+    "materiales": []
+  },
+  {
+    "apellido": "Botta",
+    "nombres": "Juan Manuel",
+    "celular": "2325 515130",
+    "materiales": [
+      {
+        "id": "botta_jm_20260419_1",
+        "creado": "2026-04-19",
+        "temas": [
+          "plan_alimentacion"
+        ],
+        "fotos": {
+          "antiinflamatorio": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=840&h=240&fit=crop&crop=center",
+          "nutrientes_clave": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "semillas": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=840&h=240&fit=crop&crop=center",
+          "combinacion": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
+          "utensilios": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
+          "tips_organizacion": "https://images.unsplash.com/photo-1543362906-acfc16c67564?w=840&h=240&fit=crop&crop=center",
+          "listado_compras": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=840&h=240&fit=crop&crop=center",
+          "untables": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
+          "recetas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
+          "caldo_huesos": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
+          "leches_vegetales": "https://images.unsplash.com/photo-1600718374662-0483d2b9da44?w=840&h=240&fit=crop&crop=center",
+          "mindfulness": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
+          "rutina_matutina": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=840&h=240&fit=crop&crop=center",
+          "elementos": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=840&h=240&fit=crop&crop=center",
+          "ozempic": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "analogos_glp1": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "ejercicios_sensoriales": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=840&h=240&fit=crop&crop=center",
+          "ejercicios_elementos_practicos": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=840&h=240&fit=crop&crop=center",
+          "ritmos_circadianos": "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=840&h=240&fit=crop&crop=center",
+          "plantas_descanso": "https://images.unsplash.com/photo-1487530811015-780bdbbca90f?w=840&h=240&fit=crop&crop=center",
+          "ondas_cerebrales": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=840&h=240&fit=crop&crop=center",
+          "meditaciones": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=840&h=240&fit=crop&crop=center",
+          "neurotransmisores": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=840&h=240&fit=crop&crop=center",
+          "autocuidado_integral": "https://images.unsplash.com/photo-1482349212652-744925b7b2ad?w=840&h=240&fit=crop&crop=center",
+          "conteo_carbohidratos": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "jugos_desintoxicantes": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
+          "recetas_horneadas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
+          "granola_mermerlada": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
+          "aceitunas_aliÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±o": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
+          "mate_infusiones": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
+          "habitos_vida": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
+          "plan_alimentacion": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "desayunos_hiperproteicos": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=840&h=240&fit=crop&crop=center",
+          "meriendas_saludables": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=840&h=240&fit=crop&crop=center",
+          "mid_banner_1": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=840&h=200&fit=crop&crop=center",
+          "mid_banner_2": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=200&fit=crop&crop=center",
+          "mid_banner_3": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=840&h=200&fit=crop&crop=center"
+        },
+        "orden": [
+          "plan_alimentacion"
+        ]
+      }
+    ]
+  },
+  {
+    "apellido": "Centeleghe",
+    "nombres": "Karina",
+    "celular": "2325 469288",
+    "materiales": []
+  },
+  {
+    "apellido": "Allende",
+    "nombres": "Pablo",
+    "celular": "2325 513956",
+    "materiales": []
+  },
+  {
+    "apellido": "Vergagni",
+    "nombres": "Rubén Darío",
+    "celular": "011 23905150",
+    "materiales": []
+  },
+  {
+    "apellido": "Ferreyra",
+    "nombres": "Giselle Natalia",
+    "celular": "11 31426084",
+    "materiales": []
+  },
+  {
+    "apellido": "Martinez",
+    "nombres": "Alfonso",
+    "celular": "2325 564516",
+    "materiales": []
+  },
+  {
+    "apellido": "Lanzone",
+    "nombres": "Romina",
+    "celular": "2325 418943",
+    "materiales": []
+  },
+  {
+    "apellido": "Gallo",
+    "nombres": "Juliana",
+    "celular": "11 58944841",
+    "materiales": []
+  },
+  {
+    "apellido": "Bonaparte",
+    "nombres": "Marcela Edith",
+    "celular": "2325 410571",
+    "materiales": []
+  },
+  {
+    "apellido": "Giordano",
+    "nombres": "Karen",
+    "celular": "11 65225376",
+    "materiales": []
+  },
+  {
+    "apellido": "Gómez",
+    "nombres": "Susana",
+    "celular": "2325 651849",
+    "materiales": []
+  },
+  {
+    "apellido": "Crivelli",
+    "nombres": "Estela Alejandra",
+    "celular": "2325 597775",
+    "materiales": []
+  },
+  {
+    "apellido": "Defelippe",
+    "nombres": "Rosana",
+    "celular": "2325 680470",
+    "materiales": []
+  },
+  {
+    "apellido": "Tula",
+    "nombres": "Cristina Del Valle",
+    "celular": "00549388 6854730",
+    "materiales": []
+  },
+  {
+    "apellido": "Casas",
+    "nombres": "Julian",
+    "celular": "2325 471768",
+    "materiales": []
+  },
+  {
+    "apellido": "Cooke",
+    "nombres": "Federico",
+    "celular": "11 41936647",
+    "materiales": []
+  },
+  {
+    "apellido": "Andreani",
+    "nombres": "Beatriz",
+    "celular": "2325 567432",
+    "materiales": []
+  },
+  {
+    "apellido": "Erramuspe",
+    "nombres": "Myrian Karina",
+    "celular": "92325 414876",
+    "materiales": []
+  },
+  {
+    "apellido": "Veneroni",
+    "nombres": "Diego",
+    "celular": "2325 658680",
+    "materiales": []
+  },
+  {
+    "apellido": "Maldonado",
+    "nombres": "Rebeca Magali",
+    "celular": "2325 404302",
+    "materiales": []
+  },
+  {
+    "apellido": "Bucconi",
+    "nombres": "Tania",
+    "celular": "2325 561111",
+    "materiales": []
+  },
+  {
+    "apellido": "Rios",
+    "nombres": "Antonella",
+    "celular": "2325 569187",
+    "materiales": []
+  },
+  {
+    "apellido": "Furlaro",
+    "nombres": "Patricia Noemí",
+    "celular": "2474 661164",
+    "materiales": []
+  },
+  {
+    "apellido": "Lofrano",
+    "nombres": "Camila",
+    "celular": "2324 680023",
+    "materiales": []
+  },
+  {
+    "apellido": "Cordal",
+    "nombres": "Maria Soledad",
+    "celular": "2324 540012",
+    "materiales": []
+  },
+  {
+    "apellido": "Andrade",
+    "nombres": "Maria Odete",
+    "celular": "11 35133417",
+    "materiales": []
+  },
+  {
+    "apellido": "Ceriani",
+    "nombres": "Carolina",
+    "celular": "2325 474680",
+    "materiales": []
+  },
+  {
+    "apellido": "Schubert",
+    "nombres": "Maria Claudia",
+    "celular": "0226 488208",
+    "materiales": []
+  },
+  {
+    "apellido": "Colombo",
+    "nombres": "Silvina Valeria",
+    "celular": "11 60019177",
+    "materiales": []
+  },
+  {
+    "apellido": "Vieytes",
+    "nombres": "Elisa Noemi",
+    "celular": "2234 396779",
+    "materiales": []
+  },
+  {
+    "apellido": "Pallante",
+    "nombres": "Cecilia Alejandra",
+    "celular": "2236 895660",
+    "materiales": []
+  },
+  {
+    "apellido": "Borobia",
+    "nombres": "Mirta Liliana",
+    "celular": "2920 474972",
+    "materiales": []
+  },
+  {
+    "apellido": "Cárdenas Buracco",
+    "nombres": "Morena",
+    "celular": "3885 177995",
+    "materiales": []
+  },
+  {
+    "apellido": "Fiscella",
+    "nombres": "Marta Irene",
+    "celular": "2325 560251",
+    "materiales": []
+  },
+  {
+    "apellido": "Perez",
+    "nombres": "Antonio Nicandro",
+    "celular": "2325 416838",
+    "materiales": []
+  },
+  {
+    "apellido": "Miroglio",
+    "nombres": "Aquiles",
+    "celular": "2325 404824",
+    "materiales": []
+  },
+  {
+    "apellido": "García",
+    "nombres": "Mercedes",
+    "celular": "2325 652908",
+    "materiales": []
+  },
+  {
+    "apellido": "Pereyra",
+    "nombres": "Leonardo",
+    "celular": "2325 478037",
+    "materiales": []
+  },
+  {
+    "apellido": "Martinez",
+    "nombres": "Juan Carlos",
+    "celular": "11 01133165416",
+    "materiales": []
+  },
+  {
+    "apellido": "Flores",
+    "nombres": "Monica  Cristina",
+    "celular": "2325 657139",
+    "materiales": []
+  },
+  {
+    "apellido": "Curva",
+    "nombres": "Gisela Ruth",
+    "celular": "2325 409572",
+    "materiales": []
+  },
+  {
+    "apellido": "Haedo",
+    "nombres": "Mónica Liliana",
+    "celular": "2325 657933",
+    "materiales": []
+  },
+  {
+    "apellido": "Di Leo",
+    "nombres": "Soledad",
+    "celular": "005698 1492667",
+    "materiales": []
+  },
+  {
+    "apellido": "Paglieri",
+    "nombres": "Juan Carlos",
+    "celular": "2325 653798",
+    "materiales": []
+  },
+  {
+    "apellido": "Acevedo",
+    "nombres": "Graciela",
+    "celular": "039348 9511478",
+    "materiales": []
+  },
+  {
+    "apellido": "Barraza",
+    "nombres": "Maria Vanesa",
+    "celular": "2325 590633",
+    "materiales": []
+  },
+  {
+    "apellido": "Llamazares",
+    "nombres": "Mario",
+    "celular": "2325 424190",
+    "materiales": []
+  },
+  {
+    "apellido": "Giraldi",
+    "nombres": "Maria Cristina",
+    "celular": "11 32005764",
+    "materiales": []
+  },
+  {
+    "apellido": "Dómine",
+    "nombres": "Carlos Damián",
+    "celular": "2325 592898",
+    "materiales": []
+  },
+  {
+    "apellido": "Rodriguez",
+    "nombres": "Elvira Olga",
+    "celular": "2325 640474",
+    "materiales": []
+  },
+  {
+    "apellido": "Larroque",
+    "nombres": "Julio Francisco",
+    "celular": "2325 400102",
+    "materiales": []
+  },
+  {
+    "apellido": "Uncal Baso",
+    "nombres": "Maria Magdalena",
+    "celular": "11 46735477",
+    "materiales": []
+  },
+  {
+    "apellido": "Antico",
+    "nombres": "Estela",
+    "celular": "2325 688018",
+    "materiales": []
+  },
+  {
+    "apellido": "Marta",
+    "nombres": "Puglielli",
+    "celular": "2325 457966",
+    "materiales": []
+  },
+  {
+    "apellido": "Jufre",
+    "nombres": "Mirta",
+    "celular": "2325 440221",
+    "materiales": []
+  },
+  {
+    "apellido": "Sena",
+    "nombres": "Alba",
+    "celular": "5411 61510935",
     "materiales": []
   },
   {
@@ -1256,9 +966,75 @@
     "materiales": []
   },
   {
+    "apellido": "Monti",
+    "nombres": "Sebastian",
+    "celular": "11 25443333",
+    "materiales": []
+  },
+  {
+    "apellido": "Valeria",
+    "nombres": "Amondaray",
+    "celular": "2325 569974",
+    "materiales": []
+  },
+  {
+    "apellido": "Bava",
+    "nombres": "Victor Ramon",
+    "celular": "2325 682620",
+    "materiales": []
+  },
+  {
+    "apellido": "Mendoza",
+    "nombres": "Agustin",
+    "celular": "2325 417716",
+    "materiales": []
+  },
+  {
+    "apellido": "Fernanda",
+    "nombres": "Fernanda Derivada De Nora Macchi",
+    "celular": "011 45288161",
+    "materiales": []
+  },
+  {
+    "apellido": "Paganini",
+    "nombres": "Rodrigo",
+    "celular": "2325 686196",
+    "materiales": []
+  },
+  {
+    "apellido": "Rosso",
+    "nombres": "Ana",
+    "celular": "2325 434867",
+    "materiales": []
+  },
+  {
+    "apellido": "Almeira",
+    "nombres": "Patricia",
+    "celular": "2324 552957",
+    "materiales": []
+  },
+  {
+    "apellido": "Marincovich",
+    "nombres": "Marcelo",
+    "celular": "2325 593612",
+    "materiales": []
+  },
+  {
+    "apellido": "Corbetta",
+    "nombres": "Isaias",
+    "celular": "2325 404703",
+    "materiales": []
+  },
+  {
     "apellido": "Maggi",
     "nombres": "Adrián José",
     "celular": "2325 458094",
+    "materiales": []
+  },
+  {
+    "apellido": "Gonzalez",
+    "nombres": "Cecilia",
+    "celular": "2325 435678",
     "materiales": []
   },
   {
@@ -1271,6 +1047,24 @@
     "apellido": "Morada",
     "nombres": "Walter",
     "celular": "2325 685164",
+    "materiales": []
+  },
+  {
+    "apellido": "Verminetti",
+    "nombres": "Adela Verónica",
+    "celular": "2325 422515",
+    "materiales": []
+  },
+  {
+    "apellido": "Argoita",
+    "nombres": "María José",
+    "celular": "2325 596697",
+    "materiales": []
+  },
+  {
+    "apellido": "Ferretto",
+    "nombres": "Haydee Susana",
+    "celular": "2325 400160",
     "materiales": []
   },
   {
@@ -1292,9 +1086,117 @@
     "materiales": []
   },
   {
+    "apellido": "Pucharnau",
+    "nombres": "Ester",
+    "celular": "2325 569682",
+    "materiales": []
+  },
+  {
+    "apellido": "Flores",
+    "nombres": "Andres",
+    "celular": "2325 595344",
+    "materiales": []
+  },
+  {
+    "apellido": "Furriol",
+    "nombres": "Claudia Edith",
+    "celular": "2325 513244",
+    "materiales": []
+  },
+  {
+    "apellido": "Contreras",
+    "nombres": "Marisa",
+    "celular": "2323 410700",
+    "materiales": []
+  },
+  {
+    "apellido": "Zanou",
+    "nombres": "Susana Noemí",
+    "celular": "2325 565422",
+    "materiales": []
+  },
+  {
+    "apellido": "Alzuarte",
+    "nombres": "Jorge",
+    "celular": "2325 568474",
+    "materiales": []
+  },
+  {
+    "apellido": "Martin",
+    "nombres": "Margarita",
+    "celular": "2324 411113",
+    "materiales": []
+  },
+  {
+    "apellido": "Decastelli",
+    "nombres": "Malvina Olga",
+    "celular": "2325 568682",
+    "materiales": []
+  },
+  {
+    "apellido": "Mendoza",
+    "nombres": "Miguel",
+    "celular": "2325 417716",
+    "materiales": []
+  },
+  {
+    "apellido": "Monte",
+    "nombres": "Beatriz",
+    "celular": "11 60317789",
+    "materiales": []
+  },
+  {
+    "apellido": "Camarano",
+    "nombres": "Silvia Noemi",
+    "celular": "2325 653465",
+    "materiales": []
+  },
+  {
+    "apellido": "Rios",
+    "nombres": "Luis Oscar",
+    "celular": "2325 478978",
+    "materiales": []
+  },
+  {
+    "apellido": "Losinno",
+    "nombres": "Silvita Losinno",
+    "celular": "011 01160485075",
+    "materiales": []
+  },
+  {
+    "apellido": "Cairo",
+    "nombres": "César",
+    "celular": "92325 682922",
+    "materiales": []
+  },
+  {
+    "apellido": "Bilancieri",
+    "nombres": "Alicia",
+    "celular": "2325 435003",
+    "materiales": []
+  },
+  {
     "apellido": "Van Denbrouck",
     "nombres": "Claudia Marcela",
     "celular": "2325 415509",
+    "materiales": []
+  },
+  {
+    "apellido": "De Lellis",
+    "nombres": "María Celeste",
+    "celular": "2325 595467",
+    "materiales": []
+  },
+  {
+    "apellido": "Barrera",
+    "nombres": "Luis Sebastian",
+    "celular": "2325 411041",
+    "materiales": []
+  },
+  {
+    "apellido": "Elvira Cristina",
+    "nombres": "Legal",
+    "celular": "92325 565027",
     "materiales": []
   },
   {
@@ -1304,33 +1206,197 @@
     "materiales": []
   },
   {
+    "apellido": "Valli",
+    "nombres": "Armando",
+    "celular": "2325 412296",
+    "materiales": []
+  },
+  {
+    "apellido": "Pereira",
+    "nombres": "Marcelo Omar",
+    "celular": "2325 655657",
+    "materiales": []
+  },
+  {
+    "apellido": "Jacket",
+    "nombres": "Pedro Jose Manuel",
+    "celular": "2325 420354",
+    "materiales": []
+  },
+  {
+    "apellido": "Ricci",
+    "nombres": "Gianluca",
+    "celular": "2474 449001",
+    "materiales": []
+  },
+  {
+    "apellido": "Marchesi",
+    "nombres": "Maria De Los Ángeles",
+    "celular": "2325 683143",
+    "materiales": []
+  },
+  {
+    "apellido": "Acuña",
+    "nombres": "Analía",
+    "celular": "2325 565454",
+    "materiales": []
+  },
+  {
+    "apellido": "Narvaez",
+    "nombres": "Claudia Fernanda",
+    "celular": "11 619800370",
+    "materiales": [
+      {
+        "id": "narvaez_cf_20260501_1",
+        "creado": "2026-05-01",
+        "temas": [
+          "plan_alimentacion",
+          "ozempic",
+          "etiquetas"
+        ],
+        "fotos": {
+          "antiinflamatorio": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=840&h=240&fit=crop&crop=center",
+          "nutrientes_clave": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "semillas": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=840&h=240&fit=crop&crop=center",
+          "combinacion": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
+          "utensilios": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
+          "tips_organizacion": "https://images.unsplash.com/photo-1543362906-acfc16c67564?w=840&h=240&fit=crop&crop=center",
+          "listado_compras": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=840&h=240&fit=crop&crop=center",
+          "untables": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
+          "recetas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
+          "caldo_huesos": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
+          "leches_vegetales": "https://images.unsplash.com/photo-1600718374662-0483d2b9da44?w=840&h=240&fit=crop&crop=center",
+          "mindfulness": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
+          "rutina_matutina": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=840&h=240&fit=crop&crop=center",
+          "elementos": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=840&h=240&fit=crop&crop=center",
+          "ozempic": "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=840&h=240&fit=crop&crop=center",
+          "analogos_glp1": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "ejercicios_sensoriales": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=840&h=240&fit=crop&crop=center",
+          "ejercicios_elementos_practicos": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=840&h=240&fit=crop&crop=center",
+          "ritmos_circadianos": "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=840&h=240&fit=crop&crop=center",
+          "plantas_descanso": "https://images.unsplash.com/photo-1487530811015-780bdbbca90f?w=840&h=240&fit=crop&crop=center",
+          "ondas_cerebrales": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=840&h=240&fit=crop&crop=center",
+          "meditaciones": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=840&h=240&fit=crop&crop=center",
+          "neurotransmisores": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=840&h=240&fit=crop&crop=center",
+          "autocuidado_integral": "https://images.unsplash.com/photo-1482349212652-744925b7b2ad?w=840&h=240&fit=crop&crop=center",
+          "conteo_carbohidratos": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "jugos_desintoxicantes": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=840&h=240&fit=crop&crop=center",
+          "recetas_horneadas": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=840&h=240&fit=crop&crop=center",
+          "granola_mermerlada": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=840&h=240&fit=crop&crop=center",
+          "aceitunas_aliÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±o": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=840&h=240&fit=crop&crop=center",
+          "mate_infusiones": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=840&h=240&fit=crop&crop=center",
+          "habitos_vida": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=240&fit=crop&crop=center",
+          "plan_alimentacion": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=840&h=240&fit=crop&crop=center",
+          "desayunos_hiperproteicos": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=840&h=240&fit=crop&crop=center",
+          "meriendas_saludables": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=840&h=240&fit=crop&crop=center",
+          "jmaf": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=840&h=240&fit=crop&crop=center",
+          "etiquetas": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=840&h=240&fit=crop&crop=center",
+          "mid_banner_1": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=840&h=200&fit=crop&crop=center",
+          "mid_banner_2": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=840&h=200&fit=crop&crop=center",
+          "mid_banner_3": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=840&h=200&fit=crop&crop=center"
+        },
+        "orden": [
+          "plan_alimentacion",
+          "ozempic",
+          "etiquetas"
+        ]
+      }
+    ]
+  },
+  {
+    "apellido": "Martinez",
+    "nombres": "Juan Carlos",
+    "celular": "11 57239259",
+    "materiales": []
+  },
+  {
     "apellido": "Capiello",
     "nombres": "Analía",
     "celular": "11 59631262",
     "materiales": []
   },
   {
-    "apellido": "Valenzuela De La Torre",
-    "nombres": "Teresa Del Niño Jesus Ernestina",
-    "celular": "11 63680730",
+    "apellido": "Di Chiaro",
+    "nombres": "Graciela",
+    "celular": "2324 690918",
     "materiales": []
   },
   {
-    "apellido": "Boiero",
-    "nombres": "Daniel Alejandro",
-    "celular": "11 58499204",
+    "apellido": "Carlotta",
+    "nombres": "María Alejandra",
+    "celular": "2325 411341",
     "materiales": []
   },
   {
-    "apellido": "Rodriguez",
-    "nombres": "Elvira Olga",
-    "celular": "2325 640474",
+    "apellido": "Espinosa",
+    "nombres": "Liliana",
+    "celular": "2325 414392",
+    "materiales": []
+  },
+  {
+    "apellido": "Traberzo",
+    "nombres": "Juan Antonio",
+    "celular": "2325 680100",
+    "materiales": []
+  },
+  {
+    "apellido": "Ruiz",
+    "nombres": "Carolina",
+    "celular": "2326 470132",
+    "materiales": []
+  },
+  {
+    "apellido": "Vallejos Orellana",
+    "nombres": "Ruth Nelly",
+    "celular": "11 27735296",
+    "materiales": []
+  },
+  {
+    "apellido": "Brito",
+    "nombres": "Francisco Nahuel",
+    "celular": "2325 417431",
+    "materiales": []
+  },
+  {
+    "apellido": "Zampieri",
+    "nombres": "Ricardo Jorge",
+    "celular": "11 37996458",
+    "materiales": []
+  },
+  {
+    "apellido": "Elizondo",
+    "nombres": "Maria Evangelina",
+    "celular": "2325 596252",
+    "materiales": []
+  },
+  {
+    "apellido": "Rolón",
+    "nombres": "Sergio Oscar",
+    "celular": "2325 428711",
     "materiales": []
   },
   {
     "apellido": "Levo",
     "nombres": "Lisando",
     "celular": "2325 474047",
+    "materiales": []
+  },
+  {
+    "apellido": "Cejas",
+    "nombres": "Luis",
+    "celular": "2325 411041",
+    "materiales": []
+  },
+  {
+    "apellido": "Rojas",
+    "nombres": "Felix",
+    "celular": "2325 427888",
+    "materiales": []
+  },
+  {
+    "apellido": "Achaga",
+    "nombres": "Griselda Beatriz",
+    "celular": "2325 475627",
     "materiales": []
   }
 ]
